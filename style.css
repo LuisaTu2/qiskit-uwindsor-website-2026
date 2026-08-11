@@ -46,6 +46,8 @@ html {
 
 body {
   margin: 0;
+  /* min-width: 320px; */
+  overflow-x: hidden;
   background: var(--light-blue);
   color: var(--text);
   font-family: var(--font-body);
@@ -224,9 +226,14 @@ ol {
   backdrop-filter: blur(14px);
   border-bottom: 1px solid var(--line);
   transition: box-shadow 0.25s var(--ease);
+  transition: transform 0.3s ease;
+  box-shadow: 0 8px 24px -12px rgba(0, 0, 0, 0.35);
 }
 .site-header.is-stuck {
   box-shadow: 0 12px 32px -22px #000;
+}
+.site-header.header-hidden {
+  transform: translateY(-100%);
 }
 
 .header-inner {
@@ -338,11 +345,11 @@ ol {
 .hero {
   position: relative;
   overflow: hidden;
-  padding: 84px 0 92px;
+  padding: 32px 0;
 }
 
-.hero::after {
-  /* soft violet bloom behind the artwork */
+/* soft violet bloom behind the artwork */
+/* .hero::after {
   content: "";
   position: absolute;
   inset: auto -10% -45% 35%;
@@ -353,21 +360,7 @@ ol {
     transparent 62%
   );
   pointer-events: none;
-}
-.hero-grid {
-  position: absolute;
-  inset: 0;
-  background-image:
-    linear-gradient(to right, rgba(38, 43, 92, 0.5) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(38, 43, 92, 0.5) 1px, transparent 1px);
-  background-size: 68px 68px;
-  mask-image: radial-gradient(
-    ellipse 85% 62% at 40% 30%,
-    #000 30%,
-    transparent 78%
-  );
-  pointer-events: none;
-}
+} */
 
 .hero-inner {
   position: relative;
@@ -403,11 +396,28 @@ ol {
   max-width: 52ch;
 }
 
+.hero-details {
+  font-size: 1.3em;
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-detail {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
   gap: 14px;
   margin: 30px 0 40px;
+}
+
+.hero-actions a {
+  max-width: 200px;
 }
 
 .hero-stats {
@@ -436,26 +446,116 @@ ol {
 }
 .hero-media img {
   /* width: 100%; */
-  height: 300px;
+  height: 420px;
   /* border: 1px solid var(--line); */
   /* border-radius: var(--radius); */
   /* background: var(--panel); */
-  -webkit-mask-image:
+  /* smoothing hero image */
+  /* -webkit-mask-image:
     linear-gradient(to right, transparent, black 10%, black 90%, transparent),
     linear-gradient(to bottom, transparent, black 10%, black 90%, transparent);
   -webkit-mask-composite: source-in;
   mask-image:
     linear-gradient(to right, transparent, black 10%, black 90%, transparent),
     linear-gradient(to bottom, transparent, black 10%, black 90%, transparent);
-  mask-composite: intersect;
+  mask-composite: intersect; */
 }
-.hero-media figcaption {
+/* .hero-media figcaption {
   margin-top: 12px;
   text-align: right;
   font: 500 12px/1 var(--font-mono);
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--muted);
+} */
+
+.hero-media figcaption {
+  margin-top: 12px;
+  text-align: right;
+  font: 500 11px/1 var(--font-mono);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--muted);
+  opacity: 0.7;
+}
+
+/* HERO ANIMATION */
+/* ---------- Flying flock behind the cloud ---------- */
+.hero-media {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-cloud {
+  position: relative;
+  z-index: 2;
+}
+
+.sky-flock {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.flyer {
+  position: absolute;
+  top: var(--top, 20%);
+  left: -15%;
+  will-change: left;
+  animation: flyRight var(--fly-duration, 18s) linear infinite;
+  animation-delay: var(--fly-delay, 0s);
+}
+
+.flyer.fly-left {
+  animation-name: flyLeft;
+  left: 115%;
+}
+
+.flyer img,
+.flyer svg {
+  width: var(--size, 60px);
+  height: auto;
+  animation: bob var(--bob-duration, 3s) ease-in-out infinite;
+  animation-delay: var(--bob-delay, 0s);
+}
+
+@keyframes flyRight {
+  from {
+    left: -15%;
+  }
+  to {
+    left: 115%;
+  }
+}
+
+@keyframes flyLeft {
+  from {
+    left: 115%;
+    transform: scaleX(-1);
+  }
+  to {
+    left: -15%;
+    transform: scaleX(-1);
+  }
+}
+
+@keyframes bob {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .flyer,
+  .flyer img,
+  .flyer svg {
+    animation: none;
+  }
 }
 
 /* ==========================================================================
@@ -1163,7 +1263,7 @@ ol {
 
   .hero-inner {
     grid-template-columns: 1fr;
-    gap: 44px;
+    /* gap: 44px; */
   }
   .hero-media {
     order: 1;

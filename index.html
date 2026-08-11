@@ -76,21 +76,25 @@
     <main id="main">
       <!-- ============ HERO ============ -->
       <section class="hero" id="home">
-        <!-- <div class="hero-grid" aria-hidden="true"></div> -->
         <div class="shell hero-inner">
           <div class="hero-copy">
             <!-- <p class="eyebrow">
               <span class="dot"></span>Nov 14–15, 2025 · Windsor, Ontario
             </p> -->
             <h1>Qiskit Fall Fest <span class="year">2026</span></h1>
-            <p class="hero-lede">Exploring quantum computing with IBM.</p>
-            <p class="hero-text">
-              Two days of workshops, hands-on labs, and a creativity-first
-              hackathon at the University of Windsor — plus time to meet
-              researchers and industry mentors working in quantum today.
+            <p class="hero-lede">
+              IBM · University of Windsor · Quantum Computing
             </p>
-            <p class="hero-lede">NOV 14 - 15, 2026</p>
-
+            <p class="hero-text">
+              Join us for two days of workshops, hands-on labs, and a
+              creativity-first hackathon at the University of Windsor — plus
+              time to meet researchers and industry mentors working in quantum
+              today.
+            </p>
+            <div class="hero-details">
+              <div class="hero-detail">🗓️ November 14 - 15, 2026</div>
+              <div class="hero-detail">📍 University of Windsor</div>
+            </div>
             <div class="hero-actions">
               <a class="btn btn-primary btn-lg">Register</a>
               <a class="btn btn-ghost btn-lg" href="#schedule">Schedule</a>
@@ -117,17 +121,63 @@
           </div>
 
           <figure class="hero-media">
+            <div class="sky-flock" aria-hidden="true">
+              <div
+                class="flyer"
+                style="
+                  --top: 15%;
+                  --fly-duration: 22s;
+                  --fly-delay: 0s;
+                  --size: 100px;
+                "
+              >
+                <img src="assets/falcon.svg" alt="" />
+              </div>
+              <div
+                class="flyer fly-left"
+                style="
+                  --top: 35%;
+                  --fly-duration: 26s;
+                  --fly-delay: 4s;
+                  --size: 40px;
+                "
+              >
+                <img src="assets/fall-fest-purple.png" alt="" />
+              </div>
+              <div
+                class="flyer"
+                style="
+                  --top: 55%;
+                  --fly-duration: 30s;
+                  --fly-delay: 9s;
+                  --size: 45px;
+                "
+              >
+                <img src="assets/quantum-blue.png" alt="" />
+              </div>
+              <div
+                class="flyer fly-left"
+                style="
+                  --top: 65%;
+                  --fly-duration: 20s;
+                  --fly-delay: 2s;
+                  --size: 35px;
+                "
+              >
+                <img src="assets/birds-pink-pair.png" alt="" />
+              </div>
+            </div>
             <img
-              src="assets/hero-1-no-title.svg"
+              class="hero-copy"
+              src="assets/cloud-2.svg"
               alt="Qiskit Fall Fest Background"
             />
             <!-- <img
-              src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA3MjAgNTYwIiByb2xlPSJpbWciIGFyaWEtbGFiZWw9IkFuaW1hdGVkIHF1YW50dW0gYXJ0d29yayBwbGFjZWhvbGRlciI+CiAgPGRlZnM+CiAgICA8cmFkaWFsR3JhZGllbnQgaWQ9ImhhbG8iIGN4PSI1MCUiIGN5PSI0NSUiIHI9IjYwJSI+CiAgICAgIDxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iIzZFNEJGNiIgc3RvcC1vcGFjaXR5PSIuNTUiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjMEEwQjFFIiBzdG9wLW9wYWNpdHk9IjAiLz4KICAgIDwvcmFkaWFsR3JhZGllbnQ+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9InJpbmciIHgxPSIwIiB5MT0iMCIgeDI9IjEiIHkyPSIxIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjMzNFMUUxIi8+CiAgICAgIDxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iI0I1N0JGRiIvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICA8L2RlZnM+CiAgPHJlY3Qgd2lkdGg9IjcyMCIgaGVpZ2h0PSI1NjAiIHJ4PSIxNiIgZmlsbD0iIzEwMTIzMyIvPgogIDxyZWN0IHdpZHRoPSI3MjAiIGhlaWdodD0iNTYwIiByeD0iMTYiIGZpbGw9InVybCgjaGFsbykiLz4KICA8ZyBmaWxsPSJub25lIiBzdHJva2U9InVybCgjcmluZykiIHN0cm9rZS13aWR0aD0iMi4yIiBvcGFjaXR5PSIuOTUiPgogICAgPGNpcmNsZSBjeD0iMzYwIiBjeT0iMjUwIiByPSIxMjYiLz4KICAgIDxlbGxpcHNlIGN4PSIzNjAiIGN5PSIyNTAiIHJ4PSIxOTYiIHJ5PSI3MCIvPgogICAgPGVsbGlwc2UgY3g9IjM2MCIgY3k9IjI1MCIgcng9IjE5NiIgcnk9IjcwIiB0cmFuc2Zvcm09InJvdGF0ZSg2MCAzNjAgMjUwKSIvPgogICAgPGVsbGlwc2UgY3g9IjM2MCIgY3k9IjI1MCIgcng9IjE5NiIgcnk9IjcwIiB0cmFuc2Zvcm09InJvdGF0ZSgtNjAgMzYwIDI1MCkiLz4KICA8L2c+CiAgPGNpcmNsZSBjeD0iMzYwIiBjeT0iMjUwIiByPSIxMyIgZmlsbD0iIzMzRTFFMSIvPgogIDxjaXJjbGUgY3g9IjU1NiIgY3k9IjI1MCIgcj0iOCIgZmlsbD0iI0ZGN0VCNiIvPgogIDxjaXJjbGUgY3g9IjI2MiIgY3k9IjgwIiByPSI4IiBmaWxsPSIjQjU3QkZGIi8+CiAgPGNpcmNsZSBjeD0iMTY0IiBjeT0iNDIwIiByPSI4IiBmaWxsPSIjMzNFMUUxIi8+CiAgPHRleHQgeD0iMzYwIiB5PSI0NzAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSInSUJNIFBsZXggU2FucycsIHN5c3RlbS11aSwgc2Fucy1zZXJpZiIKICAgICAgICBmb250LXNpemU9IjI0IiBmb250LXdlaWdodD0iNjAwIiBmaWxsPSIjRkZGRkZGIiBvcGFjaXR5PSIuOSI+SGVybyBtZWRpYSBwbGFjZWhvbGRlcjwvdGV4dD4KICA8dGV4dCB4PSIzNjAiIHk9IjUwMiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IidJQk0gUGxleCBNb25vJywgdWktbW9ub3NwYWNlLCBtb25vc3BhY2UiCiAgICAgICAgZm9udC1zaXplPSIxNCIgbGV0dGVyLXNwYWNpbmc9IjIuNCIgZmlsbD0iIzhBOEZCOSI+NzIwICYjMjE1OyA1NjAgJiM4MjEyOyBTV0FQIEZPUiBHSUYgT1IgVklERU88L3RleHQ+Cjwvc3ZnPgo="
               alt="Placeholder for the festival hero animation"
               width="720"
               height="560"
             /> -->
-            <!-- <figcaption>IBM</figcaption> -->
+            <figcaption>IBM Chip birds</figcaption>
           </figure>
         </div>
       </section>

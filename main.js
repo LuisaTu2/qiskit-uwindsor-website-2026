@@ -120,4 +120,13 @@
       revealer.observe(el);
     });
   }
+
+  window.addEventListener("scroll", () => {
+    const currentScroll = window.scrollY;
+    if (currentScroll > 100) {
+      header.classList.add("header-hidden");
+    } else {
+      header.classList.remove("header-hidden");
+    }
+  });
 })();
