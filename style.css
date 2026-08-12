@@ -491,17 +491,17 @@ ol {
   width: 95%;
   margin-left: 2.5%;
   position: relative;
-  z-index: 2;
+  z-index: 1;
   animation: cloud-pulse 6s ease-in-out infinite;
 }
 
 @keyframes cloud-pulse {
   0%,
   100% {
-    transform: scale(1.02);
+    transform: scale(1);
   }
   50% {
-    transform: scale(1.04);
+    transform: scale(1.05);
   }
 }
 
@@ -514,27 +514,23 @@ ol {
 .sky-flock {
   position: absolute;
   inset: 0;
-  z-index: 1;
+  /* z-index: 1; */
   pointer-events: none;
 }
 
 .flyer {
-  z-index: 1;
+  z-index: 5;
   position: absolute;
   top: var(--top, 20%);
-  left: -55%;
+  left: -155%;
   will-change: left;
   animation: flyRight var(--fly-duration, 18s) linear infinite;
   animation-delay: var(--fly-delay, 0s);
 }
 
-.flyer-front img {
-  z-index: 15;
-}
-
 .flyer.fly-left {
   animation-name: flyLeft;
-  left: 115%;
+  right: -115%;
 }
 
 .flyer img,
@@ -556,7 +552,7 @@ ol {
 
 @keyframes flyLeft {
   from {
-    left: 115%;
+    left: 95%;
   }
   to {
     left: -15%;
@@ -569,15 +565,12 @@ ol {
     transform: translateY(0);
   }
   50% {
-    transform: translateY(-8px);
+    transform: translateY(-18px);
   }
 }
-
+/*
 .flyer {
   position: absolute;
-  /* top: var(--top, 20%); */
-  /* left: -15%; */
-  /* width: var(--size); */
   height: var(--size);
   animation: flyRight var(--fly-duration, 18s) linear infinite;
   animation-delay: var(--fly-delay, 0s);
@@ -614,7 +607,7 @@ ol {
   50% {
     transform: translateY(-8px);
   }
-}
+} */
 
 /* Wing flap — two stacked frames, alternating visibility */
 /* .wing-flap {
@@ -703,6 +696,52 @@ ol {
 
 @media (prefers-reduced-motion: reduce) {
   .peeker {
+    animation: none;
+  }
+}
+
+/* ARCHER */
+
+.arcer {
+  position: absolute;
+  left: var(--arc-start-left, 45%);
+  bottom: var(--arc-bottom, 45%);
+  width: var(--arc-size, 70px);
+  z-index: 0; /* behind the cloud, which sits at z-index: 1 */
+  animation:
+    arc-left var(--arc-duration, 10s) ease-in-out infinite,
+    arc-lift var(--arc-duration, 10s) ease-in-out infinite;
+  animation-delay: var(--arc-delay, 0s);
+}
+
+.arcer img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+@keyframes arc-left {
+  0%,
+  100% {
+    left: var(--arc-start-left, 15%);
+  }
+  50% {
+    left: var(--arc-end-left, 60%);
+  }
+}
+
+@keyframes arc-lift {
+  0%,
+  100% {
+    transform: translateY(0) scale(0.88);
+  }
+  50% {
+    transform: translateY(-170px) scale(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .arcer {
     animation: none;
   }
 }
