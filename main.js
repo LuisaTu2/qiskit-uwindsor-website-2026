@@ -1,4 +1,4 @@
-/* Qiskit Fall Fest 2025 — interactions
+/* Qiskit Fall Fest 2026 — interactions
    Vanilla JS, no dependencies. Everything degrades gracefully if JS is off. */
 
 (function () {
@@ -128,5 +128,21 @@
     } else {
       header.classList.remove("header-hidden");
     }
+  });
+
+  document.querySelectorAll(".has-dropdown").forEach((item) => {
+    const toggle = item.querySelector(".dropdown-toggle");
+    if (!toggle) return;
+    toggle.addEventListener("click", (e) => {
+      e.preventDefault();
+      const isOpen = item.classList.toggle("is-open");
+      toggle.setAttribute("aria-expanded", String(isOpen));
+    });
+    item.querySelectorAll(".dropdown a").forEach((link) => {
+      link.addEventListener("click", () => {
+        item.classList.remove("is-open");
+        toggle.setAttribute("aria-expanded", "false");
+      });
+    });
   });
 })();

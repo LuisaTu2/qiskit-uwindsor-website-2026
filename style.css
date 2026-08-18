@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Qiskit Fall Fest 2025 — University of Windsor
+   Qiskit Fall Fest 2026 — University of Windsor
    Design tokens → base → layout → components → responsive
    ========================================================================== */
 
@@ -13,6 +13,7 @@
   --line: #262b5c; /* hairlines and borders */
   --text: #31135e; /* primary text */
   --muted: #a2a7ce; /* secondary text */
+  --muted-light: #d7d9ed; /* secondary text */
   --violet: #7b4dff; /* primary brand */
   --violet-soft: #b57bff;
   --cyan: #33e1e1; /* accent / active */
@@ -292,13 +293,70 @@ ol {
     background 0.18s var(--ease);
 }
 .site-nav a:hover {
-  color: var(--text);
+  color: var(--muted-light);
   background: var(--panel);
   text-decoration: none;
 }
 .site-nav a.is-active {
   color: var(--cyan);
   background: rgba(51, 225, 225, 0.09);
+}
+
+/* Menu dropdowns */
+/* ---- About dropdown (desktop) ---- */
+.has-dropdown {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.dropdown-toggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  color: var(--muted);
+  cursor: pointer;
+  padding: 8px 6px;
+  border-radius: 8px;
+}
+.dropdown-toggle svg {
+  transition: transform 0.18s var(--ease);
+}
+.dropdown {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  min-width: 208px;
+  background: var(--ink-2);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 6px;
+  display: grid;
+  gap: 2px;
+  box-shadow: 0 16px 32px -16px rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-6px);
+  transition:
+    opacity 0.16s var(--ease),
+    transform 0.16s var(--ease),
+    visibility 0.16s var(--ease);
+  z-index: 40;
+}
+.dropdown a {
+  font-size: 13.5px;
+  white-space: nowrap;
+}
+.has-dropdown:hover .dropdown,
+.has-dropdown:focus-within .dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: none;
+}
+.has-dropdown:focus-within .dropdown-toggle svg,
+.has-dropdown:hover .dropdown-toggle svg {
+  transform: rotate(180deg);
 }
 
 .nav-register {
@@ -379,10 +437,10 @@ ol {
   margin-bottom: 0.3em;
 }
 .hero h1 .year {
-  background: linear-gradient(92deg, var(--cyan), var(--violet-soft));
+  /* background: linear-gradient(92deg, var(--cyan), var(--violet-soft)); */
   -webkit-background-clip: text;
   background-clip: text;
-  color: transparent;
+  color: var(--violet-soft);
 }
 .hero-lede {
   font-size: 1.3rem;
@@ -1468,6 +1526,34 @@ ol {
   .location {
     grid-template-columns: 1fr;
   }
+
+  /* ---- About dropdown (mobile): always expanded ---- */
+  .has-dropdown {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .dropdown-toggle {
+    display: none; /* no toggle needed, submenu is always visible */
+  }
+  .dropdown {
+    position: static;
+    min-width: 0;
+    background: none;
+    border: none;
+    padding: 2px 0 2px 14px;
+    box-shadow: none;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    transition: none;
+    display: grid;
+    gap: 2px;
+  }
+  .dropdown a {
+    font-size: 0.92rem;
+    color: var(--muted);
+    padding: 10px 14px;
+  }
 }
 
 @media (max-width: 760px) {
@@ -1558,4 +1644,52 @@ ol {
     background: #fff;
     padding: 20px 0;
   }
+}
+
+/* TEAM CARDS */
+.team-member {
+  width: 100%;
+  /* background-color: red; */
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 18px;
+}
+
+.team-member-photo {
+  width: 150px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 50%;
+  background-color: rgb(156, 186, 186);
+}
+
+.team-member-photo img {
+  max-width: 70%;
+  max-height: 70%;
+  object-fit: contain;
+  display: block;
+  object-position: center;
+}
+
+.team-member-text {
+  display: flex;
+  flex-direction: column;
+  padding: 18px;
+}
+
+.team-member-name {
+  font-size: 18px;
+  color: var(--violet);
+}
+
+.team-member-position {
+  text-transform: uppercase;
+  font-size: 15px;
+  color: rgb(56, 56, 150);
+  font-weight: 600;
+}
+.team-member-bio {
 }
