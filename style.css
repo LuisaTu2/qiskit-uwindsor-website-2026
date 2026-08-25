@@ -81,8 +81,9 @@ img {
 }
 
 a {
-  color: var(--cyan);
+  color: var(--blue-bird);
   text-decoration: none;
+  font-weight: bold;
 }
 a:hover {
   text-decoration: underline;
@@ -388,18 +389,19 @@ ol {
   width: 44px;
   height: 44px;
   background: transparent;
-  border: 1px solid var(--line);
-  border-radius: 10px;
+  /* border: 1px solid var(--soft-grey); */
+  /* border-radius: 10px; */
   cursor: pointer;
   padding: 0;
+  border: none;
 }
 .nav-toggle span {
   display: block;
   width: 19px;
   height: 2px;
   margin: 4px auto;
-  background: var(--text);
-  border-radius: 2px;
+  background: var(--soft-grey);
+  /* border-radius: 2px; */
   transition:
     transform 0.25s var(--ease),
     opacity 0.2s var(--ease);
@@ -412,6 +414,10 @@ ol {
 }
 .nav-toggle[aria-expanded="true"] span:nth-child(3) {
   transform: translateY(-6px) rotate(-45deg);
+}
+
+.nav-toggle[aria-expanded="true"] {
+  transform: translateY(-10px);
 }
 
 /* ==========================================================================
@@ -1743,17 +1749,56 @@ ol {
   font-weight: bold;
   color: var(--blue-bird);
 }
+.team-member-socials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-top: 12px;
+  background: none; /* remove the red background */
+}
 
+.team-member-socials a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: #f0f0f0;
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.team-member-socials a:hover {
+  background-color: #e0e0e0;
+  transform: translateY(-2px);
+}
+
+.team-member-socials svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* MORE ABOUT */
 .about-img {
-  /* margin: 24px 0; */
+  width: 100%;
+  margin: 0;
 }
 .about-img img {
   width: 80%;
   margin-left: 10%;
   height: auto;
   border-radius: var(--radius);
-  /* border: 1px solid var(--line); */
   display: block;
+}
+
+@media (max-width: 600px) {
+  .about-img img {
+    width: 100%;
+    margin-left: 0;
+  }
 }
 .about-img figcaption {
   margin-top: 16px;
