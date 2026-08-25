@@ -1293,18 +1293,15 @@ ol {
   color: var(--text);
 }
 
-.pills {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 16px;
-}
 .pills li {
-  padding: 6px 14px;
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  font: 500 12.5px/1.4 var(--font-body);
-  color: var(--muted);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.pills li::before {
+  content: "✓";
+  color: var(--cyan);
+  font-weight: 700;
 }
 
 .location-map {
