@@ -1443,10 +1443,11 @@ ol {
   height: 46px;
   display: grid;
   place-items: center;
-  border: 1px solid var(--line);
+  border: 1px solid var(--soft-grey);
+  border: none;
   border-radius: 50%;
-  background: var(--panel);
-  color: var(--text);
+  background: var(--purple);
+  color: white;
   cursor: pointer;
   opacity: 0;
   visibility: hidden;
@@ -1463,8 +1464,8 @@ ol {
   transform: none;
 }
 .to-top:hover {
-  border-color: var(--cyan);
-  color: var(--cyan);
+  border-color: var(--blue-bird);
+  color: var(--blue-bird);
 }
 
 /* ---------- Scroll reveal ---------- */
