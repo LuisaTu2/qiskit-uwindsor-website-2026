@@ -309,7 +309,7 @@
           <h3 class="sub-head" id="about-fallfest">
             What is Qiskit Fall Fest?
           </h3>
-          <div>
+          <div class="sub-head-text">
             <p>
               Qiskit Fall Fest is a
               <span class="highlight">worldwide</span> movement of
@@ -331,10 +331,16 @@
               ready to build on that momentum and bring together an even bigger
               crowd in 2026!
             </p>
+            <figure class="about-img">
+              <img src="assets/uwindsor-fall.jpg" alt="2025 memory" />
+              <figcaption>
+                University of Windsor, Fall Fest 2025 participants
+              </figcaption>
+            </figure>
           </div>
 
           <h3 class="sub-head" id="about-tenyears">Ten Years On The Cloud</h3>
-          <div>
+          <div class="sub-head-text">
             <p>
               In 2016, IBM put a
               <span class="highlight">real quantum computer</span> on the cloud
@@ -352,10 +358,16 @@
               <span class="highlight">celebrating</span> how far that access has
               come!
             </p>
+            <figure class="about-img">
+              <img src="assets/hero-1-no-title.svg" alt="2025 memory" />
+              <figcaption>
+                IBM names its quantum processors after birds
+              </figcaption>
+            </figure>
           </div>
 
           <h3 class="sub-head" id="about-qiskit">What is Qiskit</h3>
-          <div>
+          <div class="sub-head-text">
             <p>
               Qiskit is an
               <span class="highlight">open-source software</span> toolkit for
@@ -380,7 +392,7 @@
         <div class="shell">
           <header class="section-head">
             <h2>Schedule</h2>
-            <p class="section-sub">Come hack with the University of Windsor!</p>
+            <p class="section-sub">Come hack at the University of Windsor!</p>
           </header>
           <h3 class="sub-head" id="schedule-day-1">Day 1</h3>
           <h3 class="sub-head" id="schedule-day-2">Day 2</h3>
@@ -587,8 +599,29 @@
         <div class="shell">
           <header class="section-head">
             <h2>Speakers</h2>
-            <p class="section-sub">Guest speakears 2026</p>
           </header>
+          <ul class="people people-3">
+            <div class="team-member">
+              <div class="team-member-photo">
+                <img src="assets/birds-pink-pair.png" alt="" />
+              </div>
+              <div class="team-member-text">
+                <div class="team-member-name">Speaker 1</div>
+                <div class="team-member-position">CMC MICROSYSTEMS</div>
+                <div class="team-member-bio">Quantum Error Correction</div>
+              </div>
+            </div>
+            <div class="team-member">
+              <div class="team-member-photo">
+                <img src="assets/birds-pink-pair.png" alt="" />
+              </div>
+              <div class="team-member-text">
+                <div class="team-member-name">Speaker 2</div>
+                <div class="team-member-position">IBM</div>
+                <div class="team-member-bio">AI meets Quantum Computing</div>
+              </div>
+            </div>
+          </ul>
         </div>
       </section>
       <!-- ============ OLD SPEAKERS ============ -->
@@ -663,68 +696,74 @@
           <header class="section-head">
             <h2>Team</h2>
             <p class="section-sub">
-              Meet the organizing team behind the 2026 Qiskit Fall Fest 2026,
-              University of Waterloo!
+              Meet the organizing team behind the University of Windsor 2026
+              Qiskit Fall Fest!
             </p>
           </header>
 
           <h3 class="sub-head" id="team-faculty">Faculty</h3>
-          <ul class="people people-5" style="margin-bottom: 32px">
-            <li class="person">
-              <img
-                src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0MDAgNDAwIiByb2xlPSJpbWciIGFyaWEtbGFiZWw9IlBvcnRyYWl0IHBsYWNlaG9sZGVyIGZvciBaaWFkIEtvYnRpIj4KICA8ZGVmcz4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iZyIgeDE9IjAiIHkxPSIwIiB4Mj0iMSIgeTI9IjEiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiMxQjFFM0QiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjMTIxNDMwIi8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogICAgPHBhdHRlcm4gaWQ9ImRvdHMiIHdpZHRoPSIyNiIgaGVpZ2h0PSIyNiIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+CiAgICAgIDxjaXJjbGUgY3g9IjIiIGN5PSIyIiByPSIxLjQiIGZpbGw9IiNCNTdCRkYiIG9wYWNpdHk9Ii4yOCIvPgogICAgPC9wYXR0ZXJuPgogIDwvZGVmcz4KICA8cmVjdCB3aWR0aD0iNDAwIiBoZWlnaHQ9IjQwMCIgZmlsbD0idXJsKCNnKSIvPgogIDxyZWN0IHdpZHRoPSI0MDAiIGhlaWdodD0iNDAwIiBmaWxsPSJ1cmwoI2RvdHMpIi8+CiAgPGNpcmNsZSBjeD0iMjAwIiBjeT0iMTYzIiByPSI1OCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjQjU3QkZGIiBzdHJva2Utd2lkdGg9IjIuNSIgb3BhY2l0eT0iLjg1Ii8+CiAgPHBhdGggZD0iTTEwNCAzMzBjMC01MyA0My05NiA5Ni05NnM5NiA0MyA5NiA5NiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjQjU3QkZGIiBzdHJva2Utd2lkdGg9IjIuNSIgb3BhY2l0eT0iLjg1Ii8+CiAgPHRleHQgeD0iMjAwIiB5PSIxODAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSInSUJNIFBsZXggTW9ubycsIHVpLW1vbm9zcGFjZSwgbW9ub3NwYWNlIgogICAgICAgIGZvbnQtc2l6ZT0iNDIiIGZvbnQtd2VpZ2h0PSI2MDAiIGZpbGw9IiNGRkZGRkYiIG9wYWNpdHk9Ii45MiI+Wks8L3RleHQ+CiAgPHJlY3QgeD0iMCIgeT0iMzUyIiB3aWR0aD0iNDAwIiBoZWlnaHQ9IjQ4IiBmaWxsPSIjMDAwMDAwIiBvcGFjaXR5PSIuMzgiLz4KICA8dGV4dCB4PSIyMDAiIHk9IjM4MiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IidJQk0gUGxleCBNb25vJywgdWktbW9ub3NwYWNlLCBtb25vc3BhY2UiCiAgICAgICAgZm9udC1zaXplPSIxNyIgbGV0dGVyLXNwYWNpbmc9IjEuNSIgZmlsbD0iIzhBOEZCOSI+UEhPVE8gUExBQ0VIT0xERVI8L3RleHQ+Cjwvc3ZnPgo="
-                alt="Photo placeholder for Ziad Kobti"
-                width="400"
-                height="400"
-              />
-              <h3>Ziad Kobti</h3>
-              <p class="role">Professor</p>
-              <p class="org">University of Windsor</p>
-            </li>
-            <li class="person">
-              <img
-                src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0MDAgNDAwIiByb2xlPSJpbWciIGFyaWEtbGFiZWw9IlBvcnRyYWl0IHBsYWNlaG9sZGVyIGZvciBDaGl0cmEgUmFuZ2FuIj4KICA8ZGVmcz4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iZyIgeDE9IjAiIHkxPSIwIiB4Mj0iMSIgeTI9IjEiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiMxQjFFM0QiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjMTIxNDMwIi8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogICAgPHBhdHRlcm4gaWQ9ImRvdHMiIHdpZHRoPSIyNiIgaGVpZ2h0PSIyNiIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+CiAgICAgIDxjaXJjbGUgY3g9IjIiIGN5PSIyIiByPSIxLjQiIGZpbGw9IiMzM0UxRTEiIG9wYWNpdHk9Ii4yOCIvPgogICAgPC9wYXR0ZXJuPgogIDwvZGVmcz4KICA8cmVjdCB3aWR0aD0iNDAwIiBoZWlnaHQ9IjQwMCIgZmlsbD0idXJsKCNnKSIvPgogIDxyZWN0IHdpZHRoPSI0MDAiIGhlaWdodD0iNDAwIiBmaWxsPSJ1cmwoI2RvdHMpIi8+CiAgPGNpcmNsZSBjeD0iMjAwIiBjeT0iMTYzIiByPSI1OCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMzNFMUUxIiBzdHJva2Utd2lkdGg9IjIuNSIgb3BhY2l0eT0iLjg1Ii8+CiAgPHBhdGggZD0iTTEwNCAzMzBjMC01MyA0My05NiA5Ni05NnM5NiA0MyA5NiA5NiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMzNFMUUxIiBzdHJva2Utd2lkdGg9IjIuNSIgb3BhY2l0eT0iLjg1Ii8+CiAgPHRleHQgeD0iMjAwIiB5PSIxODAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSInSUJNIFBsZXggTW9ubycsIHVpLW1vbm9zcGFjZSwgbW9ub3NwYWNlIgogICAgICAgIGZvbnQtc2l6ZT0iNDIiIGZvbnQtd2VpZ2h0PSI2MDAiIGZpbGw9IiNGRkZGRkYiIG9wYWNpdHk9Ii45MiI+Q1I8L3RleHQ+CiAgPHJlY3QgeD0iMCIgeT0iMzUyIiB3aWR0aD0iNDAwIiBoZWlnaHQ9IjQ4IiBmaWxsPSIjMDAwMDAwIiBvcGFjaXR5PSIuMzgiLz4KICA8dGV4dCB4PSIyMDAiIHk9IjM4MiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IidJQk0gUGxleCBNb25vJywgdWktbW9ub3NwYWNlLCBtb25vc3BhY2UiCiAgICAgICAgZm9udC1zaXplPSIxNyIgbGV0dGVyLXNwYWNpbmc9IjEuNSIgZmlsbD0iIzhBOEZCOSI+UEhPVE8gUExBQ0VIT0xERVI8L3RleHQ+Cjwvc3ZnPgo="
-                alt="Photo placeholder for Chitra Rangan"
-                width="400"
-                height="400"
-              />
-              <h3>Chitra Rangan</h3>
-              <p class="role">Professor</p>
-              <p class="org">University of Windsor</p>
-            </li>
-            <li class="person">
-              <img
-                src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0MDAgNDAwIiByb2xlPSJpbWciIGFyaWEtbGFiZWw9IlBvcnRyYWl0IHBsYWNlaG9sZGVyIGZvciBUaXJ1cGF0aSBCb2xpc2V0dGkiPgogIDxkZWZzPgogICAgPGxpbmVhckdyYWRpZW50IGlkPSJnIiB4MT0iMCIgeTE9IjAiIHgyPSIxIiB5Mj0iMSI+CiAgICAgIDxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iIzFCMUUzRCIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiMxMjE0MzAiLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgICA8cGF0dGVybiBpZD0iZG90cyIgd2lkdGg9IjI2IiBoZWlnaHQ9IjI2IiBwYXR0ZXJuVW5pdHM9InVzZXJTcGFjZU9uVXNlIj4KICAgICAgPGNpcmNsZSBjeD0iMiIgY3k9IjIiIHI9IjEuNCIgZmlsbD0iI0ZGN0VCNiIgb3BhY2l0eT0iLjI4Ii8+CiAgICA8L3BhdHRlcm4+CiAgPC9kZWZzPgogIDxyZWN0IHdpZHRoPSI0MDAiIGhlaWdodD0iNDAwIiBmaWxsPSJ1cmwoI2cpIi8+CiAgPHJlY3Qgd2lkdGg9IjQwMCIgaGVpZ2h0PSI0MDAiIGZpbGw9InVybCgjZG90cykiLz4KICA8Y2lyY2xlIGN4PSIyMDAiIGN5PSIxNjMiIHI9IjU4IiBmaWxsPSJub25lIiBzdHJva2U9IiNGRjdFQjYiIHN0cm9rZS13aWR0aD0iMi41IiBvcGFjaXR5PSIuODUiLz4KICA8cGF0aCBkPSJNMTA0IDMzMGMwLTUzIDQzLTk2IDk2LTk2czk2IDQzIDk2IDk2IiBmaWxsPSJub25lIiBzdHJva2U9IiNGRjdFQjYiIHN0cm9rZS13aWR0aD0iMi41IiBvcGFjaXR5PSIuODUiLz4KICA8dGV4dCB4PSIyMDAiIHk9IjE4MCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IidJQk0gUGxleCBNb25vJywgdWktbW9ub3NwYWNlLCBtb25vc3BhY2UiCiAgICAgICAgZm9udC1zaXplPSI0MiIgZm9udC13ZWlnaHQ9IjYwMCIgZmlsbD0iI0ZGRkZGRiIgb3BhY2l0eT0iLjkyIj5UQjwvdGV4dD4KICA8cmVjdCB4PSIwIiB5PSIzNTIiIHdpZHRoPSI0MDAiIGhlaWdodD0iNDgiIGZpbGw9IiMwMDAwMDAiIG9wYWNpdHk9Ii4zOCIvPgogIDx0ZXh0IHg9IjIwMCIgeT0iMzgyIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iJ0lCTSBQbGV4IE1vbm8nLCB1aS1tb25vc3BhY2UsIG1vbm9zcGFjZSIKICAgICAgICBmb250LXNpemU9IjE3IiBsZXR0ZXItc3BhY2luZz0iMS41IiBmaWxsPSIjOEE4RkI5Ij5QSE9UTyBQTEFDRUhPTERFUjwvdGV4dD4KPC9zdmc+Cg=="
-                alt="Photo placeholder for Tirupati Bolisetti"
-                width="400"
-                height="400"
-              />
-              <h3>Tirupati Bolisetti</h3>
-              <p class="role">Professor</p>
-              <p class="org">University of Windsor</p>
-            </li>
-            <li class="person">
-              <img
-                src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0MDAgNDAwIiByb2xlPSJpbWciIGFyaWEtbGFiZWw9IlBvcnRyYWl0IHBsYWNlaG9sZGVyIGZvciBQcmFzaGFudGggUmFuZ2EiPgogIDxkZWZzPgogICAgPGxpbmVhckdyYWRpZW50IGlkPSJnIiB4MT0iMCIgeTE9IjAiIHgyPSIxIiB5Mj0iMSI+CiAgICAgIDxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iIzFCMUUzRCIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiMxMjE0MzAiLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgICA8cGF0dGVybiBpZD0iZG90cyIgd2lkdGg9IjI2IiBoZWlnaHQ9IjI2IiBwYXR0ZXJuVW5pdHM9InVzZXJTcGFjZU9uVXNlIj4KICAgICAgPGNpcmNsZSBjeD0iMiIgY3k9IjIiIHI9IjEuNCIgZmlsbD0iI0I1N0JGRiIgb3BhY2l0eT0iLjI4Ii8+CiAgICA8L3BhdHRlcm4+CiAgPC9kZWZzPgogIDxyZWN0IHdpZHRoPSI0MDAiIGhlaWdodD0iNDAwIiBmaWxsPSJ1cmwoI2cpIi8+CiAgPHJlY3Qgd2lkdGg9IjQwMCIgaGVpZ2h0PSI0MDAiIGZpbGw9InVybCgjZG90cykiLz4KICA8Y2lyY2xlIGN4PSIyMDAiIGN5PSIxNjMiIHI9IjU4IiBmaWxsPSJub25lIiBzdHJva2U9IiNCNTdCRkYiIHN0cm9rZS13aWR0aD0iMi41IiBvcGFjaXR5PSIuODUiLz4KICA8cGF0aCBkPSJNMTA0IDMzMGMwLTUzIDQzLTk2IDk2LTk2czk2IDQzIDk2IDk2IiBmaWxsPSJub25lIiBzdHJva2U9IiNCNTdCRkYiIHN0cm9rZS13aWR0aD0iMi41IiBvcGFjaXR5PSIuODUiLz4KICA8dGV4dCB4PSIyMDAiIHk9IjE4MCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IidJQk0gUGxleCBNb25vJywgdWktbW9ub3NwYWNlLCBtb25vc3BhY2UiCiAgICAgICAgZm9udC1zaXplPSI0MiIgZm9udC13ZWlnaHQ9IjYwMCIgZmlsbD0iI0ZGRkZGRiIgb3BhY2l0eT0iLjkyIj5QUjwvdGV4dD4KICA8cmVjdCB4PSIwIiB5PSIzNTIiIHdpZHRoPSI0MDAiIGhlaWdodD0iNDgiIGZpbGw9IiMwMDAwMDAiIG9wYWNpdHk9Ii4zOCIvPgogIDx0ZXh0IHg9IjIwMCIgeT0iMzgyIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iJ0lCTSBQbGV4IE1vbm8nLCB1aS1tb25vc3BhY2UsIG1vbm9zcGFjZSIKICAgICAgICBmb250LXNpemU9IjE3IiBsZXR0ZXItc3BhY2luZz0iMS41IiBmaWxsPSIjOEE4RkI5Ij5QSE9UTyBQTEFDRUhPTERFUjwvdGV4dD4KPC9zdmc+Cg=="
-                alt="Photo placeholder for Prashanth Ranga"
-                width="400"
-                height="400"
-              />
-              <h3>Prashanth Ranga</h3>
-              <p class="role">Professor</p>
-              <p class="org">University of Windsor</p>
-            </li>
-            <li class="person">
-              <img
-                src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0MDAgNDAwIiByb2xlPSJpbWciIGFyaWEtbGFiZWw9IlBvcnRyYWl0IHBsYWNlaG9sZGVyIGZvciBNYXNvdWQgQWtoc2hpayI+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImciIHgxPSIwIiB5MT0iMCIgeDI9IjEiIHkyPSIxIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjMUIxRTNEIi8+CiAgICAgIDxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzEyMTQzMCIvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICAgIDxwYXR0ZXJuIGlkPSJkb3RzIiB3aWR0aD0iMjYiIGhlaWdodD0iMjYiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiPgogICAgICA8Y2lyY2xlIGN4PSIyIiBjeT0iMiIgcj0iMS40IiBmaWxsPSIjMzNFMUUxIiBvcGFjaXR5PSIuMjgiLz4KICAgIDwvcGF0dGVybj4KICA8L2RlZnM+CiAgPHJlY3Qgd2lkdGg9IjQwMCIgaGVpZ2h0PSI0MDAiIGZpbGw9InVybCgjZykiLz4KICA8cmVjdCB3aWR0aD0iNDAwIiBoZWlnaHQ9IjQwMCIgZmlsbD0idXJsKCNkb3RzKSIvPgogIDxjaXJjbGUgY3g9IjIwMCIgY3k9IjE2MyIgcj0iNTgiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzMzRTFFMSIgc3Ryb2tlLXdpZHRoPSIyLjUiIG9wYWNpdHk9Ii44NSIvPgogIDxwYXRoIGQ9Ik0xMDQgMzMwYzAtNTMgNDMtOTYgOTYtOTZzOTYgNDMgOTYgOTYiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzMzRTFFMSIgc3Ryb2tlLXdpZHRoPSIyLjUiIG9wYWNpdHk9Ii44NSIvPgogIDx0ZXh0IHg9IjIwMCIgeT0iMTgwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iJ0lCTSBQbGV4IE1vbm8nLCB1aS1tb25vc3BhY2UsIG1vbm9zcGFjZSIKICAgICAgICBmb250LXNpemU9IjQyIiBmb250LXdlaWdodD0iNjAwIiBmaWxsPSIjRkZGRkZGIiBvcGFjaXR5PSIuOTIiPk1BPC90ZXh0PgogIDxyZWN0IHg9IjAiIHk9IjM1MiIgd2lkdGg9IjQwMCIgaGVpZ2h0PSI0OCIgZmlsbD0iIzAwMDAwMCIgb3BhY2l0eT0iLjM4Ii8+CiAgPHRleHQgeD0iMjAwIiB5PSIzODIiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSInSUJNIFBsZXggTW9ubycsIHVpLW1vbm9zcGFjZSwgbW9ub3NwYWNlIgogICAgICAgIGZvbnQtc2l6ZT0iMTciIGxldHRlci1zcGFjaW5nPSIxLjUiIGZpbGw9IiM4QThGQjkiPlBIT1RPIFBMQUNFSE9MREVSPC90ZXh0Pgo8L3N2Zz4K"
-                alt="Photo placeholder for Masoud Akhshik"
-                width="400"
-                height="400"
-              />
-              <h3>Masoud Akhshik</h3>
-              <p class="role">Professor</p>
-              <p class="org">University of Windsor</p>
-            </li>
+          <!-- <ul class="people people-5" style="margin-bottom: 32px"> -->
+          <ul class="people people-3">
+            <div class="team-member">
+              <div class="team-member-photo">
+                <img src="assets/flamingo.svg" alt="" />
+              </div>
+              <div class="team-member-text">
+                <div class="team-member-name">Dr. Kobti</div>
+                <div class="team-member-position">Prof Computer Science</div>
+                <div class="team-member-bio">
+                  Specializes in Quantum Error Correction
+                </div>
+              </div>
+            </div>
+            <div class="team-member">
+              <div class="team-member-photo">
+                <img src="assets/flamingo.svg" alt="" />
+              </div>
+              <div class="team-member-text">
+                <div class="team-member-name">Dr. Prashanth Ranga</div>
+                <div class="team-member-position">Prof Computer Science</div>
+                <div class="team-member-bio">
+                  Specializes in Quantum Error Correction
+                </div>
+              </div>
+            </div>
+            <div class="team-member">
+              <div class="team-member-photo">
+                <img src="assets/flamingo.svg" alt="" />
+              </div>
+              <div class="team-member-text">
+                <div class="team-member-name">Dr. Kobti</div>
+                <div class="team-member-position">Prof Computer Science</div>
+                <div class="team-member-bio">
+                  Specializes in Quantum Error Correction
+                </div>
+              </div>
+            </div>
+            <div class="team-member">
+              <div class="team-member-photo">
+                <img src="assets/flamingo.svg" alt="" />
+              </div>
+              <div class="team-member-text">
+                <div class="team-member-name">Dr. Tirupati Bolisetti</div>
+                <div class="team-member-position">Prof Computer Science</div>
+                <div class="team-member-bio">
+                  Specializes in Quantum Error Correction
+                </div>
+              </div>
+            </div>
+            <div class="team-member">
+              <div class="team-member-photo">
+                <img src="assets/flamingo.svg" alt="" />
+              </div>
+              <div class="team-member-text">
+                <div class="team-member-name">Dr. Chitra Rangan</div>
+                <div class="team-member-position">Prof Physics</div>
+                <div class="team-member-bio">
+                  Specializes in Quantum Error Correction
+                </div>
+              </div>
+            </div>
           </ul>
 
           <h3 class="sub-head" id="team-volunteers">Volunteers</h3>
@@ -891,10 +930,8 @@
           </p>
           <div class="location">
             <div class="location-info">
-              <h3>Advanced Computing and Innovation Hub</h3>
-
               <div class="loc-block">
-                <h4>Find us</h4>
+                <!-- <h4>Find us</h4> -->
                 <address>
                   School of Computer Science<br />
                   300 Ouellette Ave, 4th floor<br />

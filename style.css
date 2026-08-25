@@ -1743,3 +1743,24 @@ ol {
   font-weight: bold;
   color: var(--blue-bird);
 }
+
+.about-img {
+  /* margin: 24px 0; */
+}
+.about-img img {
+  width: 80%;
+  margin-left: 10%;
+  height: auto;
+  border-radius: var(--radius);
+  /* border: 1px solid var(--line); */
+  display: block;
+}
+.about-img figcaption {
+  margin-top: 16px;
+  font-size: 0.87rem;
+  color: var(--muted);
+  text-align: center;
+}
+.sub-head-text {
+  margin-bottom: 32px;
+}
