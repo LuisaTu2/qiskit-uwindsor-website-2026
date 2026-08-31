@@ -661,22 +661,24 @@ ol {
 
 .hero-cloud-2 {
   width: clamp(200px, 60vw, 340px);
-  bottom: 0rem;
+  bottom: 8rem;
   left: clamp(1rem, 8vw, 10rem);
   position: relative;
-  z-index: 10;
-  /* transform: scaleX(-1); */
+  z-index: 1;
+  transform: scaleX(-1);
   animation: none;
   /* animation: cloud-pulse 6s ease-in-out infinite; */
 }
 
 .hero-cloud-3 {
-  width: clamp(200px, 60vw, 100px);
-  bottom: 7rem;
-  right: clamp(1rem, 8vw, 12rem);
+  width: clamp(100px, 40vw, 140px);
+  bottom: 3.5rem;
+  right: 4rem;
+  /* left: clamp(1rem, 8vw, 10rem); */
   position: absolute;
-  z-index: 10;
-  transform: scaleX(-1);
+  z-index: 1;
+  /* background-color: red; */
+  /* transform: scaleX(-1); */
   animation: none;
   /* animation: cloud-pulse 6s ease-in-out infinite; */
 }
@@ -1834,8 +1836,8 @@ ol {
 .branch-bird {
   position: absolute;
   bottom: 4rem;
-  left: 1rem;
-  z-index: 55;
+  left: 0rem;
+  z-index: 5;
   transform: scaleX(-1);
 }
 
