@@ -1736,7 +1736,27 @@ ol {
   object-fit: contain;
   display: block;
   object-position: center;
-  border-radius: 55%;
+}
+
+.luisa {
+  margin-top: 24px;
+  width: 150px;
+  height: 150px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+  background-color: rgb(156, 186, 186);
+}
+
+.luisa img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  object-position: center;
+  display: block;
 }
 
 .team-member-text {
