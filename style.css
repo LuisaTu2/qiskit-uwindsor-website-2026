@@ -1272,6 +1272,10 @@ ol {
   font-weight: bold;
   color: var(--blue-bird);
 }
+.highlight a:hover {
+  font-weight: bold;
+  color: var(--violet-soft);
+}
 .team-member-socials {
   display: flex;
   justify-content: center;
