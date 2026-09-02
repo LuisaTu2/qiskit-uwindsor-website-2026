@@ -1,6 +1,5 @@
 /* ==========================================================================
    Qiskit Fall Fest 2026 — University of Windsor
-   Design tokens → base → layout → components → responsive
    ========================================================================== */
 
 :root {
@@ -19,7 +18,7 @@
   --cyan: #33e1e1; /* accent / active */
   --pink: #ff7eb6; /* accent 2 */
 
-  /* isa picks */
+  /* 2026 picks */
   --flamingo: #ffafd2;
   --bright-pink: #ff7eb6;
   --purple: #be95ff;
@@ -155,14 +154,12 @@ ol {
 }
 
 .btn-primary {
-  /* background: linear-gradient(100deg, var(--purple), #9a5cff); */
   background-color: var(--violet-soft);
   color: #fff;
   box-shadow: 0 8px 24px -12px rgba(123, 77, 255, 0.9);
 }
 .btn-primary:hover {
   background-color: var(--violet);
-  /* background: linear-gradient(100deg, #8a5cff, #ab74ff); */
 }
 
 .btn-ghost {
@@ -201,7 +198,6 @@ ol {
 
 .section {
   padding: 80px 0 0 0;
-  /* border-top: 1px solid var(--line); */
 }
 .section-alt {
   background: var(--ink-2);
@@ -239,13 +235,10 @@ ol {
   position: sticky;
   top: 0;
   z-index: 100;
-  /* background: var(--ink-2); */
   background: none;
   backdrop-filter: blur(14px);
-  /* border-bottom: 1px solid var(--line); */
   transition: box-shadow 0.25s var(--ease);
   transition: transform 0.3s ease;
-  /* box-shadow: 0 8px 24px -12px rgba(0, 0, 0, 0.35); */
 }
 .site-header.is-stuck {
   /* box-shadow: 0 12px 32px -22px #000; */
@@ -270,10 +263,6 @@ ol {
 .brand:hover {
   text-decoration: none;
 }
-/* .brand img {
-  border-radius: 9px;
-  height: 110px;
-} */
 .brand-text {
   display: flex;
   flex-direction: column;
@@ -308,7 +297,6 @@ ol {
   display: block;
   padding: 8px 11px;
   color: var(--muted);
-  /* color: var(--panel); */
   font-size: 14.5px;
   font-weight: 500;
   border-radius: 8px;
@@ -354,9 +342,6 @@ ol {
   left: 0;
   min-width: 208px;
   background: #89abe5;
-  /* color: var(--muted-light); */
-
-  /* border: 1px solid var(--line); */
   border-radius: 10px;
   padding: 6px;
   display: grid;
@@ -399,8 +384,6 @@ ol {
   width: 44px;
   height: 44px;
   background: transparent;
-  /* border: 1px solid var(--soft-grey); */
-  /* border-radius: 10px; */
   cursor: pointer;
   padding: 0;
   border: none;
@@ -439,20 +422,6 @@ ol {
   padding: 32px 0;
 }
 
-/* soft violet bloom behind the artwork */
-/* .hero::after {
-  content: "";
-  position: absolute;
-  inset: auto -10% -45% 35%;
-  height: 620px;
-  background: radial-gradient(
-    circle at 50% 50%,
-    rgba(123, 77, 255, 0.3),
-    transparent 62%
-  );
-  pointer-events: none;
-} */
-
 .hero-inner {
   position: relative;
   z-index: 1;
@@ -470,7 +439,6 @@ ol {
   margin-bottom: 0.3em;
 }
 .hero h1 .year {
-  /* background: linear-gradient(92deg, var(--cyan), var(--violet-soft)); */
   -webkit-background-clip: text;
   background-clip: text;
   color: var(--violet-soft);
@@ -538,30 +506,8 @@ ol {
 }
 
 .hero-media img {
-  /* width: 100%; */
   height: 270px;
-  /* background-color: red; */
-  /* border: 1px solid var(--line); */
-  /* border-radius: var(--radius); */
-  /* background: var(--panel); */
-  /* smoothing hero image */
-  /* -webkit-mask-image:
-    linear-gradient(to right, transparent, black 10%, black 90%, transparent),
-    linear-gradient(to bottom, transparent, black 10%, black 90%, transparent);
-  -webkit-mask-composite: source-in;
-  mask-image:
-    linear-gradient(to right, transparent, black 10%, black 90%, transparent),
-    linear-gradient(to bottom, transparent, black 10%, black 90%, transparent);
-  mask-composite: intersect; */
 }
-/* .hero-media figcaption {
-  margin-top: 12px;
-  text-align: right;
-  font: 500 12px/1 var(--font-mono);
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--muted);
-} */
 
 .hero-media figcaption {
   margin-top: 12px;
@@ -580,7 +526,6 @@ ol {
   overflow: hidden;
   width: 100%;
   margin: 0;
-  /* border: 2px red solid; */
 }
 
 .flamingo-funny {
@@ -612,9 +557,6 @@ ol {
   .flamingo-funny {
     display: none;
   }
-  /* .flamingo-funny {
-    transform: scaleX(-1);
-  } */
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -633,7 +575,6 @@ ol {
   position: absolute;
   z-index: 1;
   transform: scaleX(-1) scaleY(-1);
-  /* animation: cloud-pulse 6s ease-in-out infinite; */
 }
 
 .hero-cloud {
@@ -677,11 +618,8 @@ ol {
   width: clamp(100px, 40vw, 140px);
   bottom: 3.5rem;
   right: 4rem;
-  /* left: clamp(1rem, 8vw, 10rem); */
   position: absolute;
   z-index: 1;
-  /* background-color: red; */
-  /* transform: scaleX(-1); */
   animation: none;
   animation: cloud-pulse 1s ease-in-out infinite;
 }
@@ -689,7 +627,6 @@ ol {
 .sky-flock {
   position: absolute;
   inset: 0;
-  /* z-index: 1; */
   pointer-events: none;
 }
 
@@ -709,7 +646,6 @@ ol {
 }
 
 .flyer.mirror {
-  /* animation-name: flyLeft; */
   transform: scaleX(-1);
 }
 
@@ -766,12 +702,6 @@ ol {
   animation: peek-cycle var(--peek-duration, 11s) ease-in-out infinite;
   animation-delay: var(--peek-delay, 0s);
 }
-
-/* @media (max-width: 430px) {
-  .peeker {
-    --peek-bottom: 100px !important;
-  }
-} */
 
 @media (max-width: 600px) {
   .peeker {
@@ -1868,13 +1798,6 @@ ol {
   width: clamp(120px, 25vw, 170px);
   height: auto;
   display: block;
-  /* border-radius: 50%; */
-  /* background: linear-gradient(
-    to left,
-    transparent 0%,
-    transparent 80%,
-    white 100%
-  ); */
 }
 
 .fall-tree {
@@ -1894,8 +1817,6 @@ ol {
   position: absolute;
   width: 100%;
   bottom: 7rem;
-  /* left: 1rem; */
-  /* z-index: 60; */
 }
 
 .fade-overlay {
