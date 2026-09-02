@@ -229,6 +229,7 @@ ol {
 
 .header-inner {
   min-height: var(--header-h);
+  max-height: 120px;
   display: flex;
   align-items: center;
   gap: 20px;
@@ -245,12 +246,13 @@ ol {
 }
 
 .uni-logo {
-  padding-top: 18px;
-  height: 5rem;
+  /* padding-top: 18px; */
+  padding-left: 0;
+  height: 7rem;
 }
 
 .site-nav {
-  margin-top: 2rem;
+  margin-top: 0rem;
   margin-left: auto;
 }
 .site-nav > ul {
@@ -377,7 +379,7 @@ ol {
 .hero {
   position: relative;
   overflow: hidden;
-  padding: 32px 0;
+  padding: 16px 0;
 }
 
 .hero-inner {
