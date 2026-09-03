@@ -1480,15 +1480,20 @@ ol {
   margin: 0;
   border-radius: 8px;
   /* background: #eceff5; */
-  background: #ffffff;
+  background: linear-gradient(to bottom, #eef3fc 0%, #bfcfed 100%);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.6) inset,
+    0 2px 10px -4px rgba(49, 19, 94, 0.12);
   display: flex;
   flex-direction: column;
   align-items: center;
   text-decoration: none;
-  transition: transform 0.2s var(--ease);
+  transition:
+    box-shadow 0.2s var(--ease),
+    transform 0.2s var(--ease);
 }
-
 .sponsor-logo:hover {
+  box-shadow: 0 8px 20px -6px rgba(69, 137, 255, 0.28);
   transform: translateY(-3px);
   text-decoration: none;
 }
@@ -1505,10 +1510,10 @@ ol {
 .sponsor-caption {
   margin-top: 10px;
   text-align: center;
-  font: 500 11px/1 var(--font-mono);
+  font: 500 12px/1 var(--font-mono);
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: var(--muted);
+  /* color: var(--muted); */
 }
 
 /* ==========================================================================
