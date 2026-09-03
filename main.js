@@ -194,6 +194,9 @@
 
   if (rareBird) {
     function launchRareBird() {
+      var containerWidth = rareBird.offsetParent.offsetWidth;
+      rareBird.style.setProperty("--fly-distance", containerWidth + 60 + "px");
+
       rareBird.classList.add("is-flying");
 
       setTimeout(function () {

@@ -1724,11 +1724,6 @@ ol {
     z-index: 2;
     animation: none;
   }
-
-  .mobile-bird-3.is-flying {
-    opacity: 1;
-    animation: mobile-bird-fly-fast 1.1s linear forwards;
-  }
 }
 
 @keyframes mobile-bird-fly {
@@ -1759,24 +1754,17 @@ ol {
   }
 }
 
-@keyframes mobile-bird-fly-fast {
-  from {
-    transform: translateX(0) scaleX(-1);
-  }
-  to {
-    transform: translateX(calc(100vw + 60px)) scaleX(-1);
-  }
-}
-
 .mobile-bird-3.is-flying {
   opacity: 1;
   animation: mobile-bird-fly-fast 2.2s linear forwards;
 }
 
-@media (max-width: 1000px) and (prefers-reduced-motion: reduce) {
-  .mobile-bird,
-  .mobile-bird img {
-    animation: none;
+@keyframes mobile-bird-fly-fast {
+  from {
+    transform: translateX(0) scaleX(-1);
+  }
+  to {
+    transform: translateX(var(--fly-distance, 300px)) scaleX(-1);
   }
 }
 
@@ -1809,5 +1797,12 @@ ol {
   100% {
     opacity: 0;
     transform: translateY(-40px);
+  }
+}
+
+@media (max-width: 1000px) and (prefers-reduced-motion: reduce) {
+  .mobile-bird,
+  .mobile-bird img {
+    animation: none;
   }
 }
