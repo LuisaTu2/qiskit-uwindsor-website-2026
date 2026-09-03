@@ -147,27 +147,68 @@
   });
 
   /* ---------- Mobile bird tap game ---------- */
-  var mobileBird = document.getElementById("mobileBird");
+  var STORAGE_KEY = "qff2026-bird-score";
+  var scoreDisplay = document.getElementById("birdScoreDisplay");
+  var birds = document.querySelectorAll(".mobile-bird");
 
-  if (mobileBird) {
-    mobileBird.style.pointerEvents = "auto";
-    mobileBird.style.cursor = "pointer";
+  function getScore() {
+    return parseInt(localStorage.getItem(STORAGE_KEY), 10) || 0;
+  }
 
-    mobileBird.addEventListener("click", function () {
+  function setScore(value) {
+    localStorage.setItem(STORAGE_KEY, String(value));
+    if (scoreDisplay)
+      scoreDisplay.textContent = "Total qubits entangled: " + value;
+  }
+
+  setScore(getScore());
+
+  birds.forEach(function (bird) {
+    bird.style.pointerEvents = "auto";
+    bird.style.cursor = "pointer";
+
+    bird.addEventListener("click", function () {
+      var points = parseInt(bird.getAttribute("data-points"), 10) || 0;
+      var newScore = getScore() + points;
+      setScore(newScore);
+
       var popup = document.createElement("div");
       popup.className = "bird-score-popup";
-      popup.textContent = "+10";
+      popup.textContent = "+" + points;
 
-      var rect = mobileBird.getBoundingClientRect();
-      var parentRect = mobileBird.offsetParent.getBoundingClientRect();
+      var rect = bird.getBoundingClientRect();
+      var parentRect = bird.offsetParent.getBoundingClientRect();
       popup.style.left = rect.left - parentRect.left + rect.width / 2 + "px";
       popup.style.top = rect.top - parentRect.top + "px";
 
-      mobileBird.offsetParent.appendChild(popup);
+      bird.offsetParent.appendChild(popup);
 
       setTimeout(function () {
         popup.remove();
       }, 900);
     });
+  });
+
+  /* ---------- Rare bonus bird ---------- */
+  var rareBird = document.getElementById("rareBird");
+
+  if (rareBird) {
+    function launchRareBird() {
+      rareBird.classList.add("is-flying");
+
+      setTimeout(function () {
+        rareBird.classList.remove("is-flying");
+      }, 2200);
+    }
+
+    function scheduleRareBird() {
+      var delay = 8000 + Math.random() * 1000;
+      setTimeout(function () {
+        launchRareBird();
+        scheduleRareBird();
+      }, delay);
+    }
+
+    scheduleRareBird();
   }
 })();
