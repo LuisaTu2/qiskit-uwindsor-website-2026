@@ -1416,3 +1416,69 @@ ol {
     opacity: 0;
   }
 }
+
+.sponsors {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+@media (max-width: 760px) {
+  .sponsors {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sponsors {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+.sponsor {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.sponsor-logo {
+  width: 100%;
+  padding: 12px;
+  margin: 0;
+  border-radius: 8px;
+  background: #f1f4fa;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  transition: transform 0.2s var(--ease);
+}
+
+.sponsor-logo:hover {
+  transform: translateY(-3px);
+  text-decoration: none;
+}
+
+.sponsor-logo img {
+  max-height: 100px;
+}
+
+.sponsor-name {
+  padding-left: 5%;
+  margin: 0;
+}
+
+.sponsor-caption {
+  margin-top: 10px;
+  text-align: center;
+  font: 500 11px/1 var(--font-mono);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
