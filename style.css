@@ -1718,9 +1718,10 @@ ol {
 
   .mobile-bird-3 {
     top: 60px;
-    width: 45px;
+    width: 60px;
     left: -60px;
     opacity: 0;
+    z-index: 2;
     animation: none;
   }
 
