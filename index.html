@@ -8,11 +8,18 @@
       name="description"
       content="A two-day quantum computing festival at the University of Windsor with workshops, a hackathon, and mentors from IBM Quantum and PINQ."
     />
-    <link
+    <!-- <link
       rel="icon"
       href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjggMTI4IiByb2xlPSJpbWciIGFyaWEtbGFiZWw9Ikluc3RpdHV0aW9uIGxvZ28gcGxhY2Vob2xkZXIiPgogIDxyZWN0IHdpZHRoPSIxMjgiIGhlaWdodD0iMTI4IiByeD0iMTIiIGZpbGw9IiMxNTE4NDMiIHN0cm9rZT0iIzMzRTFFMSIgc3Ryb2tlLXdpZHRoPSIyIi8+CiAgPGcgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjQjU3QkZGIiBzdHJva2Utd2lkdGg9IjMiPgogICAgPGNpcmNsZSBjeD0iNjQiIGN5PSI1NiIgcj0iMjAiLz4KICAgIDxlbGxpcHNlIGN4PSI2NCIgY3k9IjU2IiByeD0iMzQiIHJ5PSIxMiIvPgogICAgPGVsbGlwc2UgY3g9IjY0IiBjeT0iNTYiIHJ4PSIzNCIgcnk9IjEyIiB0cmFuc2Zvcm09InJvdGF0ZSg2MCA2NCA1NikiLz4KICA8L2c+CiAgPGNpcmNsZSBjeD0iNjQiIGN5PSI1NiIgcj0iNSIgZmlsbD0iIzMzRTFFMSIvPgogIDx0ZXh0IHg9IjY0IiB5PSIxMDYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSInSUJNIFBsZXggTW9ubycsIHVpLW1vbm9zcGFjZSwgbW9ub3NwYWNlIgogICAgICAgIGZvbnQtc2l6ZT0iMTMiIGxldHRlci1zcGFjaW5nPSIxIiBmaWxsPSIjOEE4RkI5Ij5MT0dPPC90ZXh0Pgo8L3N2Zz4K"
       type="image/svg+xml"
+    /> -->
+    <link
+      rel="icon"
+      href="assets/qiskit-2.png"
+      type="image/png"
+      sizes="32x32"
     />
+    <link rel="apple-touch-icon" href="assets/qiskit-2.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="style.css" />
@@ -22,7 +29,7 @@
     />
   </head>
   <body>
-    <a class="skip-link" href="#main">Skip to content</a>
+    <!-- <a class="skip-link" href="#main">Skip to content</a> -->
 
     <!-- ============ HEADER ============ -->
     <header class="site-header" id="siteHeader">
@@ -38,7 +45,7 @@
         <!-- ============ NAVIGATION ============ -->
         <nav class="site-nav" id="siteNav" aria-label="Main">
           <ul>
-            <li><a href="#home">Home</a></li>
+            <!-- <li><a href="#home">Home</a></li> -->
 
             <li class="has-dropdown">
               <a href="#about">About</a>
@@ -215,7 +222,11 @@
               <div class="hero-detail">📍 University of Windsor</div>
             </div>
             <div class="hero-actions">
-              <a class="btn btn-primary btn-lg">Register</a>
+              <a
+                class="btn btn-primary btn-lg tooltip"
+                data-tooltip="Opening soon!"
+                >Register</a
+              >
               <a class="btn btn-ghost btn-lg" href="#schedule">Schedule</a>
             </div>
 
@@ -342,9 +353,7 @@
             </p>
             <figure class="about-img">
               <img src="assets/uwindsor-fall.jpg" alt="2025 memory" />
-              <figcaption>
-                University of Windsor, Fall Fest 2025 participants
-              </figcaption>
+              <figcaption>University of Windsor campus in the fall</figcaption>
             </figure>
           </div>
 
@@ -481,7 +490,10 @@
                 <div class="schedule-title">
                   Quantum Games & Interactive Activities
                 </div>
-                <div class="schedule-meta">Playing with qubits!</div>
+                <div class="schedule-meta">
+                  A qubit wanted to play hide and seek, but wasn't sure of its
+                  position
+                </div>
               </div>
             </li>
             <li class="schedule-item">
@@ -497,7 +509,9 @@
                 <div class="schedule-title">
                   Hackathon Presentations & Judging
                 </div>
-                <div class="schedule-meta">Learning and Applying</div>
+                <div class="schedule-meta">
+                  A qubit had such intense stage fright, it collapsed
+                </div>
               </div>
             </li>
             <li class="schedule-item">
@@ -505,7 +519,9 @@
               <div class="schedule-details">
                 <div class="schedule-title">Awards and Closing Ceremony</div>
                 <div class="schedule-meta">
-                  Let's stay entangled till next year!
+                  And the award for the most coherent qubit goes to... <br />The
+                  waveFUNction collapses here. See you next year. Stay
+                  entangled, stay coherent.
                 </div>
               </div>
             </li>
@@ -863,7 +879,7 @@
                   Software engineer by day, entangled qubit by midnight. I'm
                   excited to be part of Windsor's 2026 Qiskit Fall Fest,
                   learning Qiskit along the way and seeing all of your hackathon
-                  submission. Can't wait to meet everyone!
+                  projects. Can't wait to meet everyone!
                 </div>
                 <div class="team-member-socials">
                   <a

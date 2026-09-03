@@ -1511,38 +1511,54 @@ ol {
 .schedule-list {
   max-width: 800px;
   display: grid;
+  gap: 16px;
   margin-bottom: 48px;
-  background: #ffffff;
-  border-radius: 12px;
-}
-
-@media (min-width: 1000px) {
-  .schedule-list {
-    gap: 14px;
-  }
 }
 
 .schedule-item {
+  position: relative;
   display: flex;
-  gap: 20px;
-  align-items: flex-start;
-  padding: 10px 22px;
+  align-items: center;
+  gap: 32px;
+  /* background: linear-gradient(180deg, #ffffff 0%, #f4f7fd 100%); */
+  /* background: linear-gradient(135deg, #fff5f9 0%, var(--soft-purple) 100%); */
+  /* background: linear-gradient(160deg, var(--soft-blue) 0%, #ffffff 60%); */
+  background: linear-gradient(135deg, #eef3fc 0%, #cedcf9 100%);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.6) inset,
+    0 2px 10px -4px rgba(49, 19, 94, 0.12);
+  border: 1px solid var(--medium-blue);
+  border-radius: 10px;
+  padding: 12px 26px 12px 34px;
+  overflow: hidden;
+  /* box-shadow: 0 2px 10px -4px rgba(49, 19, 94, 0.12); */
   transition:
     border-color 0.2s var(--ease),
-    background 0.2s var(--ease),
+    box-shadow 0.2s var(--ease),
     transform 0.2s var(--ease);
 }
+
+.schedule-item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 8px;
+  background: var(--blue-bird);
+}
+
 .schedule-item:hover {
-  /* border-color: var(--blue-bird); */
-  /* background: var(--soft-purple); */
-  /* transform: translateY(-2px); */
+  border-color: var(--blue-bird);
+  box-shadow: 0 8px 20px -6px rgba(69, 137, 255, 0.28);
+  transform: translateY(-3px);
 }
 
 .schedule-time {
   flex: 0 0 120px;
   font: 600 15px/1.3 var(--font-mono);
   letter-spacing: 0.05em;
-  color: var(--blue-bird);
+  color: #5f4688;
   padding-top: 5px;
 }
 
@@ -1553,24 +1569,80 @@ ol {
 .schedule-title {
   font-family: var(--font-display);
   font-size: 1.05rem;
-  font-weight: 600;
+  font-weight: 700;
   color: var(--indigo);
-  /* margin-bottom: 4px; */
+  margin-bottom: 4px;
 }
 
 .schedule-meta {
-  font-size: 0.88rem;
-  color: var(--grey);
+  font-size: 0.92rem;
+  /* color: var(--grey); */
+  color: #6c627c;
 }
 
 /* Stack on small screens */
 @media (max-width: 600px) {
   .schedule-item {
     flex-direction: column;
-    gap: 6px;
-    padding: 16px 18px;
+    align-items: flex-start;
+    gap: 8px;
+    padding: 18px 20px 18px 28px;
   }
   .schedule-time {
     flex: none;
   }
+}
+
+/* TOOLTIP */
+.tooltip {
+  position: relative;
+}
+
+.tooltip::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: calc(100% + 10px);
+  left: 50%;
+  transform: translateX(-50%) translateY(4px);
+  background: var(--indigo);
+  color: #fff;
+  font: 600 12px/1 var(--font-body);
+  white-space: nowrap;
+  padding: 8px 12px;
+  border-radius: 6px;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition:
+    opacity 0.18s var(--ease),
+    transform 0.18s var(--ease),
+    visibility 0.18s var(--ease);
+  z-index: 20;
+}
+
+.tooltip::before {
+  content: "";
+  position: absolute;
+  bottom: calc(100% + 4px);
+  left: 50%;
+  transform: translateX(-50%) translateY(4px);
+  border: 6px solid transparent;
+  border-top-color: var(--indigo);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition:
+    opacity 0.18s var(--ease),
+    transform 0.18s var(--ease),
+    visibility 0.18s var(--ease);
+  z-index: 20;
+}
+
+.tooltip:hover::after,
+.tooltip:hover::before,
+.tooltip:focus-visible::after,
+.tooltip:focus-visible::before {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
 }
