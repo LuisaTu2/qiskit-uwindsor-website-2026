@@ -488,6 +488,12 @@ ol {
   margin: 0;
 }
 
+@media (max-width: 1000px) {
+  .hero-media {
+    display: none;
+  }
+}
+
 .flamingo-funny {
   position: absolute;
   bottom: 80px;
