@@ -145,4 +145,29 @@
       });
     });
   });
+
+  /* ---------- Mobile bird tap game ---------- */
+  var mobileBird = document.getElementById("mobileBird");
+
+  if (mobileBird) {
+    mobileBird.style.pointerEvents = "auto";
+    mobileBird.style.cursor = "pointer";
+
+    mobileBird.addEventListener("click", function () {
+      var popup = document.createElement("div");
+      popup.className = "bird-score-popup";
+      popup.textContent = "+10";
+
+      var rect = mobileBird.getBoundingClientRect();
+      var parentRect = mobileBird.offsetParent.getBoundingClientRect();
+      popup.style.left = rect.left - parentRect.left + rect.width / 2 + "px";
+      popup.style.top = rect.top - parentRect.top + "px";
+
+      mobileBird.offsetParent.appendChild(popup);
+
+      setTimeout(function () {
+        popup.remove();
+      }, 900);
+    });
+  }
 })();

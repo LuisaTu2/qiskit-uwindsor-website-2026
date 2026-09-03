@@ -1657,3 +1657,90 @@ ol {
   visibility: visible;
   transform: translateX(-50%) translateY(0);
 }
+
+.mobile-hero-art {
+  display: none;
+}
+
+.mobile-hero-art {
+  display: none;
+}
+
+@media (max-width: 1000px) {
+  .mobile-hero-art {
+    display: block;
+    position: relative;
+    height: 160px;
+    overflow: hidden;
+    margin: 0 15px;
+  }
+
+  .mobile-cloud {
+    position: absolute;
+    top: 20px;
+    left: 0%;
+    padding: 0 5px;
+  }
+
+  .mobile-bird {
+    position: absolute;
+    top: 30px;
+    left: 0;
+    width: 80px;
+    height: auto;
+    transform: translateX(0) scaleX(-1);
+    animation: mobile-bird-fly 3s linear infinite;
+  }
+  .mobile-bird img {
+    width: 100%;
+    height: auto;
+    display: block;
+    animation: mobile-bird-bob 2s ease-in-out infinite;
+  }
+}
+
+@keyframes mobile-bird-fly {
+  from {
+    transform: translateX(0) scaleX(-1);
+  }
+  to {
+    transform: translateX(100vw) scaleX(-1);
+  }
+}
+
+@keyframes mobile-bird-bob {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@media (max-width: 1000px) and (prefers-reduced-motion: reduce) {
+  .mobile-bird,
+  .mobile-bird img {
+    animation: none;
+  }
+}
+
+.bird-score-popup {
+  position: absolute;
+  font: 700 18px/1 var(--font-display);
+  color: var(--blue-bird);
+  pointer-events: none;
+  animation: bird-score-float 0.9s ease-out forwards;
+  z-index: 10;
+}
+
+@keyframes bird-score-float {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+}
