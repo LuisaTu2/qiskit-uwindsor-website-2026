@@ -1256,6 +1256,9 @@ ol {
   object-position: center;
   display: block;
 }
+.team-member-photo-2 img[src*="nasrin"] {
+  object-position: center 25%;
+}
 
 .team-member-text {
   text-align: center;
