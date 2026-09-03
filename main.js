@@ -98,7 +98,7 @@
   /* ---------- Reveal on scroll ---------- */
   var revealTargets = document.querySelectorAll(
     ".section-head, .about-row, .card, .day, .hack-copy, .hack-panel, " +
-      ".speaker, .person, .faq-list details, .location-info, .location-map",
+      ".speaker, .person, .faqs-list details, .location-info, .location-map",
   );
 
   if (!reducedMotion && "IntersectionObserver" in window) {

@@ -822,7 +822,7 @@ ol {
 }
 
 /* ==========================================================================
-   FAQ
+   FAQs
    ========================================================================== */
 
 /* ==========================================================================
@@ -938,6 +938,7 @@ ol {
   font-family: var(--font-display);
   font-size: 1.25rem;
   margin-bottom: 0.2em;
+  color: var(--blue-bird);
 }
 .footer-brand .org {
   color: var(--cyan);
@@ -953,7 +954,7 @@ ol {
   font: 500 11px/1 var(--font-mono);
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--text);
+  color: var(--blue-bird);
   margin-bottom: 18px;
 }
 .footer-col ul {
