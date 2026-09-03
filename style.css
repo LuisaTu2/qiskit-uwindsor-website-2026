@@ -899,6 +899,18 @@ ol {
   color: var(--muted);
 }
 
+.location-map iframe {
+  width: 100%;
+  aspect-ratio: 800 / 520;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  transition: border-color 0.2s var(--ease);
+}
+
+.location-map:hover iframe {
+  border-color: var(--cyan);
+}
+
 /* ==========================================================================
    Register band
    ========================================================================== */
