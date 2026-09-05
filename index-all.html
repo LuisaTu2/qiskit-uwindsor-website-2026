@@ -1,0 +1,3191 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Qiskit Fall Fest 2026 – University of Windsor</title>
+    <meta
+      name="description"
+      content="A two-day quantum computing festival at the University of Windsor with workshops, a hackathon, and mentors from IBM Quantum and PINQ."
+    />
+    <!-- <link
+      rel="icon"
+      href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjggMTI4IiByb2xlPSJpbWciIGFyaWEtbGFiZWw9Ikluc3RpdHV0aW9uIGxvZ28gcGxhY2Vob2xkZXIiPgogIDxyZWN0IHdpZHRoPSIxMjgiIGhlaWdodD0iMTI4IiByeD0iMTIiIGZpbGw9IiMxNTE4NDMiIHN0cm9rZT0iIzMzRTFFMSIgc3Ryb2tlLXdpZHRoPSIyIi8+CiAgPGcgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjQjU3QkZGIiBzdHJva2Utd2lkdGg9IjMiPgogICAgPGNpcmNsZSBjeD0iNjQiIGN5PSI1NiIgcj0iMjAiLz4KICAgIDxlbGxpcHNlIGN4PSI2NCIgY3k9IjU2IiByeD0iMzQiIHJ5PSIxMiIvPgogICAgPGVsbGlwc2UgY3g9IjY0IiBjeT0iNTYiIHJ4PSIzNCIgcnk9IjEyIiB0cmFuc2Zvcm09InJvdGF0ZSg2MCA2NCA1NikiLz4KICA8L2c+CiAgPGNpcmNsZSBjeD0iNjQiIGN5PSI1NiIgcj0iNSIgZmlsbD0iIzMzRTFFMSIvPgogIDx0ZXh0IHg9IjY0IiB5PSIxMDYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSInSUJNIFBsZXggTW9ubycsIHVpLW1vbm9zcGFjZSwgbW9ub3NwYWNlIgogICAgICAgIGZvbnQtc2l6ZT0iMTMiIGxldHRlci1zcGFjaW5nPSIxIiBmaWxsPSIjOEE4RkI5Ij5MT0dPPC90ZXh0Pgo8L3N2Zz4K"
+      type="image/svg+xml"
+    /> -->
+    <link
+      rel="icon"
+      href="assets/qiskit-2.png"
+      type="image/png"
+      sizes="32x32"
+    />
+    <link rel="apple-touch-icon" href="assets/qiskit-2.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans+Condensed:wght@600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* ==========================================================================
+   Qiskit Fall Fest 2026 — University of Windsor
+   ========================================================================== */
+
+      :root {
+        /* Palette */
+        --ink: #07081a; /* page background */
+        --light-blue: #dae5fc;
+        --ink-2: #0d0f27; /* alternate section background */
+        --panel: #141737; /* cards, panels */
+        --panel-2: #1a1e45; /* raised card / hover */
+        --line: #262b5c; /* hairlines and borders */
+        --text: #31135e; /* primary text */
+        --muted: #a2a7ce; /* secondary text */
+        --muted-light: #d7d9ed; /* secondary text */
+        --violet: #7b4dff; /* primary brand */
+        --violet-soft: #b57bff;
+        --cyan: #33e1e1; /* accent / active */
+        --pink: #ff7eb6; /* accent 2 */
+
+        /* 2026 picks */
+        --flamingo: #ffafd2;
+        --bright-pink: #ff7eb6;
+        --purple: #be95ff;
+        --soft-purple: #d4bbff;
+        --indigo: #31135e;
+        --dark-indigo: #31135e;
+        --soft-blue: #dae5fc;
+        --medium-blue: #9daede;
+        --blue-bird: #4589ff;
+        --grey: #878a98;
+        --soft-grey: #bac0c6;
+
+        /* Type */
+        --font-display:
+          "IBM Plex Sans Condensed", "IBM Plex Sans", system-ui, sans-serif;
+        --font-body:
+          "IBM Plex Sans", system-ui, -apple-system, Segoe UI, sans-serif;
+        --font-mono:
+          "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+
+        /* Metrics */
+        --shell: 1180px;
+        --gutter: 24px;
+        --radius: 14px;
+        --header-h: 0px;
+        --ease: cubic-bezier(0.2, 0.7, 0.3, 1);
+      }
+
+      /* ---------- Base ---------- */
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+        scroll-padding-top: calc(var(--header-h) + 0px);
+      }
+
+      body {
+        margin: 0;
+        /* min-width: 320px; */
+        overflow-x: hidden;
+        background: var(--light-blue);
+        color: var(--text);
+        font-family: var(--font-body);
+        font-size: 16px;
+        line-height: 1.65;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      a {
+        color: var(--blue-bird);
+        text-decoration: none;
+        font-weight: bold;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4 {
+        margin: 0 0 0.5em;
+        line-height: 1.15;
+        font-weight: 600;
+      }
+      p {
+        margin: 0 0 1em;
+      }
+      ul,
+      ol {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      :focus-visible {
+        outline: 2px solid var(--cyan);
+        outline-offset: 3px;
+        border-radius: 4px;
+      }
+
+      .skip-link {
+        position: absolute;
+        left: -9999px;
+        top: 0;
+        z-index: 200;
+        background: var(--cyan);
+        color: var(--ink);
+        padding: 10px 18px;
+        font-weight: 600;
+        border-radius: 0 0 8px 0;
+      }
+      .skip-link:focus {
+        left: 0;
+      }
+
+      .shell {
+        width: 100%;
+        max-width: var(--shell);
+        margin-inline: auto;
+        padding-inline: var(--gutter);
+      }
+
+      /* ---------- Buttons ---------- */
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        padding: 11px 22px;
+        border: 1px solid transparent;
+        border-radius: 999px;
+        font: 600 15px/1 var(--font-body);
+        letter-spacing: 0.01em;
+        cursor: pointer;
+        transition:
+          transform 0.18s var(--ease),
+          background 0.18s var(--ease),
+          border-color 0.18s var(--ease),
+          color 0.18s var(--ease);
+      }
+      .btn:hover {
+        text-decoration: none;
+        transform: translateY(-2px);
+      }
+
+      .btn-primary {
+        background-color: var(--violet-soft);
+        color: #fff;
+        box-shadow: 0 8px 24px -12px rgba(123, 77, 255, 0.9);
+      }
+      .btn-primary:hover {
+        background-color: var(--violet);
+      }
+
+      .btn-ghost {
+        background: transparent;
+        color: var(--text);
+        border-color: var(--line);
+      }
+      .btn-ghost:hover {
+        border-color: var(--cyan);
+        color: var(--cyan);
+      }
+
+      .btn-lg {
+        padding: 14px 30px;
+        font-size: 16px;
+      }
+
+      /* ---------- Shared section furniture ---------- */
+
+      .section {
+        padding: 80px 0 0 0;
+      }
+
+      .section-head {
+        max-width: 720px;
+        margin-bottom: 52px;
+      }
+      .section-head h2 {
+        font-family: var(--font-display);
+        font-size: clamp(2rem, 4.2vw, 3rem);
+        font-weight: 700;
+        letter-spacing: -0.01em;
+        margin-bottom: 0.35em;
+      }
+      .section-sub {
+        color: var(--muted);
+        font-size: 1.05rem;
+        margin: 0;
+      }
+
+      .sub-head {
+        font-family: var(--font-display);
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+        padding-bottom: 0.6rem;
+        border-bottom: 1px solid var(--line);
+      }
+
+      /* ==========================================================================
+   Header
+   ========================================================================== */
+      .site-header {
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        background: none;
+        backdrop-filter: blur(14px);
+        transition: box-shadow 0.25s var(--ease);
+        transition: transform 0.3s ease;
+      }
+      .site-header.is-stuck {
+        /* box-shadow: 0 12px 32px -22px #000; */
+      }
+      .site-header.header-hidden {
+        transform: translateY(-100%);
+      }
+
+      .header-inner {
+        min-height: var(--header-h);
+        max-height: 120px;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        color: var(--text);
+      }
+      .brand:hover {
+        text-decoration: none;
+      }
+
+      .uni-logo {
+        /* padding-top: 18px; */
+        padding-left: 0;
+        height: 7rem;
+      }
+
+      .site-nav {
+        margin-top: 0rem;
+        margin-left: auto;
+      }
+      .site-nav > ul {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+      }
+      .site-nav a {
+        display: block;
+        padding: 8px 11px;
+        color: var(--muted);
+        font-size: 14.5px;
+        font-weight: 500;
+        border-radius: 8px;
+        transition:
+          color 0.18s var(--ease),
+          background 0.18s var(--ease);
+      }
+      .site-nav a:hover {
+        color: var(--indigo);
+        background: #b5ccf4;
+        text-decoration: none;
+      }
+      .site-nav a.is-active {
+        color: var(--blue-bird);
+        font-weight: 600;
+        background: #b5ccf4;
+      }
+
+      /* Menu dropdowns */
+      /* ---- About dropdown (desktop) ---- */
+      .has-dropdown {
+        position: relative;
+        display: flex;
+        align-items: center;
+      }
+      .dropdown-toggle {
+        display: none;
+        align-items: center;
+        justify-content: center;
+        background: none;
+        border: none;
+        color: var(--muted);
+        cursor: pointer;
+        padding: 8px 6px;
+        border-radius: 8px;
+      }
+      .dropdown-toggle svg {
+        transition: transform 0.18s var(--ease);
+      }
+      .dropdown {
+        position: absolute;
+        top: calc(100% + 6px);
+        left: 0;
+        min-width: 208px;
+        background: #89abe5;
+        border-radius: 10px;
+        padding: 6px;
+        display: grid;
+        gap: 2px;
+        box-shadow: 0 16px 32px -16px rgba(0, 0, 0, 0.5);
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-6px);
+        transition:
+          opacity 0.16s var(--ease),
+          transform 0.16s var(--ease),
+          visibility 0.16s var(--ease);
+        z-index: 40;
+      }
+      .dropdown a {
+        font-size: 13.5px;
+        white-space: nowrap;
+        color: white;
+      }
+      .has-dropdown:hover .dropdown,
+      .has-dropdown:focus-within .dropdown {
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+      }
+      .has-dropdown:focus-within .dropdown-toggle svg,
+      .has-dropdown:hover .dropdown-toggle svg {
+        transform: rotate(180deg);
+      }
+
+      .nav-toggle {
+        display: none;
+        width: 44px;
+        height: 44px;
+        background: transparent;
+        cursor: pointer;
+        padding: 0;
+        border: none;
+      }
+      .nav-toggle span {
+        display: block;
+        width: 19px;
+        height: 2px;
+        margin: 4px auto;
+        background: var(--soft-grey);
+        border-radius: 2px;
+        transition:
+          transform 0.25s var(--ease),
+          opacity 0.2s var(--ease);
+      }
+      .nav-toggle[aria-expanded="true"] span:nth-child(1) {
+        transform: translateY(6px) rotate(45deg);
+      }
+      .nav-toggle[aria-expanded="true"] span:nth-child(2) {
+        opacity: 0;
+      }
+      .nav-toggle[aria-expanded="true"] span:nth-child(3) {
+        transform: translateY(-6px) rotate(-45deg);
+      }
+
+      .nav-toggle[aria-expanded="true"] {
+        transform: translateY(-10px);
+      }
+
+      /* ==========================================================================
+   Hero
+   ========================================================================== */
+      .hero {
+        position: relative;
+        overflow: hidden;
+        padding: 16px 0;
+      }
+
+      .hero-inner {
+        position: relative;
+        z-index: 1;
+        display: grid;
+        grid-template-columns: 1.05fr 0.95fr;
+        gap: 56px;
+        align-items: center;
+      }
+
+      .hero h1 {
+        font-family: var(--font-display);
+        font-size: clamp(2.9rem, 6vw, 5rem);
+        font-weight: 700;
+        letter-spacing: -0.02em;
+        margin-bottom: 0.3em;
+      }
+      .hero h1 .year {
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: var(--violet-soft);
+      }
+      .hero-lede {
+        font-size: 1.3rem;
+        font-weight: 500;
+        color: var(--text);
+        margin-bottom: 0.8em;
+      }
+      .hero-text {
+        color: var(--text);
+        font-size: 1.05rem;
+        max-width: 52ch;
+      }
+
+      .hero-details {
+        font-size: 1.3em;
+        font-weight: 600;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .hero-detail {
+        font-size: 16px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+        margin: 30px 0 40px;
+      }
+
+      .hero-actions a {
+        max-width: 200px;
+      }
+
+      .hero-stats {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 18px;
+        margin: 0;
+        padding-top: 26px;
+        border-top: 1px solid var(--line);
+      }
+      .hero-stats dt {
+        font: 500 11px/1 var(--font-mono);
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: var(--muted);
+      }
+      .hero-stats dd {
+        margin: 8px 0 0;
+        font-family: var(--font-display);
+        font-size: 1.35rem;
+        font-weight: 700;
+      }
+
+      .hero-media-art {
+        /* position: relative; */
+      }
+
+      .hero-media img {
+        height: 270px;
+      }
+
+      .hero-media figcaption {
+        margin-top: 12px;
+        text-align: right;
+        font: 500 11px/1 var(--font-mono);
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        color: var(--muted);
+        opacity: 0.7;
+      }
+
+      /* HERO ANIMATION */
+      /* ---------- Flying flock behind the cloud ---------- */
+      .hero-media {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        margin: 0;
+      }
+
+      @media (max-width: 1000px) {
+        .hero-media {
+          display: none;
+        }
+      }
+
+      .flamingo-funny {
+        position: absolute;
+        bottom: 80px;
+        left: 20rem;
+        max-height: 200px;
+        transform: scaleX(-1);
+        display: inline-block;
+        animation: flamingo-jump 6s ease-in-out infinite;
+      }
+
+      @keyframes flamingo-jump {
+        0%,
+        85% {
+          transform: scaleX(-1) translateY(0);
+        }
+        90% {
+          transform: scaleX(-1) translateY(-14px);
+        }
+        95% {
+          transform: scaleX(-1) translateY(0);
+        }
+        100% {
+          transform: scaleX(-1) translateY(0);
+        }
+      }
+      @media (max-width: 1000px) {
+        .flamingo-funny {
+          display: none;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .flamingo-funny {
+          animation: none;
+        }
+        .flamingo-funny {
+          transform: scaleX(-1); /* keep the flip even with motion disabled */
+        }
+      }
+
+      .hero-cloud {
+        width: 70%;
+        margin-left: 2.5%;
+        position: relative;
+        z-index: 1;
+        animation: cloud-pulse 4s ease-in-out infinite;
+      }
+
+      @keyframes cloud-pulse {
+        0%,
+        100% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.05);
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .hero-cloud {
+          animation: none;
+        }
+      }
+
+      .hero-cloud-2 {
+        width: clamp(200px, 60vw, 340px);
+        bottom: 8rem;
+        left: clamp(1rem, 8vw, 10rem);
+        position: relative;
+        z-index: 1;
+        transform: scaleX(-1);
+        animation: cloud-pulse 6s ease-in-out infinite;
+      }
+
+      .hero-cloud-3 {
+        width: clamp(100px, 40vw, 140px);
+        bottom: 3.5rem;
+        right: 4rem;
+        position: absolute;
+        z-index: 1;
+        animation: none;
+        animation: cloud-pulse 1s ease-in-out infinite;
+      }
+
+      .sky-flock {
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+      }
+
+      .flyer {
+        z-index: 5;
+        position: absolute;
+        top: var(--top, 20%);
+        left: -155%;
+        will-change: left;
+        animation: flyRight var(--fly-duration, 18s) linear infinite;
+        animation-delay: var(--fly-delay, 0s);
+      }
+
+      .flyer.fly-left {
+        animation-name: flyLeft;
+        right: -115%;
+      }
+
+      .flyer.mirror {
+        transform: scaleX(-1);
+      }
+
+      .flyer img,
+      .flyer svg {
+        width: var(--size, 60px);
+        height: auto;
+        animation: bob var(--bob-duration, 3s) ease-in-out infinite;
+        animation-delay: var(--bob-delay, 0s);
+      }
+
+      @keyframes flyRight {
+        from {
+          left: -15%;
+        }
+        to {
+          left: 115%;
+        }
+      }
+
+      @keyframes flyLeft {
+        from {
+          left: 95%;
+        }
+        to {
+          left: -15%;
+        }
+      }
+
+      @keyframes bob {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-18px);
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .flyer,
+        .flyer img,
+        .flyer svg {
+          animation: none;
+        }
+      }
+
+      /* PEEKER */
+      .peeker {
+        position: absolute;
+        bottom: var(--peek-bottom, 50%);
+        right: var(--peek-left, 20%);
+        width: var(--peek-size, 100px);
+        animation: peek-cycle var(--peek-duration, 11s) ease-in-out infinite;
+        animation-delay: var(--peek-delay, 0s);
+      }
+
+      @media (max-width: 600px) {
+        .peeker {
+          bottom: 48% !important;
+          width: 50px !important;
+        }
+      }
+
+      .peeker img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      @keyframes peek-cycle {
+        0%,
+        72% {
+          transform: translateY(0);
+        }
+        80% {
+          transform: translateY(-34%);
+        }
+        85% {
+          transform: translateY(-38%);
+        }
+        90% {
+          transform: translateY(-34%);
+        }
+        96%,
+        100% {
+          transform: translateY(0);
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .peeker {
+          animation: none;
+        }
+      }
+
+      /* ==========================================================================
+   About
+   ========================================================================== */
+
+      .about-row {
+        display: grid;
+        grid-template-columns: 300px 1fr;
+        gap: 32px;
+        align-items: center;
+        background: var(--panel);
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        padding: 24px;
+        transition:
+          border-color 0.2s var(--ease),
+          transform 0.2s var(--ease);
+      }
+      .about-row:hover {
+        border-color: var(--violet);
+        transform: translateY(-3px);
+      }
+
+      .cards-3 {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 22px;
+      }
+
+      .card {
+        position: relative;
+        background: var(--panel);
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        padding: 30px 26px 26px;
+        transition:
+          border-color 0.2s var(--ease),
+          background 0.2s var(--ease),
+          transform 0.2s var(--ease);
+      }
+      .card:hover {
+        border-color: var(--cyan);
+        background: var(--panel-2);
+        transform: translateY(-3px);
+      }
+      .card-tag {
+        display: block;
+        margin-bottom: 14px;
+        font: 600 12px/1 var(--font-mono);
+        letter-spacing: 0.2em;
+        color: var(--cyan);
+      }
+      .card h4 {
+        font-family: var(--font-display);
+        font-size: 1.25rem;
+      }
+      .card p {
+        color: var(--muted);
+        margin: 0;
+        font-size: 0.97rem;
+      }
+
+      /* ==========================================================================
+   Schedule
+   ========================================================================== */
+
+      /* ==========================================================================
+   Hackathon
+   ========================================================================== */
+
+      .hack-lede {
+        font-size: 1.12rem;
+        color: var(--text);
+        max-width: 62ch;
+      }
+
+      /* ==========================================================================
+   Speakers
+   ========================================================================== */
+
+      /* ==========================================================================
+   People grids (faculty + team)
+   ========================================================================== */
+      .people {
+        display: grid;
+        gap: 24px;
+      }
+
+      .people-3 {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        /* align-items: stretch; */
+      }
+
+      .person {
+        text-align: center;
+        background: var(--panel);
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        padding: 24px 16px;
+        transition:
+          border-color 0.2s var(--ease),
+          background 0.2s var(--ease),
+          transform 0.2s var(--ease);
+      }
+      .person:hover {
+        border-color: var(--cyan);
+        background: var(--panel-2);
+        transform: translateY(-4px);
+      }
+      .person img {
+        width: 116px;
+        height: 116px;
+        margin: 0 auto 16px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 2px solid var(--line);
+      }
+      .person h3 {
+        font-size: 1.06rem;
+        margin-bottom: 0.3em;
+      }
+      .person .role {
+        margin: 0;
+        font-size: 0.87rem;
+        color: var(--cyan);
+      }
+      .person .org {
+        margin: 0.3em 0 0;
+        font-size: 0.84rem;
+        color: var(--muted);
+      }
+
+      /* ==========================================================================
+   FAQs
+   ========================================================================== */
+
+      /* ==========================================================================
+   Location
+   ========================================================================== */
+      .location {
+        display: grid;
+        grid-template-columns: 1fr 1.15fr;
+        gap: 38px;
+        align-items: start;
+      }
+
+      .location-info h3 {
+        font-family: var(--font-display);
+        font-size: 1.6rem;
+        margin-bottom: 1.2rem;
+      }
+      .loc-block {
+        padding-top: 22px;
+        margin-top: 22px;
+        border-top: 1px solid var(--line);
+      }
+      .loc-block:first-of-type {
+        padding-top: 0;
+        margin-top: 0;
+        border-top: 0;
+      }
+      .loc-block h4 {
+        font: 500 11px/1 var(--font-mono);
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: var(--cyan);
+        margin-bottom: 14px;
+      }
+      .loc-block address {
+        font-style: normal;
+        color: var(--muted);
+        line-height: 1.8;
+      }
+      .loc-block p {
+        color: var(--muted);
+        font-size: 0.97rem;
+      }
+      .loc-block strong {
+        color: var(--text);
+      }
+
+      .pills li {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+      }
+      .pills li::before {
+        content: "✓";
+        color: var(--cyan);
+        font-weight: 700;
+      }
+
+      .location-map {
+        margin: 0;
+      }
+      .location-map img {
+        width: 100%;
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        transition: border-color 0.2s var(--ease);
+      }
+      .location-map a:hover img {
+        border-color: var(--cyan);
+      }
+      .location-map figcaption {
+        margin-top: 12px;
+        text-align: center;
+        font-size: 0.87rem;
+        color: var(--muted);
+      }
+
+      .location-map iframe {
+        width: 100%;
+        aspect-ratio: 800 / 520;
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        transition: border-color 0.2s var(--ease);
+      }
+
+      .location-map:hover iframe {
+        border-color: var(--cyan);
+      }
+
+      /* ==========================================================================
+   Register band
+   ========================================================================== */
+      /* ==========================================================================
+   Footer
+   ========================================================================== */
+      .site-footer {
+        background: var(--ink);
+        border-top: 1px solid var(--line);
+        padding-top: 62px;
+      }
+
+      .footer-grid {
+        display: grid;
+        grid-template-columns: 1.6fr 1fr 1fr 1fr;
+        gap: 40px;
+        padding-bottom: 48px;
+      }
+      .footer-brand img {
+        border-radius: 10px;
+        margin-bottom: 16px;
+      }
+      .footer-brand h3 {
+        font-family: var(--font-display);
+        font-size: 1.25rem;
+        margin-bottom: 0.2em;
+        color: var(--blue-bird);
+      }
+      .footer-brand .org {
+        color: var(--cyan);
+        font-size: 0.93rem;
+        margin-bottom: 1em;
+      }
+      .footer-brand p {
+        color: var(--muted);
+        font-size: 0.93rem;
+      }
+
+      .footer-col h4 {
+        font: 500 11px/1 var(--font-mono);
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: var(--blue-bird);
+        margin-bottom: 18px;
+      }
+      .footer-col ul {
+        display: grid;
+        gap: 11px;
+      }
+      .footer-col li,
+      .footer-col a {
+        color: var(--muted);
+        font-size: 0.93rem;
+      }
+      .footer-col a:hover {
+        color: var(--cyan);
+      }
+
+      .partner-logos {
+        gap: 14px;
+      }
+      .partner-logos img {
+        width: 132px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+      }
+
+      .footer-base {
+        padding: 22px 24px;
+        border-top: 1px solid var(--line);
+      }
+      .footer-base p {
+        margin: 0;
+        font-size: 0.87rem;
+        color: var(--muted);
+        text-align: center;
+      }
+
+      /* ---------- Scroll to top ---------- */
+      .to-top {
+        position: fixed;
+        right: 22px;
+        bottom: 22px;
+        z-index: 90;
+        width: 46px;
+        height: 46px;
+        display: grid;
+        place-items: center;
+        border: 1px solid var(--soft-grey);
+        border: none;
+        border-radius: 50%;
+        background: var(--purple);
+        color: white;
+        cursor: pointer;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(10px);
+        transition:
+          opacity 0.25s var(--ease),
+          transform 0.25s var(--ease),
+          visibility 0.25s var(--ease),
+          border-color 0.2s var(--ease);
+      }
+      .to-top.is-visible {
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+      }
+      .to-top:hover {
+        border-color: var(--blue-bird);
+        color: var(--blue-bird);
+      }
+
+      /* ---------- Scroll reveal ---------- */
+      .reveal {
+        opacity: 0;
+        transform: translateY(22px);
+      }
+      .reveal.is-in {
+        opacity: 1;
+        transform: none;
+        transition:
+          opacity 0.6s var(--ease),
+          transform 0.6s var(--ease);
+      }
+
+      /* ==========================================================================
+   Responsive
+   ========================================================================== */
+      @media (max-width: 1100px) {
+        .people-3 {
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+        .footer-grid {
+          grid-template-columns: 1fr 1fr;
+          gap: 34px;
+        }
+      }
+
+      @media (max-width: 980px) {
+        .site-nav {
+          position: fixed;
+          inset: var(--header-h) 0 auto 0;
+          display: grid;
+          gap: 8px;
+          padding: 18px var(--gutter) 26px;
+          background: var(--ink-2);
+          border-bottom: 1px solid var(--line);
+          transform: translateY(-8px);
+          opacity: 0;
+          visibility: hidden;
+          pointer-events: none;
+          transition:
+            opacity 0.22s var(--ease),
+            transform 0.22s var(--ease),
+            visibility 0.22s var(--ease);
+          max-height: calc(100dvh - var(--header-h));
+          overflow-y: auto;
+        }
+        .site-nav.is-open {
+          opacity: 1;
+          visibility: visible;
+          transform: none;
+          pointer-events: auto;
+        }
+        .site-nav > ul {
+          flex-direction: column;
+          align-items: stretch;
+          gap: 2px;
+        }
+        .site-nav a {
+          padding: 13px 14px;
+          font-size: 1rem;
+        }
+
+        .nav-toggle {
+          display: block;
+          margin-left: auto;
+        }
+
+        .hero-inner {
+          grid-template-columns: 1fr;
+          /* gap: 44px; */
+        }
+        .hero-media {
+          order: 1;
+        }
+
+        .hack {
+          grid-template-columns: 1fr;
+        }
+        .hack-panel {
+          position: static;
+        }
+        .location {
+          grid-template-columns: 1fr;
+        }
+
+        /* ---- About dropdown (mobile): always expanded ---- */
+        .has-dropdown {
+          flex-direction: column;
+          align-items: stretch;
+        }
+        .dropdown-toggle {
+          display: none; /* no toggle needed, submenu is always visible */
+        }
+        .dropdown {
+          position: static;
+          min-width: 0;
+          background: none;
+          border: none;
+          padding: 2px 0 2px 14px;
+          box-shadow: none;
+          opacity: 1;
+          visibility: visible;
+          transform: none;
+          transition: none;
+          display: grid;
+          gap: 2px;
+        }
+        .dropdown a {
+          font-size: 0.92rem;
+          color: var(--muted);
+          padding: 10px 14px;
+        }
+      }
+
+      @media (max-width: 760px) {
+        .section {
+          padding: 24px 0;
+        }
+        .section-head {
+          margin-bottom: 38px;
+        }
+        .cards-3 {
+          grid-template-columns: 1fr;
+        }
+        .about-row {
+          grid-template-columns: 1fr;
+          gap: 20px;
+        }
+        .people-3 {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+        .hero-stats {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+          gap: 22px 18px;
+        }
+        .footer-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media (max-width: 430px) {
+        :root {
+          --gutter: 18px;
+        }
+        .people-3 {
+          grid-template-columns: 1fr;
+        }
+        .hero-actions .btn {
+          width: 100%;
+        }
+      }
+
+      /* ---------- Motion preferences ---------- */
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+        *,
+        *::before,
+        *::after {
+          animation-duration: 0.001ms !important;
+          transition-duration: 0.001ms !important;
+        }
+        .reveal {
+          opacity: 1;
+          transform: none;
+        }
+      }
+
+      /* ---------- Print ---------- */
+      @media print {
+        .site-header,
+        .to-top,
+        .hero-grid,
+        .hero-media,
+        body {
+          background: #fff;
+          color: #000;
+        }
+      }
+
+      /* TEAM CARDS */
+      .team-member {
+        width: 100%;
+        /* height: 100%; */
+        /* background-color: red; */
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 18px;
+        align-items: center;
+        border: 1px black solid;
+        border-radius: 10%;
+      }
+
+      .team-member-photo {
+        margin-top: 24px;
+        width: 150px;
+        height: 150px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        border-radius: 50%;
+        background-color: rgb(156, 186, 186);
+      }
+
+      .team-member-photo img {
+        max-width: 70%;
+        max-height: 70%;
+        object-fit: contain;
+        display: block;
+        object-position: center;
+      }
+
+      .team-member-photo-2 {
+        margin-top: 24px;
+        width: 150px;
+        height: 150px;
+        position: relative;
+        overflow: hidden;
+        border-radius: 50%;
+        background-color: rgb(156, 186, 186);
+      }
+
+      .team-member-photo-2 img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        object-position: center;
+        display: block;
+      }
+      .team-member-photo-2 img[src*="nasrin"] {
+        object-position: center 25%;
+      }
+
+      .team-member-text {
+        flex: 1;
+        text-align: center;
+        width: 90%;
+        margin-left: 5%;
+        display: flex;
+        flex-direction: column;
+        padding: 18px;
+      }
+
+      .team-member-name {
+        font-size: 18px;
+        color: var(--violet);
+      }
+
+      .team-member-position {
+        text-transform: uppercase;
+        font-size: 12px;
+        color: rgb(56, 56, 150);
+        font-weight: 600;
+      }
+      .team-member-bio {
+        text-align: left;
+        flex: 1;
+      }
+
+      .highlight {
+        font-weight: bold;
+        color: var(--blue-bird);
+      }
+      .highlight a:hover {
+        font-weight: bold;
+        color: var(--violet-soft);
+      }
+      .team-member-socials {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 12px;
+        margin-top: 12px;
+        background: none; /* remove the red background */
+      }
+
+      .team-member-socials a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        background-color: #f0f0f0;
+        transition:
+          background-color 0.2s ease,
+          transform 0.2s ease;
+      }
+
+      .team-member-socials a:hover {
+        background-color: #e0e0e0;
+        transform: translateY(-2px);
+      }
+
+      .team-member-socials svg {
+        width: 16px;
+        height: 16px;
+      }
+
+      /* MORE ABOUT */
+      .about-img {
+        width: 100%;
+        margin: 0;
+      }
+      .about-img img {
+        width: 80%;
+        margin-left: 10%;
+        height: auto;
+        border-radius: var(--radius);
+        display: block;
+      }
+
+      @media (max-width: 600px) {
+        .about-img img {
+          width: 100%;
+          margin-left: 0;
+        }
+      }
+      .about-img figcaption {
+        margin-top: 16px;
+        font-size: 0.87rem;
+        color: var(--muted);
+        text-align: center;
+      }
+      .sub-head-text {
+        margin-bottom: 32px;
+      }
+
+      .hero-copy {
+        margin-top: 3rem;
+      }
+      @media (max-width: 1000px) {
+        .hero-copy {
+          margin-top: 0rem;
+        }
+      }
+
+      .branch-bird {
+        position: absolute;
+        bottom: 4rem;
+        left: 0rem;
+        z-index: 5;
+        transform: scaleX(-1);
+      }
+
+      .branch-bird img {
+        width: clamp(120px, 25vw, 170px);
+        height: auto;
+        display: block;
+      }
+
+      .rotator {
+        position: absolute;
+        width: clamp(120px, 25vw, 120px);
+        height: 40px;
+        bottom: 80px;
+        right: 60px;
+      }
+
+      .rotator-item {
+        position: absolute;
+        inset: 0;
+        opacity: 0;
+        z-index: 1000;
+        animation: rotate-fade 10s infinite;
+      }
+
+      .rotator-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain; /* keeps the image proportional, no stretching/cropping */
+        display: block;
+      }
+
+      .item-1 {
+        animation-delay: 0s;
+      }
+      .item-2 {
+        animation-delay: 2s;
+      }
+      .item-3 {
+        animation-delay: 4s;
+      }
+      .item-4 {
+        animation-delay: 6s;
+      }
+      .item-5 {
+        animation-delay: 8s;
+      }
+
+      @keyframes rotate-fade {
+        0% {
+          opacity: 0;
+        }
+        6% {
+          opacity: 1;
+        }
+        19% {
+          opacity: 1;
+        }
+        25% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 0;
+        }
+      }
+
+      .sponsors {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 24px;
+      }
+      @media (max-width: 760px) {
+        .sponsors {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+          gap: 24px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .sponsors {
+          grid-template-columns: 1fr;
+          gap: 20px;
+        }
+      }
+
+      .sponsor {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+      }
+
+      .sponsor-logo {
+        width: 100%;
+        padding: 12px;
+        margin: 0;
+        border-radius: 8px;
+        /* background: #eceff5; */
+        background: linear-gradient(to bottom, #eef3fc 0%, #bfcfed 100%);
+        box-shadow:
+          0 1px 0 rgba(255, 255, 255, 0.6) inset,
+          0 2px 10px -4px rgba(49, 19, 94, 0.12);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-decoration: none;
+        transition:
+          box-shadow 0.2s var(--ease),
+          transform 0.2s var(--ease);
+      }
+      .sponsor-logo:hover {
+        box-shadow: 0 8px 20px -6px rgba(69, 137, 255, 0.28);
+        transform: translateY(-3px);
+        text-decoration: none;
+      }
+
+      .sponsor-logo img {
+        max-height: 100px;
+      }
+
+      .sponsor-name {
+        padding-left: 5%;
+        margin: 0;
+      }
+
+      .sponsor-caption {
+        margin-top: 10px;
+        text-align: center;
+        font: 500 12px/1 var(--font-mono);
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        /* color: var(--muted); */
+      }
+
+      /* ==========================================================================
+   Schedule
+   ========================================================================== */
+      .schedule-list {
+        max-width: 800px;
+        display: grid;
+        gap: 16px;
+        margin-bottom: 48px;
+      }
+
+      .schedule-item {
+        position: relative;
+        display: flex;
+        align-items: center;
+        gap: 32px;
+        /* background: linear-gradient(180deg, #ffffff 0%, #f4f7fd 100%); */
+        /* background: linear-gradient(135deg, #fff5f9 0%, var(--soft-purple) 100%); */
+        /* background: linear-gradient(160deg, var(--soft-blue) 0%, #ffffff 60%); */
+        background: linear-gradient(135deg, #eef3fc 0%, #cedcf9 100%);
+        box-shadow:
+          0 1px 0 rgba(255, 255, 255, 0.6) inset,
+          0 2px 10px -4px rgba(49, 19, 94, 0.12);
+        border: 1px solid var(--medium-blue);
+        border-radius: 10px;
+        padding: 12px 26px 12px 34px;
+        overflow: hidden;
+        /* box-shadow: 0 2px 10px -4px rgba(49, 19, 94, 0.12); */
+        transition:
+          border-color 0.2s var(--ease),
+          box-shadow 0.2s var(--ease),
+          transform 0.2s var(--ease);
+      }
+
+      .schedule-item::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 8px;
+        background: var(--blue-bird);
+      }
+
+      .schedule-item:hover {
+        border-color: var(--blue-bird);
+        box-shadow: 0 8px 20px -6px rgba(69, 137, 255, 0.28);
+        transform: translateY(-3px);
+      }
+
+      .schedule-time {
+        flex: 0 0 120px;
+        font: 600 15px/1.3 var(--font-mono);
+        letter-spacing: 0.05em;
+        color: #5f4688;
+        padding-top: 5px;
+      }
+
+      .schedule-details {
+        flex: 1;
+      }
+
+      .schedule-title {
+        font-family: var(--font-display);
+        font-size: 1.05rem;
+        font-weight: 700;
+        color: var(--indigo);
+        margin-bottom: 4px;
+      }
+
+      .schedule-meta {
+        font-size: 0.92rem;
+        /* color: var(--grey); */
+        color: #6c627c;
+      }
+
+      /* Stack on small screens */
+      @media (max-width: 600px) {
+        .schedule-item {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 8px;
+          padding: 18px 20px 18px 28px;
+        }
+        .schedule-time {
+          flex: none;
+        }
+      }
+
+      /* TOOLTIP */
+      .tooltip {
+        position: relative;
+      }
+
+      .tooltip::after {
+        content: attr(data-tooltip);
+        position: absolute;
+        bottom: calc(100% + 10px);
+        left: 50%;
+        transform: translateX(-50%) translateY(4px);
+        background: var(--indigo);
+        color: #fff;
+        font: 600 12px/1 var(--font-body);
+        white-space: nowrap;
+        padding: 8px 12px;
+        border-radius: 6px;
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transition:
+          opacity 0.18s var(--ease),
+          transform 0.18s var(--ease),
+          visibility 0.18s var(--ease);
+        z-index: 20;
+      }
+
+      .tooltip::before {
+        content: "";
+        position: absolute;
+        bottom: calc(100% + 4px);
+        left: 50%;
+        transform: translateX(-50%) translateY(4px);
+        border: 6px solid transparent;
+        border-top-color: var(--indigo);
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transition:
+          opacity 0.18s var(--ease),
+          transform 0.18s var(--ease),
+          visibility 0.18s var(--ease);
+        z-index: 20;
+      }
+
+      .tooltip:hover::after,
+      .tooltip:hover::before,
+      .tooltip:focus-visible::after,
+      .tooltip:focus-visible::before {
+        opacity: 1;
+        visibility: visible;
+        transform: translateX(-50%) translateY(0);
+      }
+
+      .mobile-hero-art {
+        display: none;
+      }
+
+      .mobile-hero-art {
+        display: none;
+      }
+      .mobile-hero-art {
+        display: none;
+      }
+
+      @media (max-width: 1000px) {
+        .mobile-hero-art {
+          display: block;
+          position: relative;
+          height: 200px;
+          overflow: hidden;
+          margin: 0 15px;
+        }
+
+        .mobile-cloud {
+          position: absolute;
+          top: 20px;
+          left: 0%;
+          padding: 0 5px;
+        }
+
+        .mobile-bird {
+          position: absolute;
+          left: 0;
+          width: 80px;
+          height: auto;
+          transform: translateX(0) scaleX(-1);
+        }
+
+        .mobile-bird img {
+          width: 100%;
+          height: auto;
+          display: block;
+          animation: mobile-bird-bob 2s ease-in-out infinite;
+        }
+
+        .mobile-bird-1 {
+          top: 30px;
+          width: 110px;
+          animation: mobile-bird-fly 3s linear infinite;
+        }
+
+        .mobile-bird-2 {
+          top: 100px;
+          width: 80px;
+          left: auto;
+          right: 0;
+          transform: translateX(0) scaleX(1);
+          animation: mobile-bird-fly-2 8s linear infinite;
+          animation-delay: 1.2s;
+        }
+
+        .mobile-bird-3 {
+          top: 60px;
+          width: 60px;
+          left: -60px;
+          opacity: 0;
+          z-index: 2;
+          animation: none;
+        }
+      }
+
+      @keyframes mobile-bird-fly {
+        from {
+          transform: translateX(0) scaleX(-1);
+        }
+        to {
+          transform: translateX(100vw) scaleX(-1);
+        }
+      }
+
+      @keyframes mobile-bird-fly-2 {
+        from {
+          transform: translateX(0) scaleX(1);
+        }
+        to {
+          transform: translateX(-100vw) scaleX(1);
+        }
+      }
+
+      @keyframes mobile-bird-bob {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-20px);
+        }
+      }
+
+      .mobile-bird-3.is-flying {
+        opacity: 1;
+        animation: mobile-bird-fly-fast 2.2s linear forwards;
+      }
+
+      @keyframes mobile-bird-fly-fast {
+        from {
+          transform: translateX(0) scaleX(-1);
+        }
+        to {
+          transform: translateX(var(--fly-distance, 300px)) scaleX(-1);
+        }
+      }
+
+      .bird-score-display {
+        position: absolute;
+        bottom: 0px;
+        right: 8px;
+        font: 700 13px/1 var(--font-mono);
+        color: var(--indigo);
+        background: rgba(255, 255, 255, 0.7);
+        padding: 6px 12px;
+        border-radius: 999px;
+        z-index: 15;
+      }
+
+      .bird-score-popup {
+        position: absolute;
+        font: 700 18px/1 var(--font-display);
+        color: var(--blue-bird);
+        pointer-events: none;
+        animation: bird-score-float 0.9s ease-out forwards;
+        z-index: 10;
+      }
+
+      @keyframes bird-score-float {
+        0% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+        100% {
+          opacity: 0;
+          transform: translateY(-40px);
+        }
+      }
+
+      @media (max-width: 1000px) and (prefers-reduced-motion: reduce) {
+        .mobile-bird,
+        .mobile-bird img {
+          animation: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <a class="skip-link" href="#main">Skip to content</a> -->
+
+    <!-- ============ HEADER ============ -->
+    <header class="site-header" id="siteHeader">
+      <div class="shell header-inner">
+        <a class="brand" href="https://www.uwindsor.ca/">
+          <img
+            src="assets/uwindsor-logo-transparent.png"
+            alt="University of Windsor"
+            class="uni-logo"
+          />
+        </a>
+
+        <!-- ============ NAVIGATION ============ -->
+        <nav class="site-nav" id="siteNav" aria-label="Main">
+          <ul>
+            <!-- <li><a href="#home">Home</a></li> -->
+
+            <li class="has-dropdown">
+              <a href="#about">About</a>
+              <button
+                class="dropdown-toggle"
+                aria-expanded="false"
+                aria-label="Toggle About submenu"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  width="12"
+                  height="12"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M6 9l6 6 6-6"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+              <ul class="dropdown">
+                <li><a href="#about-fallfest">What is Fall Fest?</a></li>
+                <li><a href="#about-tenyears">Ten Years On The Cloud</a></li>
+                <li><a href="#about-qiskit">What is Qiskit?</a></li>
+              </ul>
+            </li>
+
+            <li class="has-dropdown">
+              <a href="#schedule">Schedule</a>
+              <button
+                class="dropdown-toggle"
+                aria-expanded="false"
+                aria-label="Toggle Schedule submenu"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  width="12"
+                  height="12"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M6 9l6 6 6-6"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+              <ul class="dropdown">
+                <li><a href="#schedule-day-1">Day 1</a></li>
+                <li><a href="#schedule-day-2">Day 2</a></li>
+                <li><a href="#schedule-hackathon">Hackathon</a></li>
+              </ul>
+            </li>
+
+            <li><a href="#speakers">Speakers</a></li>
+            <li><a href="#sponsors">Sponsors</a></li>
+
+            <li class="has-dropdown">
+              <a href="#team">Team</a>
+              <button
+                class="dropdown-toggle"
+                aria-expanded="false"
+                aria-label="Toggle Team submenu"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  width="12"
+                  height="12"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M6 9l6 6 6-6"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+              <ul class="dropdown">
+                <li><a href="#team-faculty">Faculty</a></li>
+                <li><a href="#team-organizers">Organizing Team</a></li>
+              </ul>
+            </li>
+
+            <li><a href="#code-conduct">Code of Conduct </a></li>
+
+            <li class="has-dropdown">
+              <a href="#faqs">FAQs</a>
+              <button
+                class="dropdown-toggle"
+                aria-expanded="false"
+                aria-label="Toggle Team submenu"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  width="12"
+                  height="12"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M6 9l6 6 6-6"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+              <ul class="dropdown">
+                <li><a href="#faqs-location">Location</a></li>
+                <li><a href="#faqs-eligibility">Can I Join?</a></li>
+                <li>
+                  <a href="#faqs-what-to-bring">What to Bring</a>
+                </li>
+                <li>
+                  <a href="#faqs-photo-release-form">Photo Release Form </a>
+                </li>
+                <li>
+                  <a href="#faqs-past-events">Past Events </a>
+                </li>
+                <li><a href="#faqs-contact">Contact</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+
+        <button
+          class="nav-toggle"
+          id="navToggle"
+          aria-expanded="false"
+          aria-controls="siteNav"
+          aria-label="Open menu"
+        >
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+
+    <main id="main">
+      <!-- ============ HERO ============ -->
+      <section class="hero" id="home">
+        <div class="shell hero-inner">
+          <div class="hero-copy">
+            <h1>Qiskit Fall Fest <span class="year">2026</span></h1>
+            <p class="hero-lede">
+              <!-- IBM · University of Windsor · Quantum Computing -->
+            </p>
+            <p class="hero-text">
+              Join us for two days of hackathon, workshops, and hands-on labs at
+              the
+              <strong class="highlight"
+                ><a href="https://www.uwindsor.ca/"
+                  >University of Windsor</a
+                ></strong
+              >
+              in collaboration with
+              <strong class="highlight"
+                ><a href="https://www.ibm.com/quantum">IBM Quantum</a></strong
+              >, plus time to meet researchers and industry mentors working in
+              quantum today.
+            </p>
+            <div class="hero-details">
+              <div class="hero-detail">🗓️ November 13 - 14, 2026</div>
+              <div class="hero-detail">📍 University of Windsor</div>
+            </div>
+            <div class="hero-actions">
+              <a
+                class="btn btn-primary btn-lg tooltip"
+                data-tooltip="Opening soon!"
+                >Register</a
+              >
+              <a class="btn btn-ghost btn-lg" href="#schedule">Schedule</a>
+            </div>
+
+            <dl class="hero-stats">
+              <div>
+                <dt>Hackathon</dt>
+                <dd>1</dd>
+              </div>
+              <div>
+                <dt>Workshops/Talks</dt>
+                <dd>5+</dd>
+              </div>
+              <div>
+                <dt>Format</dt>
+                <dd>In Person</dd>
+              </div>
+              <div>
+                <dt>Cost</dt>
+                <dd>Free</dd>
+              </div>
+            </dl>
+            <img
+              src="assets/flamingo-transparent.svg"
+              alt=""
+              class="flamingo-funny"
+            />
+          </div>
+          <figure class="hero-media">
+            <div class="hero-media-art">
+              <div class="sky-flock" aria-hidden="true">
+                <div
+                  class="flyer fly-left"
+                  style="
+                    --top: 15%;
+                    --fly-duration: 7s;
+                    --fly-delay: 0s;
+                    --size: 100px;
+                  "
+                >
+                  <img src="assets/falcon-no-outline.svg" alt="" />
+                </div>
+                <div
+                  class="flyer mirror"
+                  style="
+                    --top: 45%;
+                    --fly-duration: 10s;
+                    --fly-delay: 2s;
+                    --size: 80px;
+                  "
+                >
+                  <img src="assets/bird-pink-up.png" alt="" />
+                </div>
+                <div class="branch-bird">
+                  <img src="assets/bird-on-branch.png" alt="" />
+                </div>
+              </div>
+              <img
+                class="hero-cloud"
+                src="assets/cloud-2.svg"
+                alt="Qiskit Fall Fest Cloud"
+              />
+              <img
+                class="hero-cloud hero-cloud-2"
+                src="assets/cloud-2.svg"
+                alt="Qiskit Fall Fest Cloud"
+              />
+              <img
+                class="hero-cloud hero-cloud-3"
+                src="assets/cloud-2.svg"
+                alt="Qiskit Fall Fest Cloud"
+              />
+
+              <div class="rotator">
+                <div class="rotator-item item-1">
+                  <img src="assets/rotator-qiskit.png" alt="Qiskit" />
+                </div>
+                <div class="rotator-item item-2">
+                  <img src="assets/rotator-fall-fest.png" alt="Fall Fest" />
+                </div>
+                <div class="rotator-item item-3">
+                  <img src="assets/rotator-2026.png" alt="2026" />
+                </div>
+                <div class="rotator-item item-4">
+                  <img src="assets/rotator-quantum.png" alt="Quantum" />
+                </div>
+                <div class="rotator-item item-5">
+                  <img src="assets/rotator-computing.png" alt="Computing" />
+                </div>
+              </div>
+            </div>
+            <figcaption></figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <div class="mobile-hero-art" aria-hidden="true">
+        <img src="assets/cloud-2.svg" alt="" class="mobile-cloud" />
+
+        <div class="mobile-bird mobile-bird-1" data-points="10">
+          <img src="assets/falcon-no-outline.svg" alt="" />
+        </div>
+
+        <div class="mobile-bird mobile-bird-2" data-points="5">
+          <img src="assets/bird-pink-up.png" alt="" />
+        </div>
+
+        <div class="mobile-bird mobile-bird-3" data-points="50" id="rareBird">
+          <img src="assets/hawk-no-outline.png" alt="" />
+        </div>
+        <div class="bird-score-display" id="birdScoreDisplay">
+          Total qubits entangled: 0
+        </div>
+      </div>
+
+      <!-- ============ ABOUT ============ -->
+      <section class="section" id="about">
+        <div class="shell">
+          <header class="section-head">
+            <h2>About Qiskit Fall Fest 2026</h2>
+          </header>
+
+          <h3 class="sub-head" id="about-fallfest">
+            What is Qiskit Fall Fest?
+          </h3>
+          <div class="sub-head-text">
+            <p>
+              Qiskit Fall Fest is a
+              <span class="highlight">worldwide</span> movement of
+              <span class="highlight">student-run</span>
+              events built around quantum computing powered by
+              <span class="highlight">
+                IBM's open-source Qiskit framework
+              </span>
+              that include workshops, hackathons, talks from people doing real
+              research, and plenty of chances to meet others into the field.
+            </p>
+            <p>
+              Last year alone, the initiative reached over 32,000 people through
+              events run by 150 student teams globally. Now the
+              <span class="highlight">University of Windsor</span> is ready to
+              build on that momentum and bring together an even bigger crowd in
+              2026!
+            </p>
+            <figure class="about-img">
+              <img src="assets/uwindsor-fall.jpg" alt="2025 memory" />
+              <figcaption>University of Windsor campus in the fall</figcaption>
+            </figure>
+          </div>
+
+          <h3 class="sub-head" id="about-tenyears">Ten Years On The Cloud</h3>
+          <div class="sub-head-text">
+            <p>
+              In 2016, IBM put a
+              <span class="highlight">real quantum computer</span> on the cloud
+              for anyone to use, the first time that had ever happened. What
+              started as a <span class="highlight">5-qubit</span> processor
+              accessible to researchers, students, and curious coders has grown
+              into a <span class="highlight">global network</span> of quantum
+              systems, used by hundreds of thousands of people to run millions
+              of experiments.
+            </p>
+            <p>
+              A decade later, that same idea is what makes events like Fall Fest
+              possible: you don't need a lab or specialized hardware to learn
+              quantum computing. You just need a laptop and an internet
+              connection. Ten years in, we're
+              <span class="highlight">celebrating</span> how far that access has
+              come!
+            </p>
+            <figure class="about-img">
+              <img src="assets/hero-1-no-title.svg" alt="2025 memory" />
+              <figcaption>
+                IBM names its quantum processors after birds
+              </figcaption>
+            </figure>
+          </div>
+
+          <h3 class="sub-head" id="about-qiskit">What is Qiskit</h3>
+          <div class="sub-head-text">
+            <p>
+              Qiskit is an
+              <span class="highlight">open-source software</span> toolkit for
+              working with quantum computers. Built by IBM and developed with an
+              open community of contributors, it lets you write code that runs
+              on real quantum hardware or on simulators, whether you're just
+              starting out or doing advanced research.
+            </p>
+            <p>
+              At Fall Fest, Qiskit is what you'll actually get your
+              <span class="highlight">hands on</span>
+              during workshops and the hackathon. No prior quantum experience is
+              required: if you can write a little Python, you can start building
+              with Qiskit!
+            </p>
+
+            <!-- <p><< GET STARTED W QISKIT HERE ? >></p> -->
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ SCHEDULE ============ -->
+      <section class="section" id="schedule">
+        <div class="shell">
+          <header class="section-head">
+            <h2>Schedule</h2>
+            Stay tuned for more updates!
+          </header>
+
+          <h3 class="sub-head" id="schedule-day-1">
+            Day 1 · Friday November 13
+          </h3>
+          <ul class="schedule-list">
+            <li class="schedule-item">
+              <div class="schedule-time">9:30 AM - 10:00 AM</div>
+              <div class="schedule-details">
+                <div class="schedule-title">Opening Remarks</div>
+                <div class="schedule-meta">
+                  Welcome and let the waveFUNction begin!
+                </div>
+              </div>
+            </li>
+            <li class="schedule-item">
+              <div class="schedule-time">10:00 AM - 11:00 AM</div>
+              <div class="schedule-details">
+                <div class="schedule-title">Keynote Talk</div>
+                <div class="schedule-meta">TBD</div>
+              </div>
+            </li>
+            <li class="schedule-item">
+              <div class="schedule-time">11:00 AM - 12:00 PM</div>
+              <div class="schedule-details">
+                <div class="schedule-title">Panel Discussion</div>
+                <div class="schedule-meta">TBD</div>
+              </div>
+            </li>
+            <li class="schedule-item">
+              <div class="schedule-time">12:00 PM - 1:30 PM</div>
+              <div class="schedule-details">
+                <div class="schedule-title">Lunch Break</div>
+                <div class="schedule-meta">Feed the qubits</div>
+              </div>
+            </li>
+            <li class="schedule-item">
+              <div class="schedule-time">1:30 PM - 3:30 PM</div>
+              <div class="schedule-details">
+                <div class="schedule-title">Keynote / Workshop</div>
+                <div class="schedule-meta">Learning and Applying</div>
+              </div>
+            </li>
+            <li class="schedule-item">
+              <div class="schedule-time">3:30 PM - 3:45 PM</div>
+              <div class="schedule-details">
+                <div class="schedule-title">Break</div>
+                <div class="schedule-meta">Even qubits need some rest</div>
+              </div>
+            </li>
+            <li class="schedule-item">
+              <div class="schedule-time">3:45 PM - 4:45 PM</div>
+              <div class="schedule-details">
+                <div class="schedule-title">Hackathon Kick-off</div>
+                <div class="schedule-meta">Let the qubit party begin!</div>
+              </div>
+            </li>
+          </ul>
+
+          <h3 class="sub-head" id="schedule-day-2">
+            Day 2 · Saturday November 14
+          </h3>
+          <ul class="schedule-list">
+            <li class="schedule-item">
+              <div class="schedule-time">10:00 AM - 11:00 AM</div>
+              <div class="schedule-details">
+                <div class="schedule-title">Keynote Talk / Workshop</div>
+                <div class="schedule-meta">TBD</div>
+              </div>
+            </li>
+            <li class="schedule-item">
+              <div class="schedule-time">11:00 AM - 12:00 PM</div>
+              <div class="schedule-details">
+                <div class="schedule-title">
+                  Quantum Games & Interactive Activities
+                </div>
+                <div class="schedule-meta">
+                  A qubit wanted to play hide and seek, but wasn't sure of its
+                  position
+                </div>
+              </div>
+            </li>
+            <li class="schedule-item">
+              <div class="schedule-time">12:00 PM - 1:00 PM</div>
+              <div class="schedule-details">
+                <div class="schedule-title">Lunch Break</div>
+                <div class="schedule-meta">A qubit walks into a restaurant</div>
+              </div>
+            </li>
+            <li class="schedule-item">
+              <div class="schedule-time">1:00 PM - 4:00 PM</div>
+              <div class="schedule-details">
+                <div class="schedule-title">
+                  Hackathon Presentations & Judging
+                </div>
+                <div class="schedule-meta">
+                  A qubit had such intense stage fright, it collapsed
+                </div>
+              </div>
+            </li>
+            <li class="schedule-item">
+              <div class="schedule-time">4:00 PM - 4:30 PM</div>
+              <div class="schedule-details">
+                <div class="schedule-title">Awards and Closing Ceremony</div>
+                <div class="schedule-meta">
+                  And the award for the most coherent qubit goes to... <br />The
+                  waveFUNction collapses here. See you next year. Stay
+                  entangled, stay coherent.
+                </div>
+              </div>
+            </li>
+          </ul>
+
+          <h3 class="sub-head" id="schedule-hackathon">Hackathon</h3>
+          <div class="shell">TBD</div>
+        </div>
+      </section>
+
+      <!-- ============ HACKATHON ============ -->
+
+      <!-- ============ SPEAKERS ============ -->
+      <section class="section" id="speakers">
+        <div class="shell">
+          <header class="section-head">
+            <h2>Speakers</h2>
+          </header>
+          <ul class="people people-3">
+            <div class="team-member">
+              <div class="team-member-photo">
+                <img src="assets/birds-pink-pair.png" alt="" />
+              </div>
+              <div class="team-member-text">
+                <div class="team-member-name">Speaker 1</div>
+                <div class="team-member-position">TBD</div>
+                <div class="team-member-bio">Stay tuned!</div>
+                <div class="team-member-socials">
+                  <a
+                    href="https://example.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <svg viewBox="0 0 24 24" fill="#0A66C2">
+                      <path
+                        d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.59 0 4.25 2.36 4.25 5.44v6.3zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"
+                      />
+                    </svg>
+                  </a>
+                  <a
+                    href="https://example.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="#333"
+                      stroke-width="2"
+                    >
+                      <circle cx="12" cy="12" r="10" />
+                      <path
+                        d="M2 12h20M12 2a15 15 0 0 1 0 20 15 15 0 0 1 0-20z"
+                      />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="team-member">
+              <div class="team-member-photo">
+                <img src="assets/birds-pink-pair.png" alt="" />
+              </div>
+              <div class="team-member-text">
+                <div class="team-member-name">Speaker 2</div>
+                <div class="team-member-position">TBD</div>
+                <div class="team-member-bio">Stay tuned!</div>
+              </div>
+            </div>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ============ SPONSORS ============ -->
+      <section class="section" id="sponsors">
+        <div class="shell">
+          <header class="section-head">
+            <h2>Sponsors</h2>
+          </header>
+
+          <div>
+            <div class="sponsors">
+              <div class="sponsor">
+                <div class="sponsor-logo">
+                  <a
+                    href="https://www.uwindsor.ca/science/computerscience/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img
+                      src="assets/uwindsor-scs-logo.png"
+                      alt="University of Windsor, School of Computer Science"
+                    />
+                    <p class="sponsor-caption">School of Computer Science</p>
+                  </a>
+                </div>
+              </div>
+              <div class="sponsor">
+                <div class="sponsor-logo">
+                  <a
+                    href="https://www.ibm.com/quantum"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img src="assets/ibm-quantum-logo.png" alt="IBM Quantum" />
+                    <p class="sponsor-caption">IBM Quantum</p>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ TEAM ============ -->
+      <section class="section" id="team">
+        <div class="shell">
+          <header class="section-head">
+            <h2>Team</h2>
+            <p class="section-sub">
+              Meet the organizing team behind the University of Windsor 2026
+              Qiskit Fall Fest!
+            </p>
+          </header>
+
+          <h3 class="sub-head" id="team-faculty">Faculty</h3>
+          <ul class="people people-3">
+            <div class="team-member">
+              <div class="team-member-photo">
+                <img src="assets/flamingo.svg" alt="" />
+              </div>
+              <div class="team-member-text">
+                <div class="team-member-name">Dr. Kobti</div>
+                <div class="team-member-position">Prof Computer Science</div>
+                <div class="team-member-bio">
+                  Specializes in Quantum Error Correction
+                </div>
+              </div>
+            </div>
+            <div class="team-member">
+              <div class="team-member-photo">
+                <img src="assets/flamingo.svg" alt="" />
+              </div>
+              <div class="team-member-text">
+                <div class="team-member-name">Dr. Prashanth Ranga</div>
+                <div class="team-member-position">Prof Computer Science</div>
+                <div class="team-member-bio">
+                  Specializes in Quantum Error Correction
+                </div>
+              </div>
+            </div>
+            <div class="team-member">
+              <div class="team-member-photo">
+                <img src="assets/flamingo.svg" alt="" />
+              </div>
+              <div class="team-member-text">
+                <div class="team-member-name">Dr. Kobti</div>
+                <div class="team-member-position">Prof Computer Science</div>
+                <div class="team-member-bio">
+                  Specializes in Quantum Error Correction
+                </div>
+              </div>
+            </div>
+            <div class="team-member">
+              <div class="team-member-photo">
+                <img src="assets/flamingo.svg" alt="" />
+              </div>
+              <div class="team-member-text">
+                <div class="team-member-name">Dr. Tirupati Bolisetti</div>
+                <div class="team-member-position">
+                  Prof Civil & Environmental Engineering
+                </div>
+                <div class="team-member-bio">
+                  Specializes in Quantum Error Correction
+                </div>
+              </div>
+            </div>
+            <div class="team-member">
+              <div class="team-member-photo">
+                <img src="assets/flamingo.svg" alt="" />
+              </div>
+              <div class="team-member-text">
+                <div class="team-member-name">Dr. Chitra Rangan</div>
+                <div class="team-member-position">Prof Physics</div>
+                <div class="team-member-bio">
+                  Specializes in Quantum Error Correction
+                </div>
+              </div>
+            </div>
+          </ul>
+
+          <h3 class="sub-head" id="team-organizers">Organizing Team</h3>
+          <ul class="people people-3">
+            <div class="team-member">
+              <div class="team-member-photo-2 photo-contain">
+                <img src="assets/team/nasrin.png" alt="" />
+              </div>
+              <div class="team-member-text">
+                <div class="team-member-name">Nasrin Tavakoli</div>
+                <div class="team-member-position">TEAM LEAD</div>
+                <div class="team-member-bio">
+                  I’m a Computer Science PhD candidate specializing in AI and
+                  computer vision, with a focus on industrial applications. I’m
+                  fascinated by the possibilities at the intersection of AI and
+                  quantum computing and excited to bring curious minds together!
+                </div>
+                <div class="team-member-socials">
+                  <a
+                    href="https://www.linkedin.com/in/nasrin-tavakoli-9300868a/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <svg viewBox="0 0 24 24" fill="#0A66C2">
+                      <path
+                        d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.59 0 4.25 2.36 4.25 5.44v6.3zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"
+                      />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="team-member">
+              <div class="team-member-photo-2">
+                <img src="assets/team/atefeh.png" alt="" />
+              </div>
+              <div class="team-member-text">
+                <div class="team-member-name">Atefeh Gilvari</div>
+                <div class="team-member-position">
+                  Sponsorship, Finance & Awards
+                </div>
+                <div class="team-member-bio">
+                  I’m a PhD candidate in Computer Science specializing in
+                  AI-based industrial vision-language models. I’m excited to
+                  help organize Qiskit Fall Fest and bring students together to
+                  explore quantum computing through hands-on learning and
+                  collaboration.
+                </div>
+                <div class="team-member-socials">
+                  <a
+                    href="https://www.linkedin.com/in/atefeh-gilvari-122a76256/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <svg viewBox="0 0 24 24" fill="#0A66C2">
+                      <path
+                        d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.59 0 4.25 2.36 4.25 5.44v6.3zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"
+                      />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="team-member">
+              <div class="team-member-photo">
+                <img src="assets/falcon.svg" alt="" />
+              </div>
+              <div class="team-member-text">
+                <div class="team-member-name">Amangel</div>
+                <div class="team-member-position">
+                  Marketing, Media & Advertising
+                </div>
+                <div class="team-member-bio">Fall Fest 2026 Woot Woot!</div>
+              </div>
+            </div>
+
+            <div class="team-member">
+              <div class="team-member-photo-2">
+                <img src="assets/team/vinay.jpeg" alt="volunteer vinaj" />
+              </div>
+              <div class="team-member-text">
+                <div class="team-member-name">Vinay Kumar Chukka</div>
+                <div class="team-member-position">
+                  Hackathon, Games & Activities
+                </div>
+                <div class="team-member-bio">
+                  I’m Vinay, a PhD researcher at the University of Windsor who
+                  spends most days trying to understand water, floods, and why
+                  models refuse to behave. I’m excited about the fest because
+                  good conversations, new faces, and a little break from
+                  research sound like a pretty irresistible combination!
+                </div>
+                <div class="team-member-socials">
+                  <a
+                    href="https://www.linkedin.com/in/vinay-kumar-chukka-28198635a"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <svg viewBox="0 0 24 24" fill="#0A66C2">
+                      <path
+                        d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.59 0 4.25 2.36 4.25 5.44v6.3zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"
+                      />
+                    </svg>
+                  </a>
+                  <a
+                    href="https://vinaykumarchukka.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="#333"
+                      stroke-width="2"
+                    >
+                      <circle cx="12" cy="12" r="10" />
+                      <path
+                        d="M2 12h20M12 2a15 15 0 0 1 0 20 15 15 0 0 1 0-20z"
+                      />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="team-member">
+              <div class="team-member-photo-2">
+                <img src="assets/team/richa.jpg" alt="volunteer richa" />
+              </div>
+
+              <div class="team-member-text">
+                <div class="team-member-name">Richa Rayamajhi</div>
+                <div class="team-member-position">
+                  Posters, Catering & Decorations
+                </div>
+                <div class="team-member-bio">
+                  I am a civil engineering graduate student specializing in
+                  hydrology and climate change, with dedication to developing
+                  advanced engineering solutions through advanced technologies.
+                </div>
+              </div>
+            </div>
+
+            <div class="team-member">
+              <div class="team-member-photo-2">
+                <img src="assets/team/luisa.jpg" alt="" />
+              </div>
+              <div class="team-member-text">
+                <div class="team-member-name">Luisa</div>
+                <div class="team-member-position">Website & Registration</div>
+                <div class="team-member-bio">
+                  Software engineer by day, entangled qubit by midnight. I'm
+                  excited to be part of Windsor's 2026 Qiskit Fall Fest,
+                  learning Qiskit along the way and seeing all of your hackathon
+                  projects. Can't wait to meet everyone!
+                </div>
+                <div class="team-member-socials">
+                  <a
+                    href="https://www.linkedin.com/in/luisa-pegoraro/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <svg viewBox="0 0 24 24" fill="#0A66C2">
+                      <path
+                        d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.59 0 4.25 2.36 4.25 5.44v6.3zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"
+                      />
+                    </svg>
+                  </a>
+                  <a
+                    href="https://findingluisa.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="#333"
+                      stroke-width="2"
+                    >
+                      <circle cx="12" cy="12" r="10" />
+                      <path
+                        d="M2 12h20M12 2a15 15 0 0 1 0 20 15 15 0 0 1 0-20z"
+                      />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ============ CODE OF CONDUCT ============ -->
+      <section class="section" id="code-conduct">
+        <div class="shell">
+          <header class="section-head">
+            <h2>Code of Conduct</h2>
+            <p class="section-sub">
+              Ensuring a fun and safe experience for everyone.
+            </p>
+          </header>
+
+          <p class="hack-lede" style="margin-bottom: 32px">
+            In our collective mission to promote and encourage an inclusive and
+            welcoming global quantum community, the
+            <strong>IBM Quantum Community Code of Conduct</strong> applies to
+            Qiskit Fall Fest and all associated events.
+          </p>
+          <div>
+            <h4>Read the Code of Conduct</h4>
+            <p>
+              Available for download and review on GitHub. All attendees,
+              speakers, volunteers, organizing team members and staff are
+              expected to follow it.
+              <a
+                href="https://github.com/Qiskit/qiskit-metapackage/blob/master/CODE_OF_CONDUCT.md"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Review it here.</a
+              >
+            </p>
+          </div>
+
+          <div>
+            <h4>Report a violation</h4>
+            <p>
+              If you experience or witness a violation of the Code of Conduct,
+              please report it as soon as possible, email
+              <a href="mailto:cshub@uwindsor.ca">cshub@uwindsor.ca</a> to
+              directly connect with our admins for code of conduct violations
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ FAQs ============ -->
+      <section class="section" id="faqs">
+        <div class="shell">
+          <header class="section-head">
+            <h2>FAQs</h2>
+            <p class="section-sub">What to know before you arrive.</p>
+          </header>
+
+          <h3 class="sub-head" id="faqs-location">Location</h3>
+
+          <div class="location">
+            <div class="location-info">
+              <div class="loc-block">
+                <div>
+                  <strong>Advanced Computing and Innovation Hub</strong><br />
+                  <strong>School of Computer Science</strong><br />
+                  300 Ouellette Ave, 4th floor<br />
+                  Windsor, ON, Canada <br />
+                  N9A 4J1
+                </div>
+                <br />
+                <ul class="pills">
+                  <li>Reacheable via Windsor Transit routes 1A, 1C, and 4</li>
+                  <li>Accessible venue</li>
+                  <!-- <li>Free Wi-Fi</li> -->
+                  <li>Located on 4th floor</li>
+                </ul>
+                <br />
+              </div>
+            </div>
+
+            <figure class="location-map">
+              <figure class="location-map">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2950.1884258279138!2d-83.04139202365387!3d42.31717967119689!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x883b2d1e5ec79d31%3A0x86e3e76d04f47203!2s300%20Ouellette%20Ave%2C%20Windsor%2C%20ON%20N9A%204J1!5e0!3m2!1sen!2sca!4v1788450673163!5m2!1sen!2sca"
+                  width="800"
+                  height="520"
+                  style="border: 0"
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  title="Map showing 300 Ouellette Ave, Windsor"
+                ></iframe>
+                <figcaption>
+                  <a
+                    href="https://maps.google.com/maps?q=300%20Ouellette%20Ave%2C%20Windsor%2C%20On%2C%20Canada"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Open in Google Maps for directions</a
+                  >
+                </figcaption>
+              </figure>
+            </figure>
+          </div>
+
+          <h3 class="sub-head" id="faqs-eligibility">Can I Join?</h3>
+          <div style="margin-bottom: 24px">
+            The event is open to any
+            <span class="highlight">University of Windsor</span> students with
+            an interest in quantum computing! <br />
+            <strong class="highlight"
+              >No experience in quantum computing required</strong
+            >.
+
+            <br />
+            <br />Please note this event will be offered
+            <span class="highlight">in person only</span>.
+          </div>
+
+          <h3 class="sub-head" id="faqs-what-to-bring">What to Bring</h3>
+          <div style="margin-bottom: 24px">
+            Feel free to bring your own laptop for the hackathon and code labs.
+            Wi-Fi, power, and mentors are on site to get you connected quickly.
+            As a University of Windsor student, you will also have access to the
+            Unix labs.
+          </div>
+
+          <h3 class="sub-head" id="faqs-what-to-bring">Photo Release Form</h3>
+
+          <h3 class="sub-head" id="faqs-past-events">Past Events</h3>
+          <div style="margin-bottom: 24px">
+            Check out the University of Windsor's 2025 Fall Fest
+            <a href="https://qiskit.cs.uwindsor.ca/">here</a>!
+          </div>
+
+          <h3 class="sub-head" id="faqs-contact">Contact</h3>
+          <div style="margin-bottom: 24px">
+            Have a question about registration, sponsorship, or the hackathon?
+            Reach out anytime, we're happy to help.
+            <div style="margin-top: 24px">
+              <p>
+                <strong>General inquiries:</strong>
+                <a href="mailto:cshub@uwindsor.ca">cshub@uwindsor.ca</a>
+              </p>
+              <p>
+                <strong>Phone:</strong>
+                <a href="tel:+15192533000">(519) 253-3000</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="site-footer">
+      <div class="shell footer-grid">
+        <div class="footer-brand">
+          <h3>Qiskit Fall Fest 2026</h3>
+          <p class="org">University of Windsor</p>
+          <p>
+            Exploring quantum computing with IBM Quantum at the University of
+            Windsor.
+          </p>
+        </div>
+
+        <nav class="footer-col" aria-label="Quick links">
+          <h4>Quick links</h4>
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#schedule">Schedule</a></li>
+            <li><a href="#speakers">Speakers</a></li>
+            <li><a href="#sponsors">Sponsors</a></li>
+            <li><a href="#team">Team</a></li>
+            <li><a href="#code-conduct">Code of Conduct</a></li>
+            <li><a href="#faqs">FAQs</a></li>
+          </ul>
+        </nav>
+
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="mailto:cshub@uwindsor.ca">cshub@uwindsor.ca</a></li>
+            <li><a href="tel:+15192533000">(519) 253-3000</a></li>
+            <li>University of Windsor</li>
+          </ul>
+        </div>
+
+        <!-- <div class="footer-col">
+          <h4>Partners</h4>
+          <ul class="partner-logos">
+            <li></li>
+            <li></li>
+          </ul>
+        </div> -->
+      </div>
+
+      <div class="shell footer-base">
+        <p>
+          &copy; <span id="year">2026</span> Qiskit Fall Fest · University of
+          Windsor
+        </p>
+      </div>
+    </footer>
+
+    <button class="to-top" id="toTop" aria-label="Scroll to top">
+      <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+        <path
+          d="M12 5l7 7-1.4 1.4L13 8.8V19h-2V8.8l-4.6 4.6L5 12z"
+          fill="currentColor"
+        />
+      </svg>
+    </button>
+    <!-- <script src="main.js"></script> -->
+    <script>
+      /* Qiskit Fall Fest 2026 — interactions
+   Vanilla JS, no dependencies. Everything degrades gracefully if JS is off. */
+
+      (function () {
+        "use strict";
+
+        var header = document.getElementById("siteHeader");
+        var nav = document.getElementById("siteNav");
+        var navToggle = document.getElementById("navToggle");
+        var toTop = document.getElementById("toTop");
+        var yearSpan = document.getElementById("year");
+
+        var reducedMotion = window.matchMedia(
+          "(prefers-reduced-motion: reduce)",
+        ).matches;
+
+        /* ---------- Footer year ---------- */
+        if (yearSpan) yearSpan.textContent = new Date().getFullYear();
+
+        /* ---------- Mobile menu ---------- */
+        function closeNav() {
+          if (!nav) return;
+          nav.classList.remove("is-open");
+          navToggle.setAttribute("aria-expanded", "false");
+          navToggle.setAttribute("aria-label", "Open menu");
+        }
+
+        if (navToggle && nav) {
+          navToggle.addEventListener("click", function () {
+            var open = nav.classList.toggle("is-open");
+            navToggle.setAttribute("aria-expanded", String(open));
+            navToggle.setAttribute(
+              "aria-label",
+              open ? "Close menu" : "Open menu",
+            );
+          });
+
+          // Close after picking a destination.
+          nav.addEventListener("click", function (e) {
+            if (e.target.closest("a")) closeNav();
+          });
+
+          document.addEventListener("keydown", function (e) {
+            if (e.key === "Escape") closeNav();
+          });
+
+          window.addEventListener("resize", function () {
+            if (window.innerWidth > 980) closeNav();
+          });
+        }
+
+        /* ---------- Header shadow on scroll + back-to-top visibility ---------- */
+        function onScroll() {
+          var y = window.scrollY || window.pageYOffset;
+          if (header) header.classList.toggle("is-stuck", y > 8);
+          if (toTop) toTop.classList.toggle("is-visible", y > 520);
+        }
+
+        window.addEventListener("scroll", onScroll, { passive: true });
+        onScroll();
+
+        if (toTop) {
+          toTop.addEventListener("click", function () {
+            window.scrollTo({
+              top: 0,
+              behavior: reducedMotion ? "auto" : "smooth",
+            });
+          });
+        }
+
+        // show nav bar on scroll up
+        var lastScrollY = window.scrollY;
+
+        window.addEventListener("scroll", () => {
+          const currentScroll = window.scrollY;
+
+          if (currentScroll > 100 && currentScroll > lastScrollY) {
+            // scrolling down past the threshold
+            header.classList.add("header-hidden");
+          } else if (currentScroll < lastScrollY) {
+            // scrolling up at any point
+            header.classList.remove("header-hidden");
+          }
+
+          lastScrollY = currentScroll;
+        });
+
+        /* ---------- Scrollspy: highlight the section you're reading ---------- */
+        var navLinks = nav
+          ? Array.prototype.slice.call(nav.querySelectorAll('a[href^="#"]'))
+          : [];
+        var sections = navLinks
+          .map(function (link) {
+            return document.querySelector(link.getAttribute("href"));
+          })
+          .filter(Boolean);
+
+        if ("IntersectionObserver" in window && sections.length) {
+          var spy = new IntersectionObserver(
+            function (entries) {
+              entries.forEach(function (entry) {
+                if (!entry.isIntersecting) return;
+                navLinks.forEach(function (link) {
+                  link.classList.toggle(
+                    "is-active",
+                    link.getAttribute("href") === "#" + entry.target.id,
+                  );
+                });
+              });
+            },
+            { rootMargin: "-45% 0px -50% 0px", threshold: 0 },
+          );
+
+          sections.forEach(function (section) {
+            spy.observe(section);
+          });
+        }
+
+        /* ---------- Reveal on scroll ---------- */
+        var revealTargets = document.querySelectorAll(
+          ".section-head, .about-row, .card, .day, .hack-copy, .hack-panel, " +
+            ".speaker, .person, .faqs-list details, .location-info, .location-map",
+        );
+
+        if (!reducedMotion && "IntersectionObserver" in window) {
+          var revealer = new IntersectionObserver(
+            function (entries, obs) {
+              entries.forEach(function (entry, i) {
+                if (!entry.isIntersecting) return;
+                // Small stagger so grids cascade rather than pop as one block.
+                entry.target.style.transitionDelay =
+                  Math.min(i * 60, 240) + "ms";
+                entry.target.classList.add("is-in");
+                obs.unobserve(entry.target);
+              });
+            },
+            { rootMargin: "0px 0px -8% 0px", threshold: 0.08 },
+          );
+
+          revealTargets.forEach(function (el) {
+            el.classList.add("reveal");
+            revealer.observe(el);
+          });
+        }
+
+        // window.addEventListener("scroll", () => {
+        //   const currentScroll = window.scrollY;
+        //   if (currentScroll > 100) {
+        //     header.classList.add("header-hidden");
+        //   } else {
+        //     header.classList.remove("header-hidden");
+        //   }
+        // });
+
+        document.querySelectorAll(".has-dropdown").forEach((item) => {
+          const toggle = item.querySelector(".dropdown-toggle");
+          if (!toggle) return;
+          toggle.addEventListener("click", (e) => {
+            e.preventDefault();
+            const isOpen = item.classList.toggle("is-open");
+            toggle.setAttribute("aria-expanded", String(isOpen));
+          });
+          item.querySelectorAll(".dropdown a").forEach((link) => {
+            link.addEventListener("click", () => {
+              item.classList.remove("is-open");
+              toggle.setAttribute("aria-expanded", "false");
+            });
+          });
+        });
+
+        /* ---------- Mobile bird tap game ---------- */
+        var STORAGE_KEY = "qff2026-bird-score";
+        var scoreDisplay = document.getElementById("birdScoreDisplay");
+        var birds = document.querySelectorAll(".mobile-bird");
+
+        function getScore() {
+          return parseInt(localStorage.getItem(STORAGE_KEY), 10) || 0;
+        }
+
+        function setScore(value) {
+          localStorage.setItem(STORAGE_KEY, String(value));
+          if (scoreDisplay)
+            scoreDisplay.textContent = "Total qubits entangled: " + value;
+        }
+
+        setScore(getScore());
+
+        birds.forEach(function (bird) {
+          bird.style.pointerEvents = "auto";
+          bird.style.cursor = "pointer";
+
+          bird.addEventListener("click", function () {
+            var points = parseInt(bird.getAttribute("data-points"), 10) || 0;
+            var newScore = getScore() + points;
+            setScore(newScore);
+
+            var popup = document.createElement("div");
+            popup.className = "bird-score-popup";
+            popup.textContent = "+" + points;
+
+            var rect = bird.getBoundingClientRect();
+            var parentRect = bird.offsetParent.getBoundingClientRect();
+            popup.style.left =
+              rect.left - parentRect.left + rect.width / 2 + "px";
+            popup.style.top = rect.top - parentRect.top + "px";
+
+            bird.offsetParent.appendChild(popup);
+
+            setTimeout(function () {
+              popup.remove();
+            }, 900);
+          });
+        });
+
+        /* ---------- Rare bonus bird ---------- */
+        var rareBird = document.getElementById("rareBird");
+
+        if (rareBird) {
+          function launchRareBird() {
+            var containerWidth = rareBird.offsetParent.offsetWidth;
+            rareBird.style.setProperty(
+              "--fly-distance",
+              containerWidth + 60 + "px",
+            );
+
+            rareBird.classList.add("is-flying");
+
+            setTimeout(function () {
+              rareBird.classList.remove("is-flying");
+            }, 2200);
+          }
+
+          function scheduleRareBird() {
+            var delay = 8000 + Math.random() * 1000;
+            setTimeout(function () {
+              launchRareBird();
+              scheduleRareBird();
+            }, delay);
+          }
+
+          scheduleRareBird();
+        }
+      })();
+    </script>
+  </body>
+</html>
