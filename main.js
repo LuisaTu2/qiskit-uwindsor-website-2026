@@ -52,6 +52,7 @@
     if (header) header.classList.toggle("is-stuck", y > 8);
     if (toTop) toTop.classList.toggle("is-visible", y > 520);
   }
+
   window.addEventListener("scroll", onScroll, { passive: true });
   onScroll();
 
@@ -63,6 +64,23 @@
       });
     });
   }
+
+  // show nav bar on scroll up
+  // var lastScrollY = window.scrollY;
+
+  // window.addEventListener("scroll", () => {
+  //   const currentScroll = window.scrollY;
+
+  //   if (currentScroll > 100 && currentScroll > lastScrollY) {
+  //     // scrolling down past the threshold
+  //     header.classList.add("header-hidden");
+  //   } else if (currentScroll < lastScrollY) {
+  //     // scrolling up at any point
+  //     header.classList.remove("header-hidden");
+  //   }
+
+  //   lastScrollY = currentScroll;
+  // });
 
   /* ---------- Scrollspy: highlight the section you're reading ---------- */
   var navLinks = nav
@@ -121,14 +139,14 @@
     });
   }
 
-  window.addEventListener("scroll", () => {
-    const currentScroll = window.scrollY;
-    if (currentScroll > 100) {
-      header.classList.add("header-hidden");
-    } else {
-      header.classList.remove("header-hidden");
-    }
-  });
+  // window.addEventListener("scroll", () => {
+  //   const currentScroll = window.scrollY;
+  //   if (currentScroll > 100) {
+  //     header.classList.add("header-hidden");
+  //   } else {
+  //     header.classList.remove("header-hidden");
+  //   }
+  // });
 
   document.querySelectorAll(".has-dropdown").forEach((item) => {
     const toggle = item.querySelector(".dropdown-toggle");
