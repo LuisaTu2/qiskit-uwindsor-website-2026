@@ -429,6 +429,19 @@ ol {
   gap: 8px;
 }
 
+.hero-register-list {
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: 600;
+  /* color: rgb(195, 39, 219); */
+  color: var(--violet-soft);
+}
+
+@media (min-width: 1000px) {
+  .hero-register-list {
+    max-width: 300px;
+  }
+}
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
@@ -1383,7 +1396,7 @@ ol {
 }
 
 .hero-copy {
-  margin-top: 3rem;
+  margin-top: 0rem;
 }
 @media (max-width: 1000px) {
   .hero-copy {
