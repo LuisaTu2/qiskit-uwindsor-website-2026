@@ -431,10 +431,10 @@ ol {
 
 .hero-register-list {
   margin-top: 20px;
-  font-size: 18px;
+  font-size: 19px;
   font-weight: 600;
-  /* color: rgb(195, 39, 219); */
-  color: var(--violet-soft);
+  color: rgb(156, 33, 175);
+  /* color: var(--violet-soft); */
 }
 
 @media (min-width: 1000px) {
