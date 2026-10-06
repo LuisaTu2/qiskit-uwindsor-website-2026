@@ -1294,6 +1294,13 @@ ol {
   object-position: center 0%;
   transform: scale(0.92) translateY(6px);
 }
+.team-member-photo-2 img[src*="sean"] {
+  object-position: center 0%;
+  transform: scale(0.9) translateY(8px);
+}
+.photo-bg-white {
+  background-color: #fff;
+}
 
 .team-member-text {
   flex: 1;
@@ -1535,6 +1542,16 @@ ol {
 
 .sponsor-logo img {
   max-height: 100px;
+  height: 100px;
+  width: 100%;
+  object-fit: contain;
+}
+.sponsor-logo a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  text-decoration: none;
 }
 
 .sponsor-name {
