@@ -1298,6 +1298,9 @@ ol {
   object-position: center 0%;
   transform: scale(0.9) translateY(8px);
 }
+.team-member-photo-2 img[src*="kobti"] {
+  object-position: center 0%;
+}
 .photo-bg-white {
   background-color: #fff;
 }
