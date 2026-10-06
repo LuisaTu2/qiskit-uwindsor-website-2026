@@ -1304,6 +1304,13 @@ ol {
 .photo-bg-white {
   background-color: #fff;
 }
+.team-member-photo-2 img[src*="masoud"] {
+  transform: scale(1.4);
+  transform-origin: 50% 35%;
+}
+.team-member-photo-2 img[src*="rangan"] {
+  transform: scale(1.25) translateX(16px) translateY(8px);
+}
 
 .team-member-text {
   flex: 1;
