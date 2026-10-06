@@ -1294,9 +1294,12 @@ ol {
   object-position: center 0%;
   transform: scale(0.92) translateY(6px);
 }
-.team-member-photo-2 img[src*="sean"] {
+.team-member-photo-2 img[src*="feite"] {
   object-position: center 0%;
   transform: scale(0.9) translateY(8px);
+}
+.team-member-photo-2 img[src*="feite"] {
+  transform: scale(1.25) translateY(5px);
 }
 .team-member-photo-2 img[src*="kobti"] {
   object-position: center 0%;
