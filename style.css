@@ -1235,7 +1235,7 @@ ol {
   margin-bottom: 18px;
   align-items: center;
   border: 1px black solid;
-  border-radius: 10%;
+  border-radius: 20px;
 }
 
 .faculty-member {
