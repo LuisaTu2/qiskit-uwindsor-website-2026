@@ -1304,6 +1304,12 @@ ol {
 .team-member-photo-2 img[src*="kobti"] {
   object-position: center 0%;
 }
+.sponsor-logo img[src*="ieee"] {
+  mix-blend-mode: multiply;
+  max-width: 80%;
+  /* height: auto; */
+  /* max-height: 0px; */
+}
 .photo-bg-white {
   background-color: #fff;
 }
