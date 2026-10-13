@@ -1351,44 +1351,7 @@ ol {
   padding: 18px;
 }
 
-/* FACULTY ROWS */
-.faculty-member {
-  flex-direction: row;
-  align-items: flex-start;
-  gap: 32px;
-  padding: 28px 0;
-  border-bottom: 1px solid rgba(157, 174, 222, 0.6);
-}
-
-.faculty-member .team-member-photo,
-.faculty-member .team-member-photo-2 {
-  margin-top: 0;
-  flex-shrink: 0;
-}
-
-.faculty-member .team-member-text,
-.faculty-member .faculty-member-text {
-  flex: 1;
-  width: auto;
-  margin: 0;
-  padding: 0;
-  text-align: left;
-}
-
-/* Stack again on phones */
-@media (max-width: 600px) {
-  .faculty-member {
-    flex-direction: column;
-    align-items: center;
-    gap: 16px;
-  }
-  .faculty-member .team-member-text,
-  .faculty-member .faculty-member-text {
-    text-align: center;
-  }
-}
-
-/* FACULTY ROWS */
+/* FACULTY ROWS (desktop) */
 #team-faculty + .people {
   max-width: 960px;
   margin-inline: auto;
@@ -1424,13 +1387,29 @@ ol {
   text-align: left;
 }
 
+/* FACULTY on phones: back to the original stacked look */
 @media (max-width: 600px) {
   .faculty-member {
     flex-direction: column;
-    gap: 16px;
+    align-items: center;
+    gap: 0;
+    padding: 0 0 24px;
+  }
+  .faculty-member .team-member-photo,
+  .faculty-member .team-member-photo-2,
+  .faculty-member .team-member-photo-2 img {
+    width: 150px;
+    height: 150px;
+  }
+  .faculty-member .team-member-photo,
+  .faculty-member .team-member-photo-2 {
+    margin-top: 24px;
   }
   .faculty-member .team-member-text,
   .faculty-member .faculty-member-text {
+    width: 90%;
+    margin: 0;
+    padding: 18px;
     text-align: center;
   }
 }
