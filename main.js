@@ -232,4 +232,31 @@
 
     scheduleRareBird();
   }
+  /* ---------- Speakers: "Show more" on long bios ---------- */
+  window.addEventListener("load", function () {
+    document
+      .querySelectorAll("#speakers .team-member-bio")
+      .forEach(function (bio) {
+        var lineHeight = parseFloat(getComputedStyle(bio).lineHeight);
+
+        // Only clip bios longer than 6 lines.
+        if (bio.scrollHeight <= lineHeight * 6 + 2) return;
+
+        bio.classList.add("is-clamped");
+
+        var btn = document.createElement("button");
+        btn.type = "button";
+        btn.className = "bio-toggle";
+        btn.textContent = "Show more";
+        btn.setAttribute("aria-expanded", "false");
+
+        btn.addEventListener("click", function () {
+          var expanded = !bio.classList.toggle("is-clamped");
+          btn.textContent = expanded ? "Show less" : "Show more";
+          btn.setAttribute("aria-expanded", String(expanded));
+        });
+
+        bio.after(btn);
+      });
+  });
 })();
