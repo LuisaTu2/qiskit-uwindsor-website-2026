@@ -2056,8 +2056,8 @@ ol {
 /* PHOTO CAROUSEL */
 .carousel {
   position: relative;
-  max-width: 900px;
   margin: 28px auto 40px;
+  max-width: min(900px, 92vh);
 }
 .carousel-track {
   display: flex;

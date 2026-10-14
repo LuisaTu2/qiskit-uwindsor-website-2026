@@ -313,7 +313,7 @@
       if (reducedMotion || timer) return;
       timer = setInterval(function () {
         goTo(current() + 1);
-      }, 5000);
+      }, 3000);
     }
 
     function stop() {
