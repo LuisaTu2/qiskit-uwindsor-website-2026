@@ -2052,3 +2052,87 @@ ol {
 #speakers .team-member {
   min-height: 275px;
 }
+
+/* PHOTO CAROUSEL */
+.carousel {
+  position: relative;
+  max-width: 900px;
+  margin: 28px auto 40px;
+}
+.carousel-track {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  border-radius: var(--radius);
+  scrollbar-width: none;
+}
+.carousel-track::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel-slide {
+  flex: 0 0 100%;
+  width: 100%;
+  aspect-ratio: 5 / 4; /* same frame for every photo */
+  height: auto;
+  object-fit: cover;
+  object-position: center;
+  scroll-snap-align: center;
+}
+.slide-keep-top {
+  object-position: center top;
+}
+.slide-keep-right {
+  object-position: right center;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: calc(50% - 16px);
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.85);
+  color: var(--indigo);
+  font-size: 28px;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: 0 4px 12px -4px rgba(49, 19, 94, 0.3);
+}
+.carousel-btn:hover {
+  background: #fff;
+}
+.carousel-prev {
+  left: 12px;
+}
+.carousel-next {
+  right: 12px;
+}
+
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 14px;
+}
+.carousel-dot {
+  width: 10px;
+  height: 10px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: var(--medium-blue);
+  cursor: pointer;
+}
+.carousel-dot.is-active {
+  background: var(--violet);
+}
+
+@media (max-width: 600px) {
+  .carousel-btn {
+    display: none; /* swipe on phones */
+  }
+}
