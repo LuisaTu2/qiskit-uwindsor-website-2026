@@ -306,5 +306,42 @@
     });
     track.addEventListener("scroll", updateDots, { passive: true });
     updateDots();
+    /* Auto-rotate every 5 seconds */
+    var timer = null;
+
+    function start() {
+      if (reducedMotion || timer) return;
+      timer = setInterval(function () {
+        goTo(current() + 1);
+      }, 5000);
+    }
+
+    function stop() {
+      clearInterval(timer);
+      timer = null;
+    }
+
+    // Pause while someone is looking at or using it
+    carousel.addEventListener("mouseenter", stop);
+    carousel.addEventListener("mouseleave", start);
+    carousel.addEventListener("focusin", stop);
+    carousel.addEventListener("focusout", start);
+    track.addEventListener("touchstart", stop, { passive: true });
+
+    // Restart the countdown after a manual click
+    [prev, next].concat(dots).forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        stop();
+        start();
+      });
+    });
+
+    // Don't rotate in a background tab
+    document.addEventListener("visibilitychange", function () {
+      if (document.hidden) stop();
+      else start();
+    });
+
+    start();
   });
 })();
