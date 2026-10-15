@@ -2254,3 +2254,22 @@ ol {
     font-size: 0.95rem;
   }
 }
+
+/* Speaker names under talk titles */
+.schedule-meta.schedule-speaker {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #8b74c5;
+}
+.schedule-meta sup {
+  font-size: 0.6em;
+  line-height: 0;
+}
+
+.schedule-speaker a {
+  color: inherit;
+  font-weight: inherit;
+}
+.schedule-speaker a:hover {
+  text-decoration: underline;
+}
