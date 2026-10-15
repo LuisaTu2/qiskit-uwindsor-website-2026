@@ -1318,6 +1318,12 @@ ol {
 .team-member-photo-2 img[src*="sasha"] {
   object-position: center 0%;
 }
+
+.team-member-photo-2 img[src*="assaf"] {
+  object-position: 0% 100%;
+  transform: scale(1.4);
+  transform-origin: 0% 100%;
+}
 .sponsor-logo img[src*="ieee"] {
   mix-blend-mode: multiply;
   max-width: 80%;
