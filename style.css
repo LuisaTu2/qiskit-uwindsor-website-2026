@@ -2148,3 +2148,103 @@ ol {
 #sponsors-partners {
   margin-top: 64px;
 }
+
+/* SCHEDULE: agenda style */
+.schedule-list {
+  max-width: 760px;
+  gap: 0;
+  margin-bottom: 48px;
+  background: linear-gradient(135deg, #eef3fc 0%, #dfe8fb 100%);
+  border: 1px solid var(--medium-blue);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px -4px rgba(49, 19, 94, 0.12);
+}
+.schedule-item {
+  display: grid;
+  grid-template-columns: 11.5rem 1fr;
+  align-items: baseline;
+  gap: 16px;
+  padding: 11px 22px;
+  background: none;
+  border: 0;
+  border-bottom: 1px solid rgba(157, 174, 222, 0.45);
+  border-radius: 0;
+  box-shadow: none;
+  transition: background 0.15s var(--ease);
+}
+.schedule-item:last-child {
+  border-bottom: 0;
+}
+.schedule-item::before {
+  display: none;
+}
+.schedule-item:hover {
+  background: rgba(255, 255, 255, 0.55);
+  border-color: rgba(157, 174, 222, 0.45);
+  box-shadow: none;
+  transform: none;
+}
+.schedule-time {
+  flex: none;
+  font: 600 13px/1.4 var(--font-mono);
+  white-space: nowrap;
+  color: #5f4688;
+}
+.schedule-title {
+  font-size: 0.98rem;
+  line-height: 1.35;
+  margin: 0;
+}
+.schedule-meta {
+  font-size: 0.85rem;
+  line-height: 1.4;
+}
+.schedule-title sup {
+  font-size: 0.6em;
+  line-height: 0;
+}
+
+/* Breaks: quieter rows */
+.schedule-item.is-break {
+  background: rgba(255, 255, 255, 0.3);
+}
+.schedule-item.is-break .schedule-title {
+  font-weight: 600;
+  color: #9e95af;
+}
+
+@media (max-width: 600px) {
+  .schedule-item {
+    grid-template-columns: 1fr;
+    gap: 2px;
+    padding: 10px 16px;
+  }
+}
+
+/* Agenda tweaks */
+.schedule-item {
+  grid-template-columns: 10rem 1fr; /* pulls titles closer to the times */
+  padding: 8px 22px;
+}
+.schedule-time {
+  color: var(--blue-bird); /* times pop a bit more */
+}
+.schedule-meta {
+  color: #7a7090;
+}
+
+/* Agenda: phones (keep this LAST in the file) */
+@media (max-width: 600px) {
+  .schedule-item {
+    grid-template-columns: 1fr;
+    gap: 2px;
+    padding: 10px 16px;
+  }
+  .schedule-time {
+    font-size: 12px;
+  }
+  .schedule-title {
+    font-size: 0.95rem;
+  }
+}
