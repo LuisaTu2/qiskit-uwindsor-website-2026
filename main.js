@@ -235,7 +235,9 @@
   /* ---------- Speakers: "Show more" on long bios ---------- */
   window.addEventListener("load", function () {
     document
-      .querySelectorAll("#speakers .team-member-bio")
+      .querySelectorAll(
+        "#speakers .team-member-bio, .faculty-member .team-member-bio",
+      )
       .forEach(function (bio) {
         var lineHeight = parseFloat(getComputedStyle(bio).lineHeight);
 
