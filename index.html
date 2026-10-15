@@ -108,7 +108,34 @@
             </li>
 
             <li><a href="#speakers">Speakers</a></li>
-            <li><a href="#sponsors">Sponsors</a></li>
+            <li class="has-dropdown">
+              <a href="#sponsors">Sponsors</a>
+              <button
+                class="dropdown-toggle"
+                aria-expanded="false"
+                aria-label="Toggle Sponsors submenu"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  width="12"
+                  height="12"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M6 9l6 6 6-6"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+              <ul class="dropdown">
+                <li><a href="#sponsors-main">Sponsors</a></li>
+                <li><a href="#sponsors-partners">Ecosystem Partners</a></li>
+              </ul>
+            </li>
 
             <li class="has-dropdown">
               <a href="#team">Team</a>
@@ -480,37 +507,64 @@
           </header>
 
           <h3 class="sub-head" id="schedule-day-1">
-            Day 1 · Friday November 13
+            Day 1 · Friday, November 13
           </h3>
           <ul class="schedule-list">
             <li class="schedule-item">
-              <div class="schedule-time">9:30 AM - 10:00 AM</div>
+              <div class="schedule-time">9:30 - 10:00 AM</div>
               <div class="schedule-details">
-                <div class="schedule-title">Opening Remarks</div>
+                <div class="schedule-title">
+                  Registration, Coffee & Networking
+                </div>
                 <div class="schedule-meta">
-                  Welcome and let the waveFUNction begin!
+                  Check in and connect with fellow quantum enthusiasts
                 </div>
               </div>
             </li>
             <li class="schedule-item">
-              <div class="schedule-time">10:00 AM - 11:00 AM</div>
+              <div class="schedule-time">10:00 - 10:15 AM</div>
               <div class="schedule-details">
-                <div class="schedule-title">Keynote Talk</div>
-                <div class="schedule-meta">TBD</div>
+                <div class="schedule-title">Opening Remarks & Welcome</div>
+                <div class="schedule-meta">
+                  Welcome to Qiskit Fall Fest 2026!
+                </div>
               </div>
             </li>
             <li class="schedule-item">
-              <div class="schedule-time">11:00 AM - 12:00 PM</div>
+              <div class="schedule-time">10:15 - 10:45 AM</div>
               <div class="schedule-details">
-                <div class="schedule-title">Panel Discussion</div>
-                <div class="schedule-meta">TBD</div>
+                <div class="schedule-title">Feite Kraay · PINQ<sup>2</sup></div>
+                <div class="schedule-meta">
+                  Out of the Lab and Into the Office
+                </div>
               </div>
             </li>
             <li class="schedule-item">
-              <div class="schedule-time">12:00 PM - 1:30 PM</div>
+              <div class="schedule-time">11:00 - 11:30 AM</div>
               <div class="schedule-details">
-                <div class="schedule-title">Lunch Break</div>
-                <div class="schedule-meta">Feed the qubits</div>
+                <div class="schedule-title">Dr. Mitra Mirhassani</div>
+                <div class="schedule-meta">Quantum-Safe Cybersecurity</div>
+              </div>
+            </li>
+            <li class="schedule-item">
+              <div class="schedule-time">11:30 - 11:45 AM</div>
+              <div class="schedule-details">
+                <div class="schedule-title">Coffee Break</div>
+                <div class="schedule-meta">Recharge and connect</div>
+              </div>
+            </li>
+            <li class="schedule-item">
+              <div class="schedule-time">11:45AM - 12:30 PM</div>
+              <div class="schedule-details">
+                <div class="schedule-title">Mehdi Bozzo-Rey</div>
+                <div class="schedule-meta">Emerging Quantum Technologies</div>
+              </div>
+            </li>
+            <li class="schedule-item">
+              <div class="schedule-time">12:30 - 1:00 PM</div>
+              <div class="schedule-details">
+                <div class="schedule-title">Lunch & Networking</div>
+                <div class="schedule-meta">Feed the qubits!</div>
               </div>
             </li>
             <li class="schedule-item">
@@ -537,54 +591,53 @@
           </ul>
 
           <h3 class="sub-head" id="schedule-day-2">
-            Day 2 · Saturday November 14
+            Day 2 · Saturday, November 14
           </h3>
           <ul class="schedule-list">
             <li class="schedule-item">
-              <div class="schedule-time">10:00 AM - 11:00 AM</div>
+              <div class="schedule-time">10:00 - 11:00 AM</div>
               <div class="schedule-details">
                 <div class="schedule-title">Keynote Talk / Workshop</div>
-                <div class="schedule-meta">TBD</div>
+                <div class="schedule-meta">
+                  Speaker and topic to be confirmed
+                </div>
               </div>
             </li>
             <li class="schedule-item">
-              <div class="schedule-time">11:00 AM - 12:00 PM</div>
+              <div class="schedule-time">11:00 - 12:00 PM</div>
               <div class="schedule-details">
                 <div class="schedule-title">
                   Quantum Games & Interactive Activities
                 </div>
                 <div class="schedule-meta">
-                  A qubit wanted to play hide and seek, but wasn't sure of its
-                  position
+                  Trivia, challenges and quantum fun
                 </div>
               </div>
             </li>
             <li class="schedule-item">
-              <div class="schedule-time">12:00 PM - 1:00 PM</div>
+              <div class="schedule-time">12:00 - 1:00 PM</div>
               <div class="schedule-details">
                 <div class="schedule-title">Lunch Break</div>
-                <div class="schedule-meta">A qubit walks into a restaurant</div>
+                <div class="schedule-meta">Recharge and connect</div>
               </div>
             </li>
             <li class="schedule-item">
-              <div class="schedule-time">1:00 PM - 4:00 PM</div>
+              <div class="schedule-time">1:00 - 4:00 PM</div>
               <div class="schedule-details">
                 <div class="schedule-title">
                   Hackathon Presentations & Judging
                 </div>
                 <div class="schedule-meta">
-                  A qubit had such intense stage fright, it collapsed
+                  Team demos, judging and project showcase
                 </div>
               </div>
             </li>
             <li class="schedule-item">
-              <div class="schedule-time">4:00 PM - 4:30 PM</div>
+              <div class="schedule-time">4:00 - 4:30 PM</div>
               <div class="schedule-details">
-                <div class="schedule-title">Awards and Closing Ceremony</div>
+                <div class="schedule-title">Awards & Closing Ceremony</div>
                 <div class="schedule-meta">
-                  And the award for the most coherent qubit goes to... <br />The
-                  waveFUNction collapses here. See you next year. Stay
-                  entangled, stay coherent.
+                  Prize, acknowledgements and closing remarks
                 </div>
               </div>
             </li>
@@ -792,117 +845,148 @@
             <h2>Sponsors</h2>
           </header>
 
-          <div>
-            <div class="sponsors">
-              <div class="sponsor">
-                <div class="sponsor-logo">
-                  <a
-                    href="https://www.uwindsor.ca/science/computerscience/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <img
-                      src="assets/uwindsor-scs-logo.png"
-                      alt="University of Windsor, School of Computer Science"
-                    />
-                    <p class="sponsor-caption">School of Computer Science</p>
-                  </a>
-                </div>
+          <h3 class="sub-head" id="sponsors-main">Sponsors</h3>
+          <div class="sponsors">
+            <div class="sponsor">
+              <div class="sponsor-logo">
+                <a
+                  href="https://www.uwindsor.ca/science/computerscience/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    src="assets/uwindsor-scs-logo.png"
+                    alt="University of Windsor, School of Computer Science"
+                  />
+                  <p class="sponsor-caption">School of Computer Science</p>
+                </a>
               </div>
-              <div class="sponsor">
-                <div class="sponsor-logo">
-                  <a
-                    href="https://www.ibm.com/quantum"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <img src="assets/ibm-quantum-logo.png" alt="IBM Quantum" />
-                    <p class="sponsor-caption">IBM Quantum</p>
-                  </a>
-                </div>
+            </div>
+            <div class="sponsor">
+              <div class="sponsor-logo">
+                <a
+                  href="https://www.ibm.com/quantum"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img src="assets/ibm-quantum-logo.png" alt="IBM Quantum" />
+                  <p class="sponsor-caption">IBM Quantum</p>
+                </a>
               </div>
-              <div class="sponsor">
-                <div class="sponsor-logo">
-                  <a
-                    href="https://www.uwsa.ca/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <img
-                      src="assets/uwsa.png"
-                      alt="University of Windsor, Students' Alliance"
-                    />
-                    <p class="sponsor-caption">Students' Alliance</p>
-                  </a>
-                </div>
+            </div>
+            <div class="sponsor">
+              <div class="sponsor-logo">
+                <a
+                  href="https://www.uwsa.ca/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    src="assets/uwsa.png"
+                    alt="University of Windsor, Students' Alliance"
+                  />
+                  <p class="sponsor-caption">Students' Alliance</p>
+                </a>
               </div>
+            </div>
+            <div class="sponsor">
+              <div class="sponsor-logo">
+                <a
+                  href="https://uwindsorgss.ca/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    src="assets/gss.png"
+                    alt="University of Windsor, Graduate Student Society"
+                  />
+                  <p class="sponsor-caption">Graduate Student Society</p>
+                </a>
+              </div>
+            </div>
+            <div class="sponsor">
+              <div class="sponsor-logo">
+                <a
+                  href="https://css.uwindsor.ca/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    src="assets/uwcss.png"
+                    alt="University of Windsor, Computer Science Society"
+                  />
+                  <p class="sponsor-caption">Computer Science Society</p>
+                </a>
+              </div>
+            </div>
+            <div class="sponsor">
+              <div class="sponsor-logo">
+                <a
+                  href="https://www.pinq2.com/en/home/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img src="assets/pinq2.png" alt="PINQ²" />
+                  <p class="sponsor-caption">PINQ<sup>2</sup></p>
+                </a>
+              </div>
+            </div>
+            <div class="sponsor">
+              <div class="sponsor-logo">
+                <a
+                  href="https://yp.ieee.org/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img src="assets/ieee.jpeg" alt="IEEE" />
+                  <p class="sponsor-caption">IEEE Windsor</p>
+                </a>
+              </div>
+            </div>
+          </div>
 
-              <div class="sponsor">
-                <div class="sponsor-logo">
-                  <a
-                    href="https://uwindsorgss.ca/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <img
-                      src="assets/gss.png"
-                      alt="University of Windsor, Graduate Student Society"
-                    />
-                    <p class="sponsor-caption">Graduate Student Society</p>
-                  </a>
-                </div>
+          <h3 class="sub-head" id="sponsors-partners">Ecosystem Partners</h3>
+          <div class="sponsors">
+            <div class="sponsor">
+              <div class="sponsor-logo">
+                <a
+                  href="https://www.cmc.ca/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img src="assets/cmc.png" alt="CMC Microsystems" />
+                  <p class="sponsor-caption">CMC Microsystems</p>
+                </a>
               </div>
-
-              <div class="sponsor">
-                <div class="sponsor-logo">
-                  <a
-                    href="https://css.uwindsor.ca/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <img
-                      src="assets/uwcss.png"
-                      alt="University of Windsor, Computer Science Society"
-                    />
-                    <p class="sponsor-caption">Computer Science Society</p>
-                  </a>
-                </div>
+            </div>
+            <div class="sponsor">
+              <div class="sponsor-logo">
+                <a href="#" target="_blank" rel="noopener noreferrer"
+                  ><!-- TODO: QAP website -->
+                  <img src="assets/qap.png" alt="Quantum Advantage Partners" />
+                  <p class="sponsor-caption">Quantum Advantage Partners</p>
+                </a>
               </div>
-              <div class="sponsor">
-                <div class="sponsor-logo">
-                  <a
-                    href="https://www.pinq2.com/en/home/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <img src="assets/pinq2.png" alt="PINQ2" />
-                    <p class="sponsor-caption">PINQ2</p>
-                  </a>
-                </div>
+            </div>
+            <div class="sponsor">
+              <div class="sponsor-logo">
+                <a href="#" target="_blank" rel="noopener noreferrer"
+                  ><!-- TODO: SHIELD website -->
+                  <img
+                    src="assets/shield.png"
+                    alt="SHIELD Automotive Cybersecurity Centre"
+                  />
+                  <p class="sponsor-caption">SHIELD</p>
+                </a>
               </div>
-              <div class="sponsor">
-                <div class="sponsor-logo">
-                  <a
-                    href="https://yp.ieee.org/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <img src="assets/ieee.jpeg" alt="IEEE" />
-                    <p class="sponsor-caption">IEEE Windsor</p>
-                  </a>
-                </div>
-              </div>
-              <div class="sponsor">
-                <div class="sponsor-logo">
-                  <a
-                    href="https://www.cmc.ca/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <img src="assets/cmc.png" alt="CMC Microsystems" />
-                    <p class="sponsor-caption">CMC Microsystems</p>
-                  </a>
-                </div>
+            </div>
+            <div class="sponsor">
+              <div class="sponsor-logo">
+                <a href="#" target="_blank" rel="noopener noreferrer"
+                  ><!-- TODO: Dr. Masoud's company website -->
+                  <img src="assets/partner-4.png" alt="TODO company name" />
+                  <p class="sponsor-caption">TODO Company Name</p>
+                </a>
               </div>
             </div>
           </div>
