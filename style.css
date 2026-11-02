@@ -2514,3 +2514,13 @@ ol {
     grid-template-columns: 1fr;
   }
 }
+
+.team-member-session {
+  font-size: 0.88rem;
+  line-height: 1.4;
+  color: #5f4688;
+}
+
+.team-member-session + .team-member-bio {
+  margin-top: 10px;
+}
