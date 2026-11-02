@@ -103,7 +103,6 @@
               <ul class="dropdown">
                 <li><a href="#schedule-day-1">Day 1</a></li>
                 <li><a href="#schedule-day-2">Day 2</a></li>
-                <li><a href="#schedule-hackathon">Hackathon</a></li>
               </ul>
             </li>
 
@@ -133,6 +132,35 @@
               <ul class="dropdown">
                 <li><a href="#speakers-main">Featured Speakers</a></li>
                 <li><a href="#speakers-panelists">Panelists</a></li>
+              </ul>
+            </li>
+
+            <li class="has-dropdown">
+              <a href="#hackathon">Hackathon</a>
+              <button
+                class="dropdown-toggle"
+                aria-expanded="false"
+                aria-label="Toggle Hackathon submenu"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  width="12"
+                  height="12"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M6 9l6 6 6-6"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+              <ul class="dropdown">
+                <li><a href="#hackathon-quest">Qubit Quest</a></li>
+                <li><a href="#hackathon-vocab">Quantum Vocab</a></li>
               </ul>
             </li>
 
@@ -725,269 +753,14 @@
               </div>
             </li>
           </ul>
-
-          <h3 class="sub-head" id="schedule-hackathon">Hackathon</h3>
-          <div class="shell">
-            <div class="hackathon-intro">
-              <p>
-                A hackathon is a friendly challenge where teams build a project
-                together in a short amount of time. We'll reveal the challenge
-                and form teams at the
-                <strong>Hackathon Kickoff on Friday at 3:45 PM</strong>. Then,
-                on <strong>Saturday at 1:00 PM</strong>, teams will present
-                their projects to the judges, with prizes at the closing
-                ceremony.
-              </p>
-              <p>
-                No quantum experience required. Complete the Qubit Quest below
-                to get ready!
-              </p>
-            </div>
-            <div class="prep-checklist">
-              <h4>Qubit Quest</h4>
-              <p class="prep-how">
-                Flip each qubit to |1⟩ as you get ready for the hackathon!
-              </p>
-
-              <ul>
-                <li class="prep-check">
-                  <input
-                    type="checkbox"
-                    id="prep-video"
-                    aria-label="Watch the video"
-                  />
-                  <div>
-                    <strong>Watch the video</strong>
-                    <p>
-                      Get a friendly intro with
-                      <a
-                        href="https://www.youtube.com/watch?v=HHV-P4_Xp1E"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        >How Quantum Computers Compute</a
-                      >.
-                    </p>
-                  </div>
-                </li>
-                <li class="prep-check">
-                  <input
-                    type="checkbox"
-                    id="prep-install"
-                    aria-label="Install Qiskit"
-                  />
-                  <div>
-                    <strong>Install Qiskit</strong>
-                    <p>
-                      Get set up on your laptop with this
-                      <a
-                        href="https://quantum.cloud.ibm.com/docs/guides/install-qiskit"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        >installation guide</a
-                      >.
-                    </p>
-                  </div>
-                </li>
-                <li class="prep-check">
-                  <input
-                    type="checkbox"
-                    id="prep-hello"
-                    aria-label="Run your first program"
-                  />
-                  <div>
-                    <strong>Run your first program</strong>
-                    <p>
-                      Say hello to Qiskit with IBM's
-                      <a
-                        href="https://quantum.cloud.ibm.com/docs/guides/hello-world"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        >Hello World tutorial</a
-                      >.
-                    </p>
-                  </div>
-                </li>
-                <li class="prep-check">
-                  <input
-                    type="checkbox"
-                    id="prep-course"
-                    aria-label="Keep exploring"
-                  />
-                  <div>
-                    <strong>Keep exploring (optional)</strong>
-                    <p>
-                      Curious for more? Try IBM's
-                      <a
-                        href="https://learning.quantum.ibm.com/course/basics-of-quantum-information"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        >Basics of Quantum Information</a
-                      >
-                      course.
-                    </p>
-                  </div>
-                </li>
-              </ul>
-
-              <p class="prep-done">
-                🦩 You're hackathon ready! See you on November 13!
-              </p>
-            </div>
-            <div class="vocab">
-              <h4>Quantum Vocab</h4>
-              <p>Learn the basics of quantum computing!</p>
-
-              <div class="vocab-grid">
-                <button class="vocab-card" type="button" aria-pressed="false">
-                  <span class="vocab-inner">
-                    <span class="vocab-face vocab-front">Qubit</span>
-                    <span class="vocab-face vocab-back"
-                      ><span
-                        >The
-                        <span class="highlight">basic unit of information</span>
-                        in a quantum computer. A regular bit is always either 0
-                        or 1, while a qubit can be in a
-                        <span class="highlight">combination of both</span>. IBM
-                        builds its qubits from superconducting circuits.</span
-                      ></span
-                    >
-                  </span>
-                </button>
-
-                <button class="vocab-card" type="button" aria-pressed="false">
-                  <span class="vocab-inner">
-                    <span class="vocab-face vocab-front">Superposition</span>
-                    <span class="vocab-face vocab-back"
-                      ><span
-                        >A state that
-                        <span class="highlight">combines 0 and 1</span>, with
-                        values that set
-                        <span class="highlight">how likely each result is</span>
-                        when the qubit is measured. Quantum algorithms use
-                        interference to make correct answers more likely.</span
-                      ></span
-                    >
-                  </span>
-                </button>
-
-                <button class="vocab-card" type="button" aria-pressed="false">
-                  <span class="vocab-inner">
-                    <span class="vocab-face vocab-front">Entanglement</span>
-                    <span class="vocab-face vocab-back"
-                      ><span
-                        >A connection that means qubits
-                        <span class="highlight"
-                          >can't be fully described one at a time</span
-                        >. Their measurement results can be
-                        <span class="highlight">correlated</span> more strongly
-                        than regular bits allow, even far apart, though this
-                        can't send messages faster than light.</span
-                      ></span
-                    >
-                  </span>
-                </button>
-
-                <button class="vocab-card" type="button" aria-pressed="false">
-                  <span class="vocab-inner">
-                    <span class="vocab-face vocab-front">Measurement</span>
-                    <span class="vocab-face vocab-back"
-                      ><span
-                        ><span class="highlight">Reading a qubit</span>, which
-                        returns a 0 or 1 and ends its superposition. Because
-                        each result is based on probability, circuits are
-                        usually run many times, in runs called
-                        <span class="highlight">shots</span>, to see the overall
-                        pattern.</span
-                      ></span
-                    >
-                  </span>
-                </button>
-
-                <button class="vocab-card" type="button" aria-pressed="false">
-                  <span class="vocab-inner">
-                    <span class="vocab-face vocab-front">Quantum gate</span>
-                    <span class="vocab-face vocab-back"
-                      ><span
-                        >An
-                        <span class="highlight"
-                          >operation that changes the state</span
-                        >
-                        of one or more qubits. For example, a
-                        <span class="highlight">Hadamard</span> gate can create
-                        a superposition, and a
-                        <span class="highlight">CNOT</span> gate can entangle
-                        two qubits. These gates are reversible.</span
-                      ></span
-                    >
-                  </span>
-                </button>
-
-                <button class="vocab-card" type="button" aria-pressed="false">
-                  <span class="vocab-inner">
-                    <span class="vocab-face vocab-front">Quantum circuit</span>
-                    <span class="vocab-face vocab-back"
-                      ><span
-                        >A
-                        <span class="highlight"
-                          >sequence of gates and measurements</span
-                        >
-                        applied to a set of qubits. In a circuit diagram, each
-                        line is a qubit and time runs from left to right.
-                        Circuits are a common way to write
-                        <span class="highlight">quantum programs</span>.</span
-                      ></span
-                    >
-                  </span>
-                </button>
-
-                <button class="vocab-card" type="button" aria-pressed="false">
-                  <span class="vocab-inner">
-                    <span class="vocab-face vocab-front">Decoherence</span>
-                    <span class="vocab-face vocab-back"
-                      ><span
-                        >The
-                        <span class="highlight"
-                          >loss of a qubit's quantum state</span
-                        >
-                        through interaction with its environment, such as heat
-                        or electromagnetic noise. It's a major
-                        <span class="highlight">source of errors</span>, which
-                        is why superconducting qubits are kept extremely
-                        cold.</span
-                      ></span
-                    >
-                  </span>
-                </button>
-
-                <button class="vocab-card" type="button" aria-pressed="false">
-                  <span class="vocab-inner">
-                    <span class="vocab-face vocab-front">Qiskit</span>
-                    <span class="vocab-face vocab-back"
-                      ><span
-                        >An
-                        <span class="highlight"
-                          >open-source software toolkit</span
-                        >, built by IBM, for quantum computing. It lets you
-                        write circuits in <span class="highlight">Python</span>,
-                        optimize them for specific hardware, and run them on
-                        simulators or real quantum computers.</span
-                      ></span
-                    >
-                  </span>
-                </button>
-              </div>
-            </div>
-          </div>
         </div>
       </section>
-
-      <!-- ============ HACKATHON ============ -->
 
       <!-- ============ SPEAKERS ============ -->
       <section class="section" id="speakers">
         <div class="shell">
           <header class="section-head">
-            <h2>Speakers</h2>
+            <h2>Speakers & Panelists</h2>
           </header>
           <h3 class="sub-head" id="speakers-main">Featured Speakers</h3>
           <ul class="people people-3">
@@ -1261,6 +1034,264 @@
               </div>
             </div>
           </ul>
+        </div>
+      </section>
+
+      <!-- ============ HACKATHON ============ -->
+      <section class="section" id="hackathon">
+        <div class="shell">
+          <header class="section-head">
+            <h2>Hackathon</h2>
+          </header>
+
+          <div class="hackathon-intro">
+            <p>
+              A hackathon is a friendly challenge where teams build a project
+              together in a short amount of time. We'll reveal the challenge and
+              form teams at the
+              <strong>Hackathon Kickoff on Friday at 3:45 PM</strong>. Then, on
+              <strong>Saturday at 1:00 PM</strong>, teams will present their
+              projects to the judges, with prizes at the closing ceremony.
+            </p>
+            <p>
+              No quantum experience required. Complete the Qubit Quest below to
+              get ready!
+            </p>
+          </div>
+
+          <div class="prep-checklist" id="hackathon-quest">
+            <h4>Qubit Quest</h4>
+            <p class="prep-how">
+              Flip each qubit to |1⟩ as you get ready for the hackathon!
+            </p>
+
+            <ul>
+              <li class="prep-check">
+                <input
+                  type="checkbox"
+                  id="prep-video"
+                  aria-label="Watch the video"
+                />
+                <div>
+                  <strong>Watch the video</strong>
+                  <p>
+                    Get a friendly intro with
+                    <a
+                      href="https://www.youtube.com/watch?v=HHV-P4_Xp1E"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >How Quantum Computers Compute</a
+                    >.
+                  </p>
+                </div>
+              </li>
+              <li class="prep-check">
+                <input
+                  type="checkbox"
+                  id="prep-install"
+                  aria-label="Install Qiskit"
+                />
+                <div>
+                  <strong>Install Qiskit</strong>
+                  <p>
+                    Get set up on your laptop with this
+                    <a
+                      href="https://quantum.cloud.ibm.com/docs/guides/install-qiskit"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >installation guide</a
+                    >.
+                  </p>
+                </div>
+              </li>
+              <li class="prep-check">
+                <input
+                  type="checkbox"
+                  id="prep-hello"
+                  aria-label="Run your first program"
+                />
+                <div>
+                  <strong>Run your first program</strong>
+                  <p>
+                    Say hello to Qiskit with IBM's
+                    <a
+                      href="https://quantum.cloud.ibm.com/docs/guides/hello-world"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >Hello World tutorial</a
+                    >.
+                  </p>
+                </div>
+              </li>
+              <li class="prep-check">
+                <input
+                  type="checkbox"
+                  id="prep-course"
+                  aria-label="Keep exploring"
+                />
+                <div>
+                  <strong>Keep exploring (optional)</strong>
+                  <p>
+                    Curious for more? Try IBM's
+                    <a
+                      href="https://learning.quantum.ibm.com/course/basics-of-quantum-information"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >Basics of Quantum Information</a
+                    >
+                    course.
+                  </p>
+                </div>
+              </li>
+            </ul>
+
+            <p class="prep-done">
+              🦩 You're hackathon ready! See you on November 13!
+            </p>
+          </div>
+
+          <div class="vocab" id="hackathon-vocab">
+            <h4>Quantum Vocab</h4>
+            <p>Learn the basics of quantum computing!</p>
+
+            <div class="vocab-grid">
+              <button class="vocab-card" type="button" aria-pressed="false">
+                <span class="vocab-inner">
+                  <span class="vocab-face vocab-front">Qubit</span>
+                  <span class="vocab-face vocab-back"
+                    ><span
+                      >The
+                      <span class="highlight">basic unit of information</span>
+                      in a quantum computer. A regular bit is always either 0 or
+                      1, while a qubit can be in a
+                      <span class="highlight">combination of both</span>. IBM
+                      builds its qubits from superconducting circuits.</span
+                    ></span
+                  >
+                </span>
+              </button>
+
+              <button class="vocab-card" type="button" aria-pressed="false">
+                <span class="vocab-inner">
+                  <span class="vocab-face vocab-front">Superposition</span>
+                  <span class="vocab-face vocab-back"
+                    ><span
+                      >A state that
+                      <span class="highlight">combines 0 and 1</span>, with
+                      values that set
+                      <span class="highlight">how likely each result is</span>
+                      when the qubit is measured. Quantum algorithms use
+                      interference to make correct answers more likely.</span
+                    ></span
+                  >
+                </span>
+              </button>
+
+              <button class="vocab-card" type="button" aria-pressed="false">
+                <span class="vocab-inner">
+                  <span class="vocab-face vocab-front">Entanglement</span>
+                  <span class="vocab-face vocab-back"
+                    ><span
+                      >A connection that means qubits
+                      <span class="highlight"
+                        >can't be fully described one at a time</span
+                      >. Their measurement results can be
+                      <span class="highlight">correlated</span> more strongly
+                      than regular bits allow, even far apart, though this can't
+                      send messages faster than light.</span
+                    ></span
+                  >
+                </span>
+              </button>
+
+              <button class="vocab-card" type="button" aria-pressed="false">
+                <span class="vocab-inner">
+                  <span class="vocab-face vocab-front">Measurement</span>
+                  <span class="vocab-face vocab-back"
+                    ><span
+                      ><span class="highlight">Reading a qubit</span>, which
+                      returns a 0 or 1 and ends its superposition. Because each
+                      result is based on probability, circuits are usually run
+                      many times, in runs called
+                      <span class="highlight">shots</span>, to see the overall
+                      pattern.</span
+                    ></span
+                  >
+                </span>
+              </button>
+
+              <button class="vocab-card" type="button" aria-pressed="false">
+                <span class="vocab-inner">
+                  <span class="vocab-face vocab-front">Quantum gate</span>
+                  <span class="vocab-face vocab-back"
+                    ><span
+                      >An
+                      <span class="highlight"
+                        >operation that changes the state</span
+                      >
+                      of one or more qubits. For example, a
+                      <span class="highlight">Hadamard</span> gate can create a
+                      superposition, and a
+                      <span class="highlight">CNOT</span> gate can entangle two
+                      qubits. These gates are reversible.</span
+                    ></span
+                  >
+                </span>
+              </button>
+
+              <button class="vocab-card" type="button" aria-pressed="false">
+                <span class="vocab-inner">
+                  <span class="vocab-face vocab-front">Quantum circuit</span>
+                  <span class="vocab-face vocab-back"
+                    ><span
+                      >A
+                      <span class="highlight"
+                        >sequence of gates and measurements</span
+                      >
+                      applied to a set of qubits. In a circuit diagram, each
+                      line is a qubit and time runs from left to right. Circuits
+                      are a common way to write
+                      <span class="highlight">quantum programs</span>.</span
+                    ></span
+                  >
+                </span>
+              </button>
+
+              <button class="vocab-card" type="button" aria-pressed="false">
+                <span class="vocab-inner">
+                  <span class="vocab-face vocab-front">Decoherence</span>
+                  <span class="vocab-face vocab-back"
+                    ><span
+                      >The
+                      <span class="highlight"
+                        >loss of a qubit's quantum state</span
+                      >
+                      through interaction with its environment, such as heat or
+                      electromagnetic noise. It's a major
+                      <span class="highlight">source of errors</span>, which is
+                      why superconducting qubits are kept extremely cold.</span
+                    ></span
+                  >
+                </span>
+              </button>
+
+              <button class="vocab-card" type="button" aria-pressed="false">
+                <span class="vocab-inner">
+                  <span class="vocab-face vocab-front">Qiskit</span>
+                  <span class="vocab-face vocab-back"
+                    ><span
+                      >An
+                      <span class="highlight">open-source software toolkit</span
+                      >, built by IBM, for quantum computing. It lets you write
+                      circuits in <span class="highlight">Python</span>,
+                      optimize them for specific hardware, and run them on
+                      simulators or real quantum computers.</span
+                    ></span
+                  >
+                </span>
+              </button>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -2001,6 +2032,7 @@
             <li><a href="#about">About</a></li>
             <li><a href="#schedule">Schedule</a></li>
             <li><a href="#speakers">Speakers</a></li>
+            <li><a href="#hackathon">Hackathon</a></li>
             <li><a href="#sponsors">Sponsors</a></li>
             <li><a href="#team">Team</a></li>
             <li><a href="#code-conduct">Code of Conduct</a></li>
