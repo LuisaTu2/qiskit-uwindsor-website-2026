@@ -1327,6 +1327,9 @@ ol {
 .team-member-photo-2 img[src*="jiang"] {
   object-position: center top;
 }
+.team-member-photo-2 img[src*="adam"] {
+  transform: scale(1.38) translateY(3px);
+}
 .sponsor-logo img[src*="ieee"] {
   mix-blend-mode: multiply;
   max-width: 80%;
