@@ -347,3 +347,11 @@
     start();
   });
 })();
+
+/* Vocab flip cards */
+document.querySelectorAll(".vocab-card").forEach(function (card) {
+  card.addEventListener("click", function () {
+    var flipped = card.getAttribute("aria-pressed") === "true";
+    card.setAttribute("aria-pressed", String(!flipped));
+  });
+});
