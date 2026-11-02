@@ -1324,6 +1324,9 @@ ol {
   transform: scale(1.4);
   transform-origin: 0% 100%;
 }
+.team-member-photo-2 img[src*="jiang"] {
+  object-position: center top;
+}
 .sponsor-logo img[src*="ieee"] {
   mix-blend-mode: multiply;
   max-width: 80%;
