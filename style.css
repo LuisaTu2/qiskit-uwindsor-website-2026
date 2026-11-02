@@ -1328,7 +1328,7 @@ ol {
   object-position: center top;
 }
 .team-member-photo-2 img[src*="adam"] {
-  transform: scale(1.38) translateY(3px);
+  object-position: center top;
 }
 .sponsor-logo img[src*="ieee"] {
   mix-blend-mode: multiply;
