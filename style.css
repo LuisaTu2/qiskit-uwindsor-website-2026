@@ -2273,3 +2273,46 @@ ol {
 .schedule-speaker a:hover {
   text-decoration: underline;
 }
+
+/* PANELISTS: same layout as organizing team cards */
+#speakers .panelists {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  max-width: none;
+}
+
+#speakers .panelists .team-member {
+  flex-direction: column;
+  gap: 0;
+  padding: 0;
+  margin-bottom: 18px;
+  min-height: 0;
+}
+
+#speakers .panelists .team-member-photo-2,
+#speakers .panelists .team-member-photo-2 img {
+  width: 150px;
+  height: 150px;
+}
+
+#speakers .panelists .team-member-photo-2 {
+  margin-top: 24px;
+}
+
+#speakers .panelists .team-member-text {
+  width: 90%;
+  margin-left: 5%;
+  padding: 18px;
+  text-align: center;
+}
+
+@media (max-width: 760px) {
+  #speakers .panelists {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 430px) {
+  #speakers .panelists {
+    grid-template-columns: 1fr;
+  }
+}

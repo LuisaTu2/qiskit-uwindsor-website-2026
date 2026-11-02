@@ -107,7 +107,35 @@
               </ul>
             </li>
 
-            <li><a href="#speakers">Speakers</a></li>
+            <li class="has-dropdown">
+              <a href="#speakers">Speakers</a>
+              <button
+                class="dropdown-toggle"
+                aria-expanded="false"
+                aria-label="Toggle Speakers submenu"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  width="12"
+                  height="12"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M6 9l6 6 6-6"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+              <ul class="dropdown">
+                <li><a href="#speakers-main">Featured Speakers</a></li>
+                <li><a href="#speakers-panelists">Panelists</a></li>
+              </ul>
+            </li>
+
             <li class="has-dropdown">
               <a href="#sponsors">Sponsors</a>
               <button
@@ -132,7 +160,7 @@
                 </svg>
               </button>
               <ul class="dropdown">
-                <li><a href="#sponsors-main">Sponsors</a></li>
+                <li><a href="#sponsors-main">Event Sponsors</a></li>
                 <li><a href="#sponsors-partners">Ecosystem Partners</a></li>
               </ul>
             </li>
@@ -693,6 +721,7 @@
           <header class="section-head">
             <h2>Speakers</h2>
           </header>
+          <h3 class="sub-head" id="speakers-main">Featured Speakers</h3>
           <ul class="people people-3">
             <div class="team-member" id="speaker-mehdi">
               <div class="team-member-photo-2">
@@ -922,6 +951,32 @@
               </div>
             </div>
           </ul>
+
+          <h3 class="sub-head" id="speakers-panelists" style="margin-top: 64px">
+            Panelists
+          </h3>
+          <ul class="people people-3 panelists">
+            <div class="team-member">
+              <div class="team-member-photo-2">
+                <img src="assets/flamingo.svg" alt="" />
+              </div>
+              <div class="team-member-text">
+                <div class="team-member-name">Panelist Name</div>
+                <div class="team-member-position">Title, Company</div>
+                <div class="team-member-bio">Panelist bio goes here.</div>
+              </div>
+            </div>
+            <div class="team-member">
+              <div class="team-member-photo-2">
+                <img src="assets/flamingo.svg" alt="" />
+              </div>
+              <div class="team-member-text">
+                <div class="team-member-name">Panelist Name</div>
+                <div class="team-member-position">Title, Company</div>
+                <div class="team-member-bio">Panelist bio goes here.</div>
+              </div>
+            </div>
+          </ul>
         </div>
       </section>
 
@@ -932,7 +987,7 @@
             <h2>Sponsors & Partners</h2>
           </header>
 
-          <h3 class="sub-head" id="sponsors-main">Sponsors</h3>
+          <h3 class="sub-head" id="sponsors-main">Event Sponsors</h3>
           <div class="sponsors">
             <div class="sponsor">
               <div class="sponsor-logo">
@@ -1498,8 +1553,8 @@
                 href="https://github.com/Qiskit/qiskit-metapackage/blob/master/CODE_OF_CONDUCT.md"
                 target="_blank"
                 rel="noopener noreferrer"
-                >Review it here.</a
-              >
+                >Review it here</a
+              >.
             </p>
           </div>
 
