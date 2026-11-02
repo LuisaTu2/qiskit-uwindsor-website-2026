@@ -2537,3 +2537,32 @@ ol {
   text-transform: uppercase;
   vertical-align: middle;
 }
+
+.bio-more {
+  align-self: center;
+  margin-top: 8px;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--blue-bird);
+  font: 600 14px var(--font-body);
+  cursor: pointer;
+}
+
+.bio-popup {
+  width: min(520px, calc(100vw - 32px));
+  padding: 24px;
+  border: 1px solid var(--medium-blue);
+  border-radius: 16px;
+  background: #fff;
+  color: var(--text);
+  box-shadow: 0 16px 40px -16px rgba(49, 19, 94, 0.45);
+}
+
+.bio-popup::backdrop {
+  background: rgba(49, 19, 94, 0.25);
+}
+
+.bio-popup p {
+  margin: 8px 0 0;
+}
