@@ -439,7 +439,7 @@ ol {
 
 @media (min-width: 1000px) {
   .hero-register-list {
-    max-width: 300px;
+    max-width: 380px;
   }
 }
 .hero-actions {
@@ -510,7 +510,8 @@ ol {
 .flamingo-funny {
   position: absolute;
   bottom: 80px;
-  left: 20rem;
+  /* left: 20rem; */
+  left: 22rem;
   max-height: 200px;
   transform: scaleX(-1);
   display: inline-block;
