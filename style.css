@@ -1331,6 +1331,33 @@ ol {
 .team-member-photo-2 img[src*="adam"] {
   object-position: center top;
 }
+.team-member-photo-2 img[src*="claudio"] {
+  transform: scale(1.18);
+  transform-origin: 50% 30%;
+}
+#speakers .panelists {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+}
+
+#speakers .panelists .team-member {
+  flex: 0 1 calc((100% - 48px) / 3);
+}
+
+@media (max-width: 760px) {
+  #speakers .panelists .team-member {
+    flex-basis: calc((100% - 24px) / 2);
+  }
+}
+
+@media (max-width: 430px) {
+  #speakers .panelists .team-member {
+    flex-basis: 100%;
+  }
+}
+
 .sponsor-logo img[src*="ieee"] {
   mix-blend-mode: multiply;
   max-width: 80%;
