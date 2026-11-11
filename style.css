@@ -2607,3 +2607,13 @@ ol {
 .bio-popup p {
   margin: 8px 0 0;
 }
+
+.hero-register-list {
+  margin-bottom: 32px;
+}
+
+.hero-register-list {
+  margin-top: 12px;
+  color: var(--indigo);
+  font-size: 16px;
+}
