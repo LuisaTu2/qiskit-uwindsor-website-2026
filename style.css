@@ -2617,3 +2617,40 @@ ol {
   color: var(--indigo);
   font-size: 16px;
 }
+
+/* HACKATHON PRIZES */
+.hack-prizes {
+  margin: 32px 0 48px;
+}
+
+.hack-prizes h4 {
+  margin-bottom: 4px;
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.prize-list {
+  display: grid;
+  gap: 8px;
+  font-size: 1.05rem;
+}
+
+.prize-extra {
+  margin: 14px 0 0;
+}
+
+/* Section titles: match Prizes */
+.quest-head h4,
+.vocab h4 {
+  margin-bottom: 4px;
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.quest-head p,
+.vocab > p {
+  margin: 0 0 18px;
+  font-size: 1rem;
+}
